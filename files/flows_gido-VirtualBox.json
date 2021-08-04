@@ -933,7 +933,8 @@
             "9a7b4f66.432798",
             "a805ac82.08e61",
             "32899bad.c622dc",
-            "6455a551.404ad4"
+            "6455a551.404ad4",
+            "4549b0dcf104745a"
         ],
         "x": 314,
         "y": 2739,
@@ -18228,7 +18229,8 @@
                 "a1fff7d7.b4c21",
                 "9a7b4f66.432798",
                 "a805ac82.08e61",
-                "32899bad.c622dc"
+                "32899bad.c622dc",
+                "4549b0dcf104745a"
             ]
         ]
     },
@@ -18249,6 +18251,24 @@
             [
                 "cc59fff9.016838"
             ]
+        ]
+    },
+    {
+        "id": "4549b0dcf104745a",
+        "type": "function",
+        "z": "4ff5da13.cce2c4",
+        "g": "4bfc33e5.0932bc",
+        "name": "setTimestamp",
+        "func": "var date = new Date();\ncontext.flow.set(\"timestamp\", date.getTime());\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 3000,
+        "wires": [
+            []
         ]
     }
 ]
