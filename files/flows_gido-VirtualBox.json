@@ -331,9 +331,7 @@
             "ad8fbd86.506ae8"
         ],
         "x": 76,
-        "y": 105,
-        "w": 1902,
-        "h": 477
+        "y": 105
     },
     {
         "id": "daa90db5.798ca",
@@ -384,9 +382,7 @@
             "437c7c89.d0b51c"
         ],
         "x": 75,
-        "y": 599,
-        "w": 1977,
-        "h": 1808
+        "y": 599
     },
     {
         "id": "66d3f26a.c296b4",
@@ -429,9 +425,7 @@
             "15f4655a.3a5aab"
         ],
         "x": 74,
-        "y": 2439,
-        "w": 1972,
-        "h": 642
+        "y": 2439
     },
     {
         "id": "fd25b313.221798",
@@ -454,9 +448,7 @@
             "2dc97f2a.e1d8d8"
         ],
         "x": 74,
-        "y": 3119,
-        "w": 1912,
-        "h": 202
+        "y": 3119
     },
     {
         "id": "16640da3.5a20ca",
@@ -477,9 +469,7 @@
             "43be3c31.fa03f4"
         ],
         "x": 74,
-        "y": 3339,
-        "w": 1932,
-        "h": 182
+        "y": 3339
     },
     {
         "id": "4b4e4270.d440bc",
@@ -503,9 +493,7 @@
             "1f1ce2c5.9cb5cd"
         ],
         "x": 194,
-        "y": 4242,
-        "w": 2272,
-        "h": 322
+        "y": 4242
     },
     {
         "id": "d366c10f.cbf158",
@@ -554,9 +542,7 @@
             "b88a92c6.fb547"
         ],
         "x": 194,
-        "y": 3374.22216796875,
-        "w": 2962,
-        "h": 686.77783203125
+        "y": 3374.22216796875
     },
     {
         "id": "d7076418.bb51d8",
@@ -601,9 +587,7 @@
             "983208d5.9b5e"
         ],
         "x": 54,
-        "y": 2333.094940185547,
-        "w": 1272,
-        "h": 431.99999809265137
+        "y": 2333.094940185547
     },
     {
         "id": "9eaca16.128cb6",
@@ -624,9 +608,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -700,9 +682,7 @@
             "f76cbbfe.4be85"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3372,
-        "h": 962
+        "y": 99
     },
     {
         "id": "48a4f908.86ced8",
@@ -728,9 +708,7 @@
             "f826e42f.85708"
         ],
         "x": 1584,
-        "y": 2359,
-        "w": 1132,
-        "h": 304.3541259765625
+        "y": 2359
     },
     {
         "id": "a4c26498.4d1758",
@@ -758,9 +736,7 @@
             "7c1b2520.ec5814"
         ],
         "x": 1574,
-        "y": 2679,
-        "w": 912,
-        "h": 242
+        "y": 2679
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -798,9 +774,7 @@
             "db200cd7.5bd32"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "7f3265a4.23ba94",
@@ -869,9 +843,7 @@
             "510bb40f.d3429c"
         ],
         "x": 1584,
-        "y": 1479,
-        "w": 2222,
-        "h": 866.25
+        "y": 1479
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -913,9 +885,7 @@
             "a6820e84.1e723"
         ],
         "x": 34,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "27a2d798.8a5c5",
@@ -946,6 +916,29 @@
         "y": 59,
         "w": 1522,
         "h": 322
+    },
+    {
+        "id": "4bfc33e5.0932bc",
+        "type": "group",
+        "z": "4ff5da13.cce2c4",
+        "name": "Connecting to the PROSYS OPC UA Simulation Server",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8a375922.a2b42",
+            "646624d4.cafe74",
+            "913f20da.5cf35",
+            "a1fff7d7.b4c21",
+            "9a7b4f66.432798",
+            "a805ac82.08e61",
+            "32899bad.c622dc",
+            "6455a551.404ad4"
+        ],
+        "x": 314,
+        "y": 2739,
+        "w": 1392,
+        "h": 382
     },
     {
         "id": "37a4080e.40ed9",
@@ -996,9 +989,7 @@
             "bb1348ef.5dad58"
         ],
         "x": 101,
-        "y": 1176,
-        "w": 1925,
-        "h": 708
+        "y": 1176
     },
     {
         "id": "c358a7e7.e264e",
@@ -1035,32 +1026,7 @@
             "9cae29d0.c4e968"
         ],
         "x": 111,
-        "y": 1909,
-        "w": 1902,
-        "h": 472
-    },
-    {
-        "id": "4bfc33e5.0932bc",
-        "type": "group",
-        "z": "4ff5da13.cce2c4",
-        "name": "Connecting to the PROSYS OPC UA Simulation Server",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "8a375922.a2b42",
-            "646624d4.cafe74",
-            "913f20da.5cf35",
-            "a1fff7d7.b4c21",
-            "9a7b4f66.432798",
-            "a805ac82.08e61",
-            "32899bad.c622dc",
-            "6455a551.404ad4"
-        ],
-        "x": 314,
-        "y": 2739,
-        "w": 1392,
-        "h": 382
+        "y": 1909
     },
     {
         "id": "de00f046.a69e6",
@@ -17307,7 +17273,7 @@
         "id": "79abdb6d.dd64fc",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "responseTime",
+        "name": "randomNumber",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
@@ -17442,11 +17408,11 @@
         "id": "d108bbcb.582c3",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "valvePosition",
+        "name": "sawtooth",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1620,
+        "x": 1610,
         "y": 1220,
         "wires": [
             []
@@ -17576,11 +17542,11 @@
         "id": "615b8342.ca54c4",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "elapsedTimeMovingAvg",
+        "name": "sinusoid",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1660,
+        "x": 1610,
         "y": 1500,
         "wires": [
             []
@@ -17710,11 +17676,11 @@
         "id": "310439d1.da6bb6",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "cylinderStatus",
+        "name": "square",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1630,
+        "x": 1600,
         "y": 1760,
         "wires": [
             []
@@ -17844,11 +17810,11 @@
         "id": "63bc6758.842d08",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "cycle",
+        "name": "triangle",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1600,
+        "x": 1610,
         "y": 2000,
         "wires": [
             []
@@ -17974,11 +17940,11 @@
         "id": "b38966d5.942b2",
         "type": "iot-datasource",
         "z": "4ff5da13.cce2c4",
-        "name": "currentOperatingPressure",
+        "name": "counter",
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1660,
+        "x": 1610,
         "y": 640,
         "wires": [
             []
