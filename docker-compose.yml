@@ -1,0 +1,13 @@
+version: '2.4'
+services:
+    novaas:
+        build: .
+        image: "novaas_simple_temperature_sens/dockerbase:1.0.0"
+        environment:
+            - "PORT_FORWARDING=${PORT_FORWARDING}" 
+            - "HOST=${HOST}"
+            - "BROKER_SERVICE_HOST=${BROKER_SERVICE_HOST}"
+            - "BROKER_SERVICE_PORT=${BROKER_SERVICE_PORT}"
+            - "PROSYS_OPCUA_SERVICE=${PROSYS_OPCUA_SERVICE}"
+        ports:
+            - "${PORT_FORWARDING}:1880"
