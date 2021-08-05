@@ -2,7 +2,7 @@ version: '2.4'
 services:
     novaas:
         build: .
-        image: "novaas_simple_temperature_sens/dockerbase:1.0.0"
+        image: "novaas/catalog/nova-school-of-science-and-technology/novaas-prosys-opc-ua-simulation-server:latest"
         environment:
             - "PORT_FORWARDING=${PORT_FORWARDING}" 
             - "HOST=${HOST}"
