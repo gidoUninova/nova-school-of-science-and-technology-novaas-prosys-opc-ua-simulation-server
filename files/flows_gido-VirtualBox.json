@@ -934,7 +934,8 @@
             "a805ac82.08e61",
             "32899bad.c622dc",
             "6455a551.404ad4",
-            "4549b0dcf104745a"
+            "4549b0dcf104745a",
+            "bef93df8e25c9334"
         ],
         "x": 314,
         "y": 2739,
@@ -17075,7 +17076,8 @@
         "y": 620,
         "wires": [
             [
-                "760d448.12effbc"
+                "760d448.12effbc",
+                "0f3deae2ad27e1dc"
             ],
             []
         ]
@@ -17121,7 +17123,7 @@
         "type": "debug",
         "z": "4ff5da13.cce2c4",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -18223,15 +18225,7 @@
         "x": 420,
         "y": 2780,
         "wires": [
-            [
-                "646624d4.cafe74",
-                "913f20da.5cf35",
-                "a1fff7d7.b4c21",
-                "9a7b4f66.432798",
-                "a805ac82.08e61",
-                "32899bad.c622dc",
-                "4549b0dcf104745a"
-            ]
+            []
         ]
     },
     {
@@ -18239,7 +18233,7 @@
         "type": "function",
         "z": "4ff5da13.cce2c4",
         "name": "",
-        "func": "if(msg.topic.includes(\"1001\")){\n    context.flow.set(\"Counter\", msg.payload);\n} else if(msg.topic.includes(\"1002\")){\n     context.flow.set(\"RandomNumber\", msg.payload);\n} else if(msg.topic.includes(\"1003\")){\n    context.flow.set(\"Sawtooth\", msg.payload);\n} else if(msg.topic.includes(\"1004\")){\n    context.flow.set(\"Sinusoid\", msg.payload);\n} else if(msg.topic.includes(\"1005\")){\n    context.flow.set(\"Square\", msg.payload);\n}else if(msg.topic.includes(\"1006\")){\n    context.flow.set(\"Triangle\", msg.payload);\n}\nreturn msg;",
+        "func": "if(msg.topic.includes(\"1001\")){\n    context.flow.set(\"Counter\", msg.payload);\n} else if(msg.topic.includes(\"1002\")){\n     context.flow.set(\"RandomNumber\", msg.payload);\n} else if(msg.topic.includes(\"1003\")){\n    context.flow.set(\"Sawtooth\", msg.payload);\n} else if(msg.topic.includes(\"1004\")){\n    context.flow.set(\"Sinusoid\", msg.payload);\n} else if(msg.topic.includes(\"1005\")){\n    context.flow.set(\"Square\", msg.payload);\n}else if(msg.topic.includes(\"1006\")){\n    context.flow.set(\"Triangle\", msg.payload);\n}\nvar date = new Date(msg.sourceTimestamp);\ncontext.flow.set(\"timestamp\", date.getTime());\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is started.\ncontext.flow.set(\"Counter\", 0.0);\ncontext.flow.set(\"RandomNumber\", 0.0);\ncontext.flow.set(\"Sawtooth\", 0.0);\ncontext.flow.set(\"Sinusoid\", 0.0);\ncontext.flow.set(\"Square\", 0.0);\ncontext.flow.set(\"Triangle\", 0.0);",
@@ -18265,10 +18259,61 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 830,
-        "y": 3000,
+        "x": 580,
+        "y": 2900,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "0f3deae2ad27e1dc",
+        "type": "debug",
+        "z": "4ff5da13.cce2c4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "bef93df8e25c9334",
+        "type": "inject",
+        "z": "4ff5da13.cce2c4",
+        "g": "4bfc33e5.0932bc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "0.5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 480,
+        "y": 3040,
+        "wires": [
+            [
+                "646624d4.cafe74",
+                "913f20da.5cf35",
+                "a1fff7d7.b4c21",
+                "9a7b4f66.432798",
+                "a805ac82.08e61",
+                "32899bad.c622dc"
+            ]
         ]
     }
 ]
