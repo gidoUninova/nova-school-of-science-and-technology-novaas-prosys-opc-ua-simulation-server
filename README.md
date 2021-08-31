@@ -18,7 +18,7 @@ After executing the above commands, the NOVAAS will be accessible at the followi
 
 http://localhost:1870/ui 
 
-![Semantic description of image](/source/images/Screenshot_2020-12-15_at_22.20.37.png)"NOVAAS Main Screen"
+![Semantic description of image](/source/images/mainScreen.png)"NOVAAS Main Screen"
 
 ### Notes
 The two environmental variables are needed to properly configure the internal iFrame node that is used to expose in the ui the dashboards for each one of the internal data sources. Specifically, the $HOST environmental variable should be the ip address of the host machine where NOVAAS is deployed. Setting this variable to localhost will only expose the dash tab within the ui in the host.
