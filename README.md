@@ -34,7 +34,7 @@ http://localhost:1870
 
 or by properly configure the following environmental variables: i) $BROKER_SERVICE_HOST that is used to set-up the host where the mqtt broker is running; and ii) $BROKER_SERVICE_PORT that is used to set-up the port used by the mqtt broker. 
 
-![Semantic description of image](/source/images/Screenshot_2020-12-15_at_22.40.31.png)"NOVAAS Backend once user is logged in"
+![Semantic description of image](/source/images/backend.png)"NOVAAS Backend once user is logged in"
 
 To access the backend the user needs to insert username and password. These are the default username and password from the node-red settings file, namely:
 
