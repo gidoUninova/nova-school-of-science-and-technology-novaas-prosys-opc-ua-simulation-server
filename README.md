@@ -34,12 +34,16 @@ http://localhost:1870
 
 or by properly configure the following environmental variables: i) $BROKER_SERVICE_HOST that is used to set-up the host where the mqtt broker is running; and ii) $BROKER_SERVICE_PORT that is used to set-up the port used by the mqtt broker. 
 
-![Semantic description of image](/source/images/Screenshot_2020-12-15_at_22.40.31.png)"NOVAAS Backend once user is logged in"
+![Semantic description of image](/source/images/backend.png)"NOVAAS Backend once user is logged in"
 
 To access the backend the user needs to insert username and password. These are the default username and password from the node-red settings file, namely:
 
 - username: admin
 - password: password
+
+Finally, the $PROSYS_OPCUA_SERVICE environmental varialbe is used to configure the NOVAAS internal opc-ua connector. THis variable should be set with the value of the PROSYS simulation server connection address.
+
+![Semantic description of image](/source/images/prosysSimServer.png)"PROSYS Simulation SErver Overview Screen"
 
 ## Using Docker-compose
 
@@ -51,7 +55,7 @@ To build and run the image. Furthermore, the command:
 
 `docker-compose build`
 
-can be used to build a new image. The started docker container will run on port 1870,however it is possible to change this behaviour by setting the environmental variables PORT_FORWARDING and HOST in the .env file.
+can be used to build a new image. The started docker container will run on port 1870,however it is possible to change this behaviour by setting the environmental variables PORT_FORWARDING, HOST, BROKER_SERVICE_HOST, BROKER_SERIVCE_PORT, PROSYS_OPCUA_SERVICE in the .env file.
 
 ## Using the pre-built image
 
