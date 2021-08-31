@@ -51,7 +51,7 @@ To build and run the image. Furthermore, the command:
 
 `docker-compose build`
 
-can be used to build a new image. The started docker container will run on port 1870,however it is possible to change this behaviour by setting the environmental variables PORT_FORWARDING and HOST in the .env file.
+can be used to build a new image. The started docker container will run on port 1870,however it is possible to change this behaviour by setting the environmental variables PORT_FORWARDING, HOST, BROKER_SERVICE in the .env file.
 
 ## Using the pre-built image
 
