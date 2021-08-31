@@ -2,7 +2,7 @@
 
 The NOVAAS-PROSYS-OPCUA-Simulation-Server is an particular instance of the NOVAAS open-source project. This repository contains file that are needed to build a docker image for attaching NOVAAS to the PROSYS OPC-UA Simulation Server using the node-red-contrib-opcua package.
 
-![Semantic description of image](/source/images/mainScreen.png)"PROSYS Logo"
+![Semantic description of image](/source/images/prosys-logo-s.png)"PROSYS Logo"
 
 
 
