@@ -41,6 +41,10 @@ To access the backend the user needs to insert username and password. These are 
 - username: admin
 - password: password
 
+Finally, the $PROSYS_OPCUA_SERVICE environmental varialbe is used to configure the NOVAAS internal opc-ua connector. THis variable should be set with the value of the PROSYS simulation server connection address.
+
+![Semantic description of image](/source/images/prosysSimServer.png)"NOVAAS Backend once user is logged in"
+
 ## Using Docker-compose
 
 The docker-compose command is the following:
@@ -51,7 +55,7 @@ To build and run the image. Furthermore, the command:
 
 `docker-compose build`
 
-can be used to build a new image. The started docker container will run on port 1870,however it is possible to change this behaviour by setting the environmental variables PORT_FORWARDING, HOST, BROKER_SERVICE in the .env file.
+can be used to build a new image. The started docker container will run on port 1870,however it is possible to change this behaviour by setting the environmental variables PORT_FORWARDING, HOST, BROKER_SERVICE_HOST, BROKER_SERIVCE_PORT, PROSYS_OPCUA_SERVICE in the .env file.
 
 ## Using the pre-built image
 
