@@ -43,7 +43,7 @@ To access the backend the user needs to insert username and password. These are 
 
 Finally, the $PROSYS_OPCUA_SERVICE environmental varialbe is used to configure the NOVAAS internal opc-ua connector. THis variable should be set with the value of the PROSYS simulation server connection address.
 
-![Semantic description of image](/source/images/prosysSimServer.png)"NOVAAS Backend once user is logged in"
+![Semantic description of image](/source/images/prosysSimServer.png)"PROSYS Simulation SErver Overview Screen"
 
 ## Using Docker-compose
 
