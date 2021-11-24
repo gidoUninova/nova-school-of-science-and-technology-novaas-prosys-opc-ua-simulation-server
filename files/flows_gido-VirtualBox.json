@@ -595,9 +595,7 @@
             "983208d5.9b5e"
         ],
         "x": 54,
-        "y": 2333.094940185547,
-        "w": 1272,
-        "h": 431.99999809265137
+        "y": 2333.094940185547
     },
     {
         "id": "9eaca16.128cb6",
@@ -618,9 +616,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -697,9 +693,7 @@
             "806e01ba8dd4aa22"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3372,
-        "h": 962
+        "y": 99
     },
     {
         "id": "48a4f908.86ced8",
@@ -725,9 +719,7 @@
             "f826e42f.85708"
         ],
         "x": 1584,
-        "y": 2359,
-        "w": 1132,
-        "h": 304.3541259765625
+        "y": 2359
     },
     {
         "id": "a4c26498.4d1758",
@@ -755,9 +747,7 @@
             "7c1b2520.ec5814"
         ],
         "x": 1574,
-        "y": 2679,
-        "w": 912,
-        "h": 242
+        "y": 2679
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -795,9 +785,7 @@
             "df98a659a5b217dc"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "7f3265a4.23ba94",
@@ -859,9 +847,7 @@
             "3da1a7ea98029b38"
         ],
         "x": 1584,
-        "y": 1539,
-        "w": 2222,
-        "h": 783
+        "y": 1539
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -903,9 +889,7 @@
             "a6820e84.1e723"
         ],
         "x": 34,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "8229c2eecc8e06ec",
@@ -933,9 +917,7 @@
             "7570dc23a725a3bd"
         ],
         "x": 124,
-        "y": 59,
-        "w": 1522,
-        "h": 322
+        "y": 59
     },
     {
         "id": "86587604e63a7f67",
@@ -956,9 +938,7 @@
             "9a910ad6.3b342"
         ],
         "x": 654,
-        "y": 2739,
-        "w": 1052,
-        "h": 382
+        "y": 2739
     },
     {
         "id": "37a4080e.40ed9",
@@ -11664,7 +11644,7 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "prepare Observation",
-        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsg = [];\nfor(var subscription in subscriptions){\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if(msg.payload.observableReference.includes(splittedSubscription[0]) && msg.payload.observableReference.includes(splittedSubscription[1]) && msg.payload.observableReference.includes(splittedSubscription[2])){\n        msg.topic = splittedSubscription[3];\n    }\n}\nvar observation = msg.payload;\nobservation.source = context.global.get(\"AASIdentifier\");\nmsg.payload = observation;\nreturn msg;",
+        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsgs = [];\nfor (var subscription in subscriptions) {\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if (msg.payload.observableReference.includes(splittedSubscription[0]) && msg.payload.observableReference.includes(splittedSubscription[1]) && msg.payload.observableReference.includes(splittedSubscription[2])) {\n        var observation = msg.payload;\n        observation.source = context.global.get(\"AASIdentifier\");\n        var outMsg = observation;\n        outMsg.topic = splittedSubscription[3];\n        outMsgs.push(outMsg);\n        //msg.topic = splittedSubscription[3];\n    }\n}\n//var observation = msg.payload;\n//observation.source = context.global.get(\"AASIdentifier\");\n//msg.payload = observation;\n//return msg;\nreturn [outMsgs];",
         "outputs": 1,
         "noerr": 0,
         "x": 1360,
@@ -11835,7 +11815,7 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "prepare Observation",
-        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsg = [];\nfor(var subscription in subscriptions){\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if(msg.payload.observableReference.includes(splittedSubscription[0]) && msg.payload.observableReference.includes(splittedSubscription[1]) && msg.payload.observableReference.includes(splittedSubscription[2])){\n        msg.topic = splittedSubscription[3];\n    }\n}\nvar observation = msg.payload;\nobservation.source = context.global.get(\"AASIdentifier\");\nmsg.payload = observation;\nreturn msg;",
+        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsgs = [];\nfor (var subscription in subscriptions) {\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if (msg.payload.observableReference.includes(splittedSubscription[0]) && msg.payload.observableReference.includes(splittedSubscription[1]) && msg.payload.observableReference.includes(splittedSubscription[2])) {\n        var observation = msg.payload;\n        observation.source = context.global.get(\"AASIdentifier\");\n        var outMsg = observation;\n        outMsg.topic = splittedSubscription[3];\n        outMsgs.push(outMsg);\n        //msg.topic = splittedSubscription[3];\n    }\n}\n//var observation = msg.payload;\n//observation.source = context.global.get(\"AASIdentifier\");\n//msg.payload = observation;\n//return msg;\nreturn [outMsgs];",
         "outputs": 1,
         "noerr": 0,
         "x": 1360,
