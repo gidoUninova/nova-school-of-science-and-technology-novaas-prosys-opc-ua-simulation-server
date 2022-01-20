@@ -1,5 +1,5 @@
 FROM nikolaik/python-nodejs:python3.9-nodejs14-slim
-RUN apt-get update && apt install unzip && npm install -g --unsafe-perm node-red
+RUN apt-get update && apt install unzip && apt install -y netcat && npm install -g --unsafe-perm node-red
 WORKDIR /app
 RUN mkdir -p .node-red
 ADD files .node-red/

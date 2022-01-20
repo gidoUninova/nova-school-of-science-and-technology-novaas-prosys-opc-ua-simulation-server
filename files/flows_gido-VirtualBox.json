@@ -594,9 +594,7 @@
             "983208d5.9b5e"
         ],
         "x": 54,
-        "y": 2333.094940185547,
-        "w": 1272,
-        "h": 431.99999809265137
+        "y": 2333.094940185547
     },
     {
         "id": "9eaca16.128cb6",
@@ -617,9 +615,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -707,9 +703,7 @@
             "e60be7a689169cf3"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3372,
-        "h": 962
+        "y": 99
     },
     {
         "id": "48a4f908.86ced8",
@@ -735,9 +729,7 @@
             "f826e42f.85708"
         ],
         "x": 1584,
-        "y": 2359,
-        "w": 1132,
-        "h": 304.3541259765625
+        "y": 2359
     },
     {
         "id": "a4c26498.4d1758",
@@ -765,9 +757,7 @@
             "2b28ebc4a0c302d8"
         ],
         "x": 1574,
-        "y": 2679,
-        "w": 912,
-        "h": 242
+        "y": 2679
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -805,9 +795,7 @@
             "df98a659a5b217dc"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "7f3265a4.23ba94",
@@ -868,9 +856,7 @@
             "3da1a7ea98029b38"
         ],
         "x": 1584,
-        "y": 1539,
-        "w": 2222,
-        "h": 783
+        "y": 1539
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -912,9 +898,7 @@
             "a6820e84.1e723"
         ],
         "x": 34,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "8229c2eecc8e06ec",
@@ -962,7 +946,8 @@
             "acf92012ced460ff",
             "e64f5c9d7d87f6e8",
             "2d391474633af659",
-            "9a910ad6.3b342"
+            "9a910ad6.3b342",
+            "300602ba72caedfd"
         ],
         "x": 654,
         "y": 2739,
@@ -16762,7 +16747,7 @@
         "z": "2d13dfa7624a2c89",
         "g": "8229c2eecc8e06ec",
         "name": "Initialize Context",
-        "func": "context.flow.set(\"NrOfDataSources\", 6);\nreturn msg;",
+        "func": "context.flow.set(\"NrOfDataSources\", 6);\ncontext.flow.set(\"status\", false);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 760,
@@ -17654,12 +17639,7 @@
         "y": 2780,
         "wires": [
             [
-                "4aa412c64463111c",
-                "680990017d7ab498",
-                "ca077532a4f83faa",
-                "acf92012ced460ff",
-                "e64f5c9d7d87f6e8",
-                "2d391474633af659"
+                "300602ba72caedfd"
             ]
         ]
     },
@@ -18405,5 +18385,135 @@
         "x": 1830,
         "y": 2060,
         "wires": []
+    },
+    {
+        "id": "18fb9ce3df0881cc",
+        "type": "debug",
+        "z": "2d13dfa7624a2c89",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1890,
+        "y": 2500,
+        "wires": []
+    },
+    {
+        "id": "5689cb3f3bb5e9a6",
+        "type": "exec",
+        "z": "2d13dfa7624a2c89",
+        "command": "nc",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1280,
+        "y": 2540,
+        "wires": [
+            [],
+            [
+                "0821a5584d382c86"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "91f0686b69ad8379",
+        "type": "inject",
+        "z": "2d13dfa7624a2c89",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 930,
+        "y": 2540,
+        "wires": [
+            [
+                "0ea11987c25859e3"
+            ]
+        ]
+    },
+    {
+        "id": "0821a5584d382c86",
+        "type": "function",
+        "z": "2d13dfa7624a2c89",
+        "name": "",
+        "func": "if(msg.payload.includes(\"succeeded\")){\n    context.flow.set(\"status\", true);\n    return msg;\n}\nelse {\n    context.flow.set(\"status\", false);\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1660,
+        "y": 2540,
+        "wires": [
+            [
+                "18fb9ce3df0881cc"
+            ]
+        ]
+    },
+    {
+        "id": "0ea11987c25859e3",
+        "type": "function",
+        "z": "2d13dfa7624a2c89",
+        "name": "",
+        "func": "let opcuaEndpoint = env.get(\"PROSYS_OPCUA_SERVICE\");\nlet opcuaEndpointManipulation1 = opcuaEndpoint.split(\"/\");\nlet opcuaEndpointManipulation2 = opcuaEndpointManipulation1[2].split(\":\")\nmsg.host = opcuaEndpointManipulation2[0];\nmsg.port = opcuaEndpointManipulation2[1];\n\nmsg.payload = \"-vz \" + msg.host + \" \" + msg.port;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 2540,
+        "wires": [
+            [
+                "5689cb3f3bb5e9a6"
+            ]
+        ]
+    },
+    {
+        "id": "300602ba72caedfd",
+        "type": "function",
+        "z": "2d13dfa7624a2c89",
+        "g": "86587604e63a7f67",
+        "name": "",
+        "func": "let status = context.flow.get(\"status\");\nif(status){\n    return msg;\n} else {\n    return null;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 2780,
+        "wires": [
+            [
+                "4aa412c64463111c",
+                "680990017d7ab498",
+                "ca077532a4f83faa",
+                "acf92012ced460ff",
+                "e64f5c9d7d87f6e8",
+                "2d391474633af659"
+            ]
+        ]
     }
 ]
