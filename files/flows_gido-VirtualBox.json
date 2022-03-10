@@ -505,7 +505,9 @@
             "e1994719bd7b4722"
         ],
         "x": 194,
-        "y": 4242
+        "y": 4242,
+        "w": 2272,
+        "h": 239
     },
     {
         "id": "d366c10f.cbf158",
@@ -549,7 +551,9 @@
             "3db83e0471372298"
         ],
         "x": 194,
-        "y": 3499
+        "y": 3499,
+        "w": 2972,
+        "h": 562
     },
     {
         "id": "d7076418.bb51d8",
@@ -594,7 +598,9 @@
             "983208d5.9b5e"
         ],
         "x": 54,
-        "y": 2333.094940185547
+        "y": 2333.094940185547,
+        "w": 1272,
+        "h": 431.99999809265137
     },
     {
         "id": "9eaca16.128cb6",
@@ -615,7 +621,9 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179
+        "y": 2179,
+        "w": 652,
+        "h": 82
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -703,7 +711,9 @@
             "e60be7a689169cf3"
         ],
         "x": 214,
-        "y": 99
+        "y": 99,
+        "w": 3372,
+        "h": 962
     },
     {
         "id": "48a4f908.86ced8",
@@ -729,7 +739,9 @@
             "f826e42f.85708"
         ],
         "x": 1584,
-        "y": 2359
+        "y": 2359,
+        "w": 1132,
+        "h": 304.3541259765625
     },
     {
         "id": "a4c26498.4d1758",
@@ -747,17 +759,19 @@
         "nodes": [
             "871d0572.18d9b8",
             "1a47219d.baab96",
-            "1e8c7e2a.260432",
-            "3488bd14.4bb1da",
-            "7b1c6bae.fc214c",
             "8dbdf175.e7ac5",
             "fb94e554.157a98",
             "acb1ea8a.2a0e6",
             "4b6c82b0.fc018c",
-            "2b28ebc4a0c302d8"
+            "2b28ebc4a0c302d8",
+            "9270121a862d81f2",
+            "571bb2e8a6535976",
+            "f79d3d7c87d27b67"
         ],
         "x": 1574,
-        "y": 2679
+        "y": 2679,
+        "w": 912,
+        "h": 302
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -795,7 +809,9 @@
             "df98a659a5b217dc"
         ],
         "x": 2504,
-        "y": 2679
+        "y": 2679,
+        "w": 1272,
+        "h": 517
     },
     {
         "id": "7f3265a4.23ba94",
@@ -856,7 +872,9 @@
             "3da1a7ea98029b38"
         ],
         "x": 1584,
-        "y": 1539
+        "y": 1539,
+        "w": 2222,
+        "h": 783
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -898,7 +916,9 @@
             "a6820e84.1e723"
         ],
         "x": 34,
-        "y": 2999
+        "y": 2999,
+        "w": 1572,
+        "h": 682
     },
     {
         "id": "8229c2eecc8e06ec",
@@ -6507,8 +6527,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 720,
-        "y": 2460,
+        "x": 760,
+        "y": 3360,
         "wires": [
             [
                 "509deedf5a2a9c33"
@@ -6521,8 +6541,8 @@
         "z": "fd31082e.5487d8",
         "name": "readSubmodelsFromAASUI out",
         "links": [],
-        "x": 2670,
-        "y": 2460,
+        "x": 2710,
+        "y": 3360,
         "wires": []
     },
     {
@@ -6535,8 +6555,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1470,
-        "y": 2420,
+        "x": 1510,
+        "y": 3320,
         "wires": []
     },
     {
@@ -6547,8 +6567,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 730,
-        "y": 2540,
+        "x": 770,
+        "y": 3440,
         "wires": [
             [
                 "51127767.6acb78"
@@ -6561,8 +6581,8 @@
         "z": "fd31082e.5487d8",
         "name": "updateSubmodelsFromAASUI out",
         "links": [],
-        "x": 2680,
-        "y": 2540,
+        "x": 2720,
+        "y": 3440,
         "wires": []
     },
     {
@@ -6573,8 +6593,8 @@
         "func": "var submodels = msg.payload.InternalElement;\nmsg.payload = submodels;\nreturn msg;\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 1300,
-        "y": 2540,
+        "x": 1340,
+        "y": 3440,
         "wires": [
             [
                 "509e7700.4e5958"
@@ -6592,8 +6612,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 1570,
-        "y": 2540,
+        "x": 1610,
+        "y": 3440,
         "wires": [
             [
                 "22f58847.d01c88",
@@ -6611,8 +6631,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1690,
-        "y": 2500,
+        "x": 1730,
+        "y": 3400,
         "wires": []
     },
     {
@@ -6621,8 +6641,8 @@
         "z": "fd31082e.5487d8",
         "name": "Interaction with the AASUI, to be checked",
         "info": "",
-        "x": 460,
-        "y": 2360,
+        "x": 500,
+        "y": 3180,
         "wires": []
     },
     {
@@ -6635,8 +6655,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1390,
-        "y": 2660,
+        "x": 1410,
+        "y": 2360,
         "wires": []
     },
     {
@@ -6648,8 +6668,8 @@
             "4a5f46fc.ea7c08",
             "c659a5d0.7355b8"
         ],
-        "x": 3115,
-        "y": 2700,
+        "x": 3135,
+        "y": 2400,
         "wires": []
     },
     {
@@ -6661,8 +6681,8 @@
             "f42c942d.6d6448",
             "a0c9ccc4.12d298"
         ],
-        "x": 235,
-        "y": 2700,
+        "x": 255,
+        "y": 2400,
         "wires": [
             [
                 "ecdb807bb68818bc"
@@ -6679,8 +6699,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1390,
-        "y": 2820,
+        "x": 1410,
+        "y": 2520,
         "wires": []
     },
     {
@@ -6710,8 +6730,8 @@
         "delaying": "unrelated",
         "msgControl": false,
         "outputs": 2,
-        "x": 1420,
-        "y": 2880,
+        "x": 1440,
+        "y": 2580,
         "wires": [
             [
                 "31e9ae57.e1de12"
@@ -6730,8 +6750,8 @@
             "6e7f5025.a4315",
             "bcb152e2.608288"
         ],
-        "x": 3115,
-        "y": 2860,
+        "x": 3135,
+        "y": 2560,
         "wires": []
     },
     {
@@ -6743,8 +6763,8 @@
             "bc2fff91.b20fd",
             "df1cae54.a6ed38"
         ],
-        "x": 235,
-        "y": 2880,
+        "x": 255,
+        "y": 2580,
         "wires": [
             [
                 "797e0b452f2d10af"
@@ -6761,8 +6781,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1390,
-        "y": 2980,
+        "x": 1410,
+        "y": 2680,
         "wires": []
     },
     {
@@ -6792,8 +6812,8 @@
         "delaying": "unrelated",
         "msgControl": false,
         "outputs": 2,
-        "x": 1420,
-        "y": 3040,
+        "x": 1440,
+        "y": 2740,
         "wires": [
             [
                 "5e6f3c8.83ccdc4"
@@ -6812,8 +6832,8 @@
             "53f11e8b.9b099",
             "b6041910.8e7b8"
         ],
-        "x": 3115,
-        "y": 3020,
+        "x": 3135,
+        "y": 2720,
         "wires": []
     },
     {
@@ -6825,8 +6845,8 @@
             "9cae29d0.c4e968",
             "e2cbc28f.14c87"
         ],
-        "x": 235,
-        "y": 3040,
+        "x": 255,
+        "y": 2740,
         "wires": [
             [
                 "417bfa4f7a2aa1fd"
@@ -6843,8 +6863,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1390,
-        "y": 3160,
+        "x": 1410,
+        "y": 2860,
         "wires": []
     },
     {
@@ -6874,8 +6894,8 @@
         "delaying": "unrelated",
         "msgControl": false,
         "outputs": 2,
-        "x": 1420,
-        "y": 3220,
+        "x": 1440,
+        "y": 2920,
         "wires": [
             [
                 "4c0c0431.1e281c"
@@ -6895,8 +6915,8 @@
             "a545d172.736c98",
             "4c51b630fe4408c9"
         ],
-        "x": 3115,
-        "y": 3200,
+        "x": 3135,
+        "y": 2900,
         "wires": []
     },
     {
@@ -6909,8 +6929,8 @@
             "2f34781a.c3a4b",
             "f775d8d4cd086ddb"
         ],
-        "x": 235,
-        "y": 3220,
+        "x": 255,
+        "y": 2920,
         "wires": [
             [
                 "b85879574e1d3bd1"
@@ -7475,7 +7495,7 @@
         "type": "unsafe-function",
         "z": "fd31082e.5487d8",
         "name": "Set Global Context",
-        "func": "\nvar os = context.global.get('os');\nvar path = context.global.get('path');\nvar fs = context.global.get('fs');\n\ncontext.global.set(\"Drivers\", []);\n\nvar interfaces = os.networkInterfaces();\nvar addresses = [];\n\nfor (var k in interfaces) {\n    for (var k2 in interfaces[k]) {\n        var address = interfaces[k][k2];\n        if (address.family === 'IPv4' && !address.internal) {\n            addresses.push(address.address);\n        }\n    }\n}\n\nvar host = addresses[0];\nvar port = context.global.get('uiPort');\n\n\ncontext.global.set('namespace',\"http://\" + host + \":\" + port);\n\n                   \n//Retrieving the home directory\nvar homedirectory = context.global.get('staticDocs');\nvar asmodelfolderRef = \"aasx/_rels/aasx-origin.rels\";\n\nvar modelDirRef = path.join(homedirectory, asmodelfolderRef);\ncontext.global.set(\"ModelDirRef\", modelDirRef);\nmsg.filename = modelDirRef;\n\nvar msg2 = {};\nvar thumbnailRef = \"_rels/.rels\";\n\nvar thumbnailDirRef = path.join(homedirectory, thumbnailRef);\ncontext.global.set(\"AssetThumbnailRef\", thumbnailDirRef);\nmsg2.filename = thumbnailDirRef;\n\n\n\n\nvar novaasIdentifier = context.global.get(\"AASIdentifier\") || \"\";\nif(novaasIdentifier === \"\"){\n    novaasIdentifier = \"http://novaas@\" + host + \":\" + port + \"/aas\";\n}\n\ncontext.global.set(\"AASIdentifier\", novaasIdentifier);\n\nreturn [msg, msg2];",
+        "func": "\nvar os = context.global.get('os');\nvar path = context.global.get('path');\nvar fs = context.global.get('fs');\n\ncontext.global.set(\"Drivers\", []);\n\nvar interfaces = os.networkInterfaces();\nvar addresses = [];\n\nfor (var k in interfaces) {\n    for (var k2 in interfaces[k]) {\n        var address = interfaces[k][k2];\n        if (address.family === 'IPv4' && !address.internal) {\n            addresses.push(address.address);\n        }\n    }\n}\n\nvar host = addresses[0];\nvar port = context.global.get('uiPort');\n\n\ncontext.global.set('namespace',\"http://\" + host + \":\" + port);\n\n                   \n//Retrieving the home directory\nvar homedirectory = context.global.get('staticDocs');\nvar asmodelfolderRef = \"aasx/_rels/aasx-origin.rels\";\n\nvar modelDirRef = path.join(homedirectory, asmodelfolderRef);\ncontext.global.set(\"ModelDirRef\", modelDirRef);\nmsg.filename = modelDirRef;\n\nvar msg2 = {};\nvar thumbnailRef = \"_rels/.rels\";\n\nvar thumbnailDirRef = path.join(homedirectory, thumbnailRef);\ncontext.global.set(\"AssetThumbnailRef\", thumbnailDirRef);\nmsg2.filename = thumbnailDirRef;\n\n\n\n\nvar novaasIdentifier = context.global.get(\"AASIdentifier\") || \"\";\nif(novaasIdentifier === \"\"){\n    novaasIdentifier = \"http://novaas@\" + host + \":\" + port + \"/aas\";\n}\n\ncontext.global.set(\"AASIdentifier\", novaasIdentifier);\ncontext.global.set(\"encrypt\", false);\n\nreturn [msg, msg2];",
         "outputs": 2,
         "noerr": 0,
         "x": 630,
@@ -8100,8 +8120,8 @@
         "links": [
             "f5d81204558f97fa"
         ],
-        "x": 1740,
-        "y": 2900,
+        "x": 1760,
+        "y": 2600,
         "wires": [],
         "l": true
     },
@@ -8113,8 +8133,8 @@
         "links": [
             "f5d81204558f97fa"
         ],
-        "x": 1760,
-        "y": 3060,
+        "x": 1780,
+        "y": 2760,
         "wires": [],
         "l": true
     },
@@ -8126,8 +8146,8 @@
         "links": [
             "f5d81204558f97fa"
         ],
-        "x": 1740,
-        "y": 3240,
+        "x": 1760,
+        "y": 2940,
         "wires": [],
         "l": true
     },
@@ -8515,8 +8535,8 @@
             "0da57b0b701845bd"
         ],
         "timeout": "30",
-        "x": 1270,
-        "y": 2460,
+        "x": 1310,
+        "y": 3360,
         "wires": [
             [
                 "2c971198.d456ee",
@@ -8533,8 +8553,8 @@
             "4de0f79bae30ea24"
         ],
         "timeout": "30",
-        "x": 1870,
-        "y": 2540,
+        "x": 1910,
+        "y": 3440,
         "wires": [
             [
                 "9c0c8569.eae818"
@@ -8550,8 +8570,8 @@
             "44cfe7cc47552378"
         ],
         "timeout": "30",
-        "x": 1130,
-        "y": 2700,
+        "x": 1150,
+        "y": 2400,
         "wires": [
             [
                 "8188be80.74de4",
@@ -8570,8 +8590,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 2880,
+        "x": 640,
+        "y": 2580,
         "wires": [
             [
                 "1d0d971feff52be8"
@@ -8590,8 +8610,8 @@
             "99e536d344a1ed6c"
         ],
         "timeout": "30",
-        "x": 1130,
-        "y": 2840,
+        "x": 1150,
+        "y": 2540,
         "wires": [
             [
                 "3cae4c9a.680424",
@@ -8608,8 +8628,8 @@
             "f7055ee8ab1520cd"
         ],
         "timeout": "30",
-        "x": 1140,
-        "y": 3040,
+        "x": 1160,
+        "y": 2740,
         "wires": [
             [
                 "6d654b80.b160d4",
@@ -8628,8 +8648,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 3220,
+        "x": 640,
+        "y": 2920,
         "wires": [
             [
                 "ef027ffb4cdf7faa"
@@ -8648,8 +8668,8 @@
             "bfafded58057a3aa"
         ],
         "timeout": "30",
-        "x": 1200,
-        "y": 3200,
+        "x": 1220,
+        "y": 2900,
         "wires": [
             [
                 "3080ce10.a53cf2",
@@ -8979,6 +8999,82 @@
         "complete": "true",
         "x": 750,
         "y": 4420,
+        "wires": []
+    },
+    {
+        "id": "3d24e4987a9374bb",
+        "type": "link in",
+        "z": "fd31082e.5487d8",
+        "name": "newConfiguration in",
+        "links": [],
+        "x": 735,
+        "y": 3260,
+        "wires": [
+            [
+                "14c24f89282d4443"
+            ]
+        ]
+    },
+    {
+        "id": "a48c3697a0e3068c",
+        "type": "link out",
+        "z": "fd31082e.5487d8",
+        "name": "newConfiguration out",
+        "mode": "return",
+        "links": [],
+        "x": 2705,
+        "y": 3260,
+        "wires": []
+    },
+    {
+        "id": "14c24f89282d4443",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "manipulate Message",
+        "func": "context.global.set(\"encrypt\", msg.payload.configuration.encrypt);\nmsg.payload = msg.payload.configuration.scheduling;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 3260,
+        "wires": [
+            [
+                "b66c98a4ecdfcfaa"
+            ]
+        ]
+    },
+    {
+        "id": "b66c98a4ecdfcfaa",
+        "type": "link call",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "links": [
+            "bac6aa469aca14ab"
+        ],
+        "timeout": "30",
+        "x": 1660,
+        "y": 3260,
+        "wires": [
+            [
+                "a48c3697a0e3068c",
+                "1e9f28b8ed7f8f81"
+            ]
+        ]
+    },
+    {
+        "id": "1e9f28b8ed7f8f81",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 2050,
+        "y": 3180,
         "wires": []
     },
     {
@@ -11957,12 +12053,12 @@
         "func": "var msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = msg.topic;\n//msg1.topic = context.global.get('AASIdentifier');\nif(msg.topic == \"\" || typeof msg.topic == \"undefined\"){\n    msg1.topic = msg.payload.observableReference;    \n    msg1.payload = observation;\n} else {\n    msg1.topic = msg.topic;\n    msg1.payload = observation;\n}\nreturn msg1;",
         "outputs": 1,
         "noerr": 0,
-        "x": 870,
-        "y": 820,
+        "x": 1410,
+        "y": 900,
         "wires": [
             [
                 "38c32929e9eff194",
-                "578362bbd6e63131"
+                "4e89e2f595b23a80"
             ]
         ]
     },
@@ -11977,8 +12073,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1150,
-        "y": 780,
+        "x": 1890,
+        "y": 840,
         "wires": []
     },
     {
@@ -11992,8 +12088,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 390,
-        "y": 660,
+        "x": 1270,
+        "y": 720,
         "wires": []
     },
     {
@@ -12005,8 +12101,8 @@
         "qos": "",
         "retain": "",
         "broker": "e70d9188.7d95e",
-        "x": 1390,
-        "y": 820,
+        "x": 2330,
+        "y": 880,
         "wires": []
     },
     {
@@ -12015,8 +12111,8 @@
         "z": "cbe5f08af64e71e8",
         "name": "To MQTT",
         "info": "",
-        "x": 840,
-        "y": 780,
+        "x": 1360,
+        "y": 860,
         "wires": []
     },
     {
@@ -12035,8 +12131,8 @@
         "selection": "next",
         "sourceProperty": "msg.topic",
         "sticky": "",
-        "x": 1140,
-        "y": 860,
+        "x": 2100,
+        "y": 900,
         "wires": [
             [],
             [
@@ -12057,8 +12153,8 @@
         "qos": "",
         "retain": "",
         "broker": "e70d9188.7d95e",
-        "x": 1390,
-        "y": 900,
+        "x": 2330,
+        "y": 960,
         "wires": []
     },
     {
@@ -12072,8 +12168,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1350,
-        "y": 760,
+        "x": 2310,
+        "y": 840,
         "wires": []
     },
     {
@@ -12082,8 +12178,8 @@
         "z": "cbe5f08af64e71e8",
         "name": "MQTT in",
         "links": [],
-        "x": 175,
-        "y": 740,
+        "x": 1075,
+        "y": 800,
         "wires": [
             [
                 "7b62aedf63a3e815",
@@ -12099,8 +12195,8 @@
         "name": "MQTT out",
         "mode": "return",
         "links": [],
-        "x": 1615,
-        "y": 740,
+        "x": 2395,
+        "y": 800,
         "wires": []
     },
     {
@@ -12111,12 +12207,12 @@
         "func": "var msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = msg.topic;\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    msg1.topic = \"clo_novaas\";\n    msg1.payload = JSON.stringify(observation);\n} else {\n    msg1.topic = \"clo_novaas\";\n    msg1.payload = JSON.stringify(observation);\n}\nreturn msg1;",
         "outputs": 1,
         "noerr": 0,
-        "x": 790,
-        "y": 1180,
+        "x": 1410,
+        "y": 1160,
         "wires": [
             [
                 "27fa23ce2feaee41",
-                "e80a2718c5fa15c4"
+                "19e82adda5928970"
             ]
         ]
     },
@@ -12131,8 +12227,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 310,
-        "y": 1040,
+        "x": 1270,
+        "y": 1100,
         "wires": []
     },
     {
@@ -12151,8 +12247,8 @@
         "selection": "next",
         "sourceProperty": "msg.topic",
         "sticky": "",
-        "x": 1080,
-        "y": 1180,
+        "x": 2100,
+        "y": 1220,
         "wires": [
             [],
             [],
@@ -12170,8 +12266,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1050,
-        "y": 1120,
+        "x": 1850,
+        "y": 1160,
         "wires": []
     },
     {
@@ -12180,8 +12276,8 @@
         "z": "cbe5f08af64e71e8",
         "name": "KAFKA in",
         "links": [],
-        "x": 115,
-        "y": 1080,
+        "x": 1075,
+        "y": 1120,
         "wires": [
             [
                 "acf269104c3e49aa",
@@ -12197,9 +12293,208 @@
         "name": "KAFKA out",
         "mode": "return",
         "links": [],
-        "x": 1655,
-        "y": 1080,
+        "x": 2395,
+        "y": 1140,
         "wires": []
+    },
+    {
+        "id": "fa0e743b2ad82d38",
+        "type": "rsa-generate-keypair",
+        "z": "cbe5f08af64e71e8",
+        "name": "rsa generate keypair",
+        "bitlength": "2048",
+        "passphrase": "",
+        "x": 480,
+        "y": 1360,
+        "wires": [
+            [
+                "1352c08fbbbba291",
+                "261d50d75a106baa",
+                "1fddf38e5f27bf54"
+            ]
+        ]
+    },
+    {
+        "id": "7848950d97b980a6",
+        "type": "inject",
+        "z": "cbe5f08af64e71e8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 1360,
+        "wires": [
+            [
+                "fa0e743b2ad82d38"
+            ]
+        ]
+    },
+    {
+        "id": "1352c08fbbbba291",
+        "type": "function",
+        "z": "cbe5f08af64e71e8",
+        "name": "store Keys",
+        "func": "context.flow.set(\"privateKey\", msg.payload.privateKey);\ncontext.flow.set(\"publicKey\", msg.payload.publicKey);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19e82adda5928970",
+        "type": "switch",
+        "z": "cbe5f08af64e71e8",
+        "name": "",
+        "property": "encrypt",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1690,
+        "y": 1220,
+        "wires": [
+            [
+                "e80a2718c5fa15c4"
+            ],
+            [
+                "f2b72f77dff633b0"
+            ]
+        ]
+    },
+    {
+        "id": "4e89e2f595b23a80",
+        "type": "switch",
+        "z": "cbe5f08af64e71e8",
+        "name": "",
+        "property": "encrypt",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1650,
+        "y": 900,
+        "wires": [
+            [
+                "578362bbd6e63131"
+            ],
+            [
+                "288b7b1d9cd8459c"
+            ]
+        ]
+    },
+    {
+        "id": "288b7b1d9cd8459c",
+        "type": "rsa-encrypt",
+        "z": "cbe5f08af64e71e8",
+        "name": "rsa encrypt",
+        "publickey": "",
+        "x": 1850,
+        "y": 1040,
+        "wires": [
+            [
+                "578362bbd6e63131"
+            ]
+        ]
+    },
+    {
+        "id": "f2b72f77dff633b0",
+        "type": "rsa-encrypt",
+        "z": "cbe5f08af64e71e8",
+        "name": "rsa encrypt",
+        "publickey": "",
+        "x": 1850,
+        "y": 1320,
+        "wires": [
+            [
+                "e80a2718c5fa15c4"
+            ]
+        ]
+    },
+    {
+        "id": "261d50d75a106baa",
+        "type": "msg-router",
+        "z": "cbe5f08af64e71e8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 610,
+        "y": 1040,
+        "wires": [
+            [
+                "288b7b1d9cd8459c"
+            ],
+            [
+                "f2b72f77dff633b0"
+            ]
+        ]
+    },
+    {
+        "id": "1fddf38e5f27bf54",
+        "type": "rsa-decrypt",
+        "z": "cbe5f08af64e71e8",
+        "name": "rsa decrypt",
+        "privatekey": "",
+        "x": 2250,
+        "y": 1560,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "b05b8675.6b0908",
@@ -14564,7 +14859,7 @@
         "z": "2164c119.f88826",
         "g": "a4c26498.4d1758",
         "name": "",
-        "label": "Seconds",
+        "label": "Every...",
         "tooltip": "",
         "group": "360b2bc7.818494",
         "order": 1,
@@ -14573,10 +14868,12 @@
         "wrap": false,
         "passthru": true,
         "topic": "",
+        "topicType": "str",
         "format": "{{value}}",
         "min": "1",
         "max": "59",
         "step": 1,
+        "className": "",
         "x": 1660,
         "y": 2720,
         "wires": [
@@ -14590,83 +14887,14 @@
         "type": "unsafe-function",
         "z": "2164c119.f88826",
         "g": "a4c26498.4d1758",
-        "name": "store seconds",
-        "func": "context.flow.set(\"seconds\", msg.payload);\nreturn msg;",
+        "name": "store period",
+        "func": "context.flow.set(\"period\", msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1930,
+        "x": 1920,
         "y": 2720,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "1e8c7e2a.260432",
-        "type": "ui_numeric",
-        "z": "2164c119.f88826",
-        "g": "a4c26498.4d1758",
-        "name": "",
-        "label": "Minutes",
-        "tooltip": "",
-        "group": "360b2bc7.818494",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "59",
-        "step": 1,
-        "x": 1660,
-        "y": 2760,
-        "wires": [
-            [
-                "3488bd14.4bb1da"
-            ]
-        ]
-    },
-    {
-        "id": "3488bd14.4bb1da",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "a4c26498.4d1758",
-        "name": "store minutes",
-        "func": "context.flow.set(\"minutes\", msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1930,
-        "y": 2760,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7b1c6bae.fc214c",
-        "type": "ui_numeric",
-        "z": "2164c119.f88826",
-        "g": "a4c26498.4d1758",
-        "name": "",
-        "label": "Hours",
-        "tooltip": "",
-        "group": "360b2bc7.818494",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "wrap": false,
-        "passthru": true,
-        "topic": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "60",
-        "step": 1,
-        "x": 1650,
-        "y": 2800,
-        "wires": [
-            [
-                "8dbdf175.e7ac5"
-            ]
         ]
     },
     {
@@ -14674,11 +14902,11 @@
         "type": "unsafe-function",
         "z": "2164c119.f88826",
         "g": "a4c26498.4d1758",
-        "name": "store hours",
-        "func": "context.flow.set(\"hours\", msg.payload);\nreturn msg;",
+        "name": "store granularity",
+        "func": "context.flow.set(\"granularity\", msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1920,
+        "x": 1930,
         "y": 2800,
         "wires": [
             []
@@ -14689,22 +14917,24 @@
         "type": "ui_button",
         "z": "2164c119.f88826",
         "g": "a4c26498.4d1758",
-        "name": "Update Scheduling",
+        "name": "Update Configuration",
         "group": "360b2bc7.818494",
         "order": 4,
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Update Scheduling",
+        "label": "Update Configuration",
         "tooltip": "",
         "color": "",
         "bgcolor": "#FF9000",
+        "className": "",
         "icon": "mode_edit",
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1690,
-        "y": 2880,
+        "topicType": "str",
+        "x": 1700,
+        "y": 2940,
         "wires": [
             [
                 "acb1ea8a.2a0e6"
@@ -14717,11 +14947,11 @@
         "z": "2164c119.f88826",
         "g": "a4c26498.4d1758",
         "name": "Get Values",
-        "func": "var seconds = context.flow.get(\"seconds\");\nvar minutes = context.flow.get(\"minutes\");\nvar hours = context.flow.get(\"hours\");\nmsg.payload = {};\nmsg.payload = msg.seconds + \" \" + \" \" + msg.minutes + \" \" + msg.hours + \" \" + \"* * * *\";\n\nreturn msg;",
+        "func": "var period = context.flow.get(\"period\");\nvar granularity = context.flow.get(\"granularity\");\nvar encrypt = context.flow.get(\"encrypt\");\nmsg.payload = {};\nmsg.payload.configuration = {};\nif (granularity == \"Seconds\") {\n    msg.payload.configuration.scheduling = \"*/\" + period + \" \" + \"* * * * * *\";\n} else if (granularity == \"Minutes\") {\n    msg.payload.configuration.scheduling = \"0 \" + \"/*\" + period + \" \" + \"* * * * *\";\n} else if (granularity == \"Hours\") {\n    msg.payload.configuration.scheduling = \"0 \" + \"0 \" + \"/*\" + period + \" \" + \"* * * *\";\n}\nmsg.payload.configuration.encrypt = encrypt;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1930,
-        "y": 2880,
+        "y": 2940,
         "wires": [
             [
                 "2b28ebc4a0c302d8"
@@ -14743,7 +14973,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2390,
-        "y": 2880,
+        "y": 2940,
         "wires": []
     },
     {
@@ -16365,11 +16595,11 @@
         "g": "a4c26498.4d1758",
         "name": "",
         "links": [
-            "bac6aa469aca14ab"
+            "3d24e4987a9374bb"
         ],
         "timeout": "30",
-        "x": 2170,
-        "y": 2880,
+        "x": 2140,
+        "y": 2940,
         "wires": [
             [
                 "4b6c82b0.fc018c"
@@ -16672,6 +16902,100 @@
         "x": 2750,
         "y": 740,
         "wires": []
+    },
+    {
+        "id": "9270121a862d81f2",
+        "type": "ui_dropdown",
+        "z": "2164c119.f88826",
+        "g": "a4c26498.4d1758",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "360b2bc7.818494",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Seconds",
+                "value": "Seconds",
+                "type": "str"
+            },
+            {
+                "label": "Minutes",
+                "value": "Minutes",
+                "type": "str"
+            },
+            {
+                "label": "Hours",
+                "value": "Hours",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1670,
+        "y": 2800,
+        "wires": [
+            [
+                "8dbdf175.e7ac5"
+            ]
+        ]
+    },
+    {
+        "id": "571bb2e8a6535976",
+        "type": "ui_switch",
+        "z": "2164c119.f88826",
+        "g": "a4c26498.4d1758",
+        "name": "",
+        "label": "Encrypt",
+        "tooltip": "",
+        "group": "360b2bc7.818494",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1660,
+        "y": 2880,
+        "wires": [
+            [
+                "f79d3d7c87d27b67"
+            ]
+        ]
+    },
+    {
+        "id": "f79d3d7c87d27b67",
+        "type": "unsafe-function",
+        "z": "2164c119.f88826",
+        "g": "a4c26498.4d1758",
+        "name": "store encrypt",
+        "func": "context.flow.set(\"encrypt\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1930,
+        "y": 2880,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "22f61ac3b3943fef",
@@ -17481,7 +17805,7 @@
         "type": "debug",
         "z": "2d13dfa7624a2c89",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -17648,7 +17972,7 @@
         "type": "unsafe-function",
         "z": "2d13dfa7624a2c89",
         "name": "statusNotification",
-        "func": "var statusCheck  = {};\nstatusCheck.connected = true;\nstatusCheck.nrOfDataSources = context.flow.get(\"NrOfDataSources\");\nmsg.payload = {\"statusCheck\": statusCheck};\nreturn msg;",
+        "func": "var statusCheck  = {};\nstatusCheck.connected = context.flow.get(\"status\");\nstatusCheck.nrOfDataSources = context.flow.get(\"NrOfDataSources\");\nmsg.payload = {\"statusCheck\": statusCheck};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1290,
@@ -18001,7 +18325,7 @@
         "type": "sub-link-input",
         "z": "2d13dfa7624a2c89",
         "name": "",
-        "topic": "uploadValue",
+        "topic": "updateValue",
         "alias": "",
         "aliasType": "string",
         "aliasMatchAll": false,
@@ -18076,7 +18400,7 @@
         "type": "sub-link-input",
         "z": "2d13dfa7624a2c89",
         "name": "",
-        "topic": "uploadValue",
+        "topic": "updateValue",
         "alias": "",
         "aliasType": "string",
         "aliasMatchAll": false,
@@ -18151,7 +18475,7 @@
         "type": "sub-link-input",
         "z": "2d13dfa7624a2c89",
         "name": "",
-        "topic": "uploadValue",
+        "topic": "updateValue",
         "alias": "",
         "aliasType": "string",
         "aliasMatchAll": false,
@@ -18226,7 +18550,7 @@
         "type": "sub-link-input",
         "z": "2d13dfa7624a2c89",
         "name": "",
-        "topic": "uploadValue",
+        "topic": "updateValue",
         "alias": "",
         "aliasType": "string",
         "aliasMatchAll": false,
@@ -18301,7 +18625,7 @@
         "type": "sub-link-input",
         "z": "2d13dfa7624a2c89",
         "name": "",
-        "topic": "uploadValue",
+        "topic": "updateValue",
         "alias": "",
         "aliasType": "string",
         "aliasMatchAll": false,
@@ -18376,7 +18700,7 @@
         "type": "sub-link-input",
         "z": "2d13dfa7624a2c89",
         "name": "",
-        "topic": "uploadValue",
+        "topic": "updateValue",
         "alias": "",
         "aliasType": "string",
         "aliasMatchAll": false,
