@@ -293,6 +293,50 @@
                 "name": "PropertyLink",
                 "type": "str",
                 "value": ""
+            },
+            {
+                "name": "HistoryLength",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "5ed335e57e3a0a3e",
+        "type": "subflow",
+        "name": "History",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "09d05abc4fc708a6"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 340,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "09d05abc4fc708a6",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "historyArrayName",
+                "type": "str",
+                "value": ""
             }
         ],
         "meta": {},
@@ -505,7 +549,9 @@
             "e1994719bd7b4722"
         ],
         "x": 194,
-        "y": 4242
+        "y": 4242,
+        "w": 2272,
+        "h": 239
     },
     {
         "id": "d366c10f.cbf158",
@@ -520,13 +566,11 @@
         "nodes": [
             "b5632ab6.616158",
             "6eef4cae.579154",
-            "c1053253.abab6",
             "6659f21b.215e6c",
             "3dd50be3.e99724",
             "9ae0cc41.4f38e",
             "ff535ae7.0608f8",
             "7a3969fb.3f65c8",
-            "6c8b8dd.0947374",
             "5ee56f7a.9622a",
             "86743c69.70234",
             "be37d7a0.4489e",
@@ -537,19 +581,21 @@
             "162cb66c.3b7292",
             "9f810b8b.7a1b8",
             "b88a92c6.fb547",
-            "49f6617c1a03ff11",
-            "9adaa7b9af390ff8",
-            "3b6f974617ed5d03",
             "4646ab27173cb0f0",
             "7194464841ce27cb",
             "d152c17f08b343fb",
             "8396acc11066b647",
             "3e3ef6d068714c31",
             "8e304a6fc81c3108",
-            "3db83e0471372298"
+            "3db83e0471372298",
+            "221aeaeeea404061",
+            "8418bc85a15171df",
+            "79bf2a43e0da209c"
         ],
         "x": 194,
-        "y": 3499
+        "y": 3499,
+        "w": 2962,
+        "h": 562
     },
     {
         "id": "d7076418.bb51d8",
@@ -591,10 +637,13 @@
             "f31795b7.8000d",
             "309b8128.737fce",
             "28ed3c82.06228c",
-            "983208d5.9b5e"
+            "983208d5.9b5e",
+            "9d9d4e513499c3ff"
         ],
         "x": 54,
-        "y": 2333.094940185547
+        "y": 2299,
+        "w": 1272,
+        "h": 466.09493827819824
     },
     {
         "id": "9eaca16.128cb6",
@@ -615,7 +664,9 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179
+        "y": 2179,
+        "w": 652,
+        "h": 82
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -703,7 +754,9 @@
             "e60be7a689169cf3"
         ],
         "x": 214,
-        "y": 99
+        "y": 99,
+        "w": 3372,
+        "h": 962
     },
     {
         "id": "48a4f908.86ced8",
@@ -729,7 +782,9 @@
             "f826e42f.85708"
         ],
         "x": 1584,
-        "y": 2359
+        "y": 2359,
+        "w": 1132,
+        "h": 304.3541259765625
     },
     {
         "id": "a4c26498.4d1758",
@@ -757,7 +812,9 @@
             "f79d3d7c87d27b67"
         ],
         "x": 1574,
-        "y": 2679
+        "y": 2679,
+        "w": 912,
+        "h": 302
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -795,68 +852,9 @@
             "df98a659a5b217dc"
         ],
         "x": 2504,
-        "y": 2679
-    },
-    {
-        "id": "7f3265a4.23ba94",
-        "type": "group",
-        "z": "2164c119.f88826",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "b05b8675.6b0908",
-            "fef12c4c.00324",
-            "1ab68a79.a369be",
-            "eb351cb4.81437",
-            "66cf1c72.99bbcc",
-            "d32b5901.1a603",
-            "27faa505.26a31a",
-            "d50039d0.bc4938",
-            "2b4abcf3.ba6b04",
-            "9d155fa1.55784",
-            "856b84d2.58bc58",
-            "f73c7559.2f4508",
-            "50f38532.36990c",
-            "4a2fa6da.9b03d8",
-            "41bb2566.3acfdc",
-            "8b15d4c7.c880d",
-            "c65f095e.8a22d",
-            "cb167da9.5407f8",
-            "550830ba.1dfd1",
-            "a11a2eee.a46c8",
-            "abde95dc.e3d6d",
-            "90530db5.87162",
-            "e76c094a.301b98",
-            "2f54e93e.6944ae",
-            "e4e4de93.93ecc",
-            "55c3590c.12a6b",
-            "ca22d6d6.76f3f",
-            "dfc2d587.5eb03",
-            "130f03a8.a2c444",
-            "1a246772.c01c29",
-            "d44825e7.f72cc",
-            "865b9995.0c7b08",
-            "86227a90.b4dd58",
-            "62f98cdc.581cc4",
-            "2776ae57.9d57ea",
-            "da93d1b7.9c1328",
-            "e8c93d79.6993d",
-            "515aafe.e6c17d",
-            "ae5e1f90.74594",
-            "c26f366a.bc9c88",
-            "323548f1.1a0c1",
-            "510bb40f.d3429c",
-            "3da1a7ea98029b38"
-        ],
-        "x": 1584,
-        "y": 1539
+        "y": 2679,
+        "w": 1272,
+        "h": 517
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -898,7 +896,9 @@
             "a6820e84.1e723"
         ],
         "x": 34,
-        "y": 2999
+        "y": 2999,
+        "w": 1572,
+        "h": 682
     },
     {
         "id": "8229c2eecc8e06ec",
@@ -1052,6 +1052,61 @@
         "y": 1909,
         "w": 1902,
         "h": 552
+    },
+    {
+        "id": "d947d8372ebcf4da",
+        "type": "group",
+        "z": "2164c119.f88826",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "aacf63e8ceeee35c",
+            "cee4988e25149744",
+            "92881cddd0cc2ba2",
+            "1f13b4e8073b244d",
+            "d14f3c4932886142",
+            "d32cd143ef1fe43d",
+            "621a0c101a40d65a",
+            "018648d5824dafe8",
+            "45ed2515de0fcfe5",
+            "41ba758961e63aca",
+            "4d1641c6d39c1cf8",
+            "1496e150e0865fb9",
+            "989e33de970edf07",
+            "bf8cb734c6cd142a",
+            "a8c69b6a8081ed3c",
+            "6d34898f536e0cf8",
+            "177ea848e02a250c",
+            "03e11d60660d630d",
+            "c40f3dc0c15caa88",
+            "8352c369ab4a9508",
+            "865400ef1a2a48e8",
+            "0d3502ab6f6acda9",
+            "31fd26886a4845db",
+            "589bd838d3771e0c",
+            "c9252c526e4fed93",
+            "3728db12b792c686",
+            "870db6c250754c4e",
+            "74a8e33e521b2bbd",
+            "d40fac3b96e6d6cf",
+            "9359c92beccf3562",
+            "a5061588fbdc31a1",
+            "93d6b801e4cca259",
+            "8fab44a338fed3c5",
+            "963669c836468734",
+            "01a20d93df575d86"
+        ],
+        "x": 1584,
+        "y": 1359,
+        "w": 2222,
+        "h": 802
     },
     {
         "id": "de00f046.a69e6",
@@ -2360,6 +2415,12 @@
         "login": false
     },
     {
+        "id": "50760f2b4eafd99b",
+        "type": "sqlitedb",
+        "db": "/app/.node-red/db/inNOVAASdb.db",
+        "mode": "RW"
+    },
+    {
         "id": "d56e5f93.f422c",
         "type": "logger",
         "z": "56cb7422.e3d28c",
@@ -3036,7 +3097,7 @@
         "type": "unsafe-function",
         "z": "c1dd96d4.47a088",
         "name": "responseTime",
-        "func": "var outMsg = {};\noutMsg.topic = \"put\";\noutMsg.payload = {\n    link: env.get(\"PropertyLink\"),\n    tstamp: context.flow.get(\"$parent.timestamp\"),\n    data: context.flow.get(\"variable\")\n};\nreturn outMsg;",
+        "func": "var historyArrayName = \"$parent.\" + env.get(\"PropertyName\") + \"_hist\";\nvar outMsg = {};\noutMsg.topic = \"put\";\noutMsg.payload = {\n    link: env.get(\"PropertyLink\"),\n    tstamp: context.flow.get(\"$parent.timestamp\"),\n    data: context.flow.get(\"variable\")\n};\nlet history = context.flow.get(historyArrayName) || [];\nif (history.length >= env.get(\"HistoryLength\")) {\n    history.pop();\n}\nhistory.push(outMsg.payload);\ncontext.flow.set(historyArrayName, history);\nreturn outMsg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1075,
@@ -3129,6 +3190,23 @@
             [
                 "8f7552d2.152dd"
             ]
+        ]
+    },
+    {
+        "id": "09d05abc4fc708a6",
+        "type": "function",
+        "z": "5ed335e57e3a0a3e",
+        "name": "History",
+        "func": "// Get request timestamps\nvar start = msg.payload.start;\nvar end = (msg.payload.end - start)/1000;\n//var end = msg.payload.end;\nvar history = context.flow.get(\"$parent.\" + env.get(\"historyArrayName\"));\nif(end > history.length){\n    start = history.length;\n} else {\n    start = history.length - end;\n}\n\nvar data = [];\nfor (var ts = start; ts < history.length; ts++ )\n{   \n    var element = history[ts];\n\n    data.push( {\n        tstamp: element.tstamp,\n        data: element.data\n    } );\n}\nmsg.payload = data;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 80,
+        "wires": [
+            []
         ]
     },
     {
@@ -6232,20 +6310,6 @@
         "wires": []
     },
     {
-        "id": "b4b680b.dc7df8",
-        "type": "unsafe-function",
-        "z": "fd31082e.5487d8",
-        "name": "OnlyPublicSubmodels",
-        "func": "var submodels = msg.payload.InternalElement;\nfor(var submodel = 0; submodel < submodels.length; submodel++){\n    var attributes = submodels[submodel].Attribute;\n    for(var attribute in attributes){\n        if(attributes[attribute]._Attribs.Name == \"Visibility\" && attributes[attribute].Value[0].toLowerCase() == \"false\"){\n            //Remove from the list\n            submodels.splice(submodel, 1);\n            submodel--;\n            break;\n        } else if(attributes[attribute]._Attribs.Name == \"Visibility\" && attributes[attribute].Value[0].toLowerCase() == \"true\"){\n            //Check only DataManifests\n            var dsms = submodels[submodel].InternalElement;\n            if(typeof dsms !== \"undefined\"){\n                for(var dsm = 0; dsm < dsms.length; dsm++){\n                    var dsm_attributes = dsms[dsm].Attribute;\n                    for(var dsm_attribute in dsm_attributes){\n                        if(dsm_attributes[dsm_attribute]._Attribs.Name == \"Visibility\" && dsm_attributes[dsm_attribute].Value[0] == \"false\"){\n                            //Remove from the list\n                            dsms.splice(dsm, 1);\n                            dsm--;\n                            break;\n                        }\n                    }\n                }\n            }\n        }\n    }\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1660,
-        "y": 1560,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "144753fb.39796c",
         "type": "link in",
         "z": "fd31082e.5487d8",
@@ -6498,122 +6562,6 @@
                 "80d2eef420fecf75"
             ]
         ]
-    },
-    {
-        "id": "8452263f.a6ba28",
-        "type": "actionflows_in",
-        "z": "fd31082e.5487d8",
-        "name": "readSubmodelsFromAASUI in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 760,
-        "y": 3360,
-        "wires": [
-            [
-                "509deedf5a2a9c33"
-            ]
-        ]
-    },
-    {
-        "id": "4950c4ca.40fb6c",
-        "type": "actionflows_out",
-        "z": "fd31082e.5487d8",
-        "name": "readSubmodelsFromAASUI out",
-        "links": [],
-        "x": 2710,
-        "y": 3360,
-        "wires": []
-    },
-    {
-        "id": "2c971198.d456ee",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1510,
-        "y": 3320,
-        "wires": []
-    },
-    {
-        "id": "458fac4.39e1f54",
-        "type": "actionflows_in",
-        "z": "fd31082e.5487d8",
-        "name": "updateSubmodelsFromAASUI in",
-        "priority": "50",
-        "links": [],
-        "scope": "global",
-        "x": 770,
-        "y": 3440,
-        "wires": [
-            [
-                "51127767.6acb78"
-            ]
-        ]
-    },
-    {
-        "id": "9c0c8569.eae818",
-        "type": "actionflows_out",
-        "z": "fd31082e.5487d8",
-        "name": "updateSubmodelsFromAASUI out",
-        "links": [],
-        "x": 2720,
-        "y": 3440,
-        "wires": []
-    },
-    {
-        "id": "51127767.6acb78",
-        "type": "unsafe-function",
-        "z": "fd31082e.5487d8",
-        "name": "reterieveSubmodels",
-        "func": "var submodels = msg.payload.InternalElement;\nmsg.payload = submodels;\nreturn msg;\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1340,
-        "y": 3440,
-        "wires": [
-            [
-                "509e7700.4e5958"
-            ]
-        ]
-    },
-    {
-        "id": "509e7700.4e5958",
-        "type": "split",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 1610,
-        "y": 3440,
-        "wires": [
-            [
-                "22f58847.d01c88",
-                "c3a19d9593fd6981"
-            ]
-        ]
-    },
-    {
-        "id": "22f58847.d01c88",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1730,
-        "y": 3400,
-        "wires": []
     },
     {
         "id": "c069a564.445c18",
@@ -6968,32 +6916,16 @@
         "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nif(msg.res){\n    // Create an Observation Event Object ------------------------------------\n    var observation = {};\n    observation.id = uuid;\n    observation.source = context.global.get(\"AASIdentifier\");\n    observation.direction = \"Output\";\n    observation.observableReference = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\n    observation.timestamp = new Date().getTime();\n    observation.payload = msg.payload;\n    msg.payload = observation;\n    return [msg, null];\n} else {\n    msg.topic = msg.req.params.id;\n    return [null, msg];\n}\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 2750,
-        "y": 3680,
+        "x": 1590,
+        "y": 3660,
         "wires": [
             [
-                "c1053253.abab6",
-                "3dd50be3.e99724"
+                "221aeaeeea404061"
             ],
             [
-                "3dd50be3.e99724"
+                "221aeaeeea404061"
             ]
         ]
-    },
-    {
-        "id": "c1053253.abab6",
-        "type": "debug",
-        "z": "fd31082e.5487d8",
-        "g": "d366c10f.cbf158",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 3030,
-        "y": 3680,
-        "wires": []
     },
     {
         "id": "6659f21b.215e6c",
@@ -7165,30 +7097,6 @@
             ],
             [
                 "86743c69.70234"
-            ]
-        ]
-    },
-    {
-        "id": "6c8b8dd.0947374",
-        "type": "switch",
-        "z": "fd31082e.5487d8",
-        "g": "d366c10f.cbf158",
-        "name": "IF_statusMessage_not_null",
-        "property": "statusMessage",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1960,
-        "y": 3580,
-        "wires": [
-            [
-                "49f6617c1a03ff11"
             ]
         ]
     },
@@ -7430,14 +7338,14 @@
         "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nif(msg.res){\n    // Create an Observation Event Object ------------------------------------\n    var observation = {};\n    observation.id = uuid;\n    observation.source = context.global.get(\"AASIdentifier\");\n    observation.direction = \"Output\";\n    observation.observableReference = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\n    observation.timestamp = new Date().getTime();\n    observation.payload = msg.payload;\n    msg.payload = observation;\n    return [msg, null];\n} else {\n    msg.topic = msg.req.params.id;\n    return [null, msg];\n}\n",
         "outputs": 2,
         "noerr": 0,
-        "x": 2750,
+        "x": 1590,
         "y": 3800,
         "wires": [
             [
-                "9ae0cc41.4f38e"
+                "58971b70a7ec39b2"
             ],
             [
-                "9ae0cc41.4f38e"
+                "58971b70a7ec39b2"
             ]
         ]
     },
@@ -8132,58 +8040,6 @@
         "l": true
     },
     {
-        "id": "49f6617c1a03ff11",
-        "type": "link out",
-        "z": "fd31082e.5487d8",
-        "g": "d366c10f.cbf158",
-        "name": "NOVAAS_(Un)SubscriptionEvent_UI",
-        "links": [
-            "3da1a7ea98029b38"
-        ],
-        "x": 3000,
-        "y": 3580,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "3b6f974617ed5d03",
-        "type": "link out",
-        "z": "fd31082e.5487d8",
-        "g": "d366c10f.cbf158",
-        "name": "NOVAAS_(Un)SubscriptionEvent_UI",
-        "links": [
-            "3da1a7ea98029b38"
-        ],
-        "x": 2980,
-        "y": 3740,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "9adaa7b9af390ff8",
-        "type": "switch",
-        "z": "fd31082e.5487d8",
-        "g": "d366c10f.cbf158",
-        "name": "IF_statusMessage_not_null",
-        "property": "statusMessage",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1960,
-        "y": 3740,
-        "wires": [
-            [
-                "3b6f974617ed5d03"
-            ]
-        ]
-    },
-    {
         "id": "1499b2e3e887643b",
         "type": "link call",
         "z": "fd31082e.5487d8",
@@ -8249,7 +8105,7 @@
         "y": 1140,
         "wires": [
             [
-                "40e9769.02d7288"
+                "ffa13d32fb015158"
             ]
         ]
     },
@@ -8266,7 +8122,7 @@
         "y": 1220,
         "wires": [
             [
-                "c309c489.5ba748"
+                "0d12ffe7d689cee9"
             ]
         ]
     },
@@ -8284,7 +8140,7 @@
         "wires": [
             [
                 "81714045.0e50c8",
-                "b14ea23f.c308a8"
+                "855e5b420bf514cf"
             ]
         ]
     },
@@ -8302,7 +8158,7 @@
         "wires": [
             [
                 "e22aaf22.a1f3e",
-                "7cec632.7e15b9c"
+                "ed3c9284d887db08"
             ]
         ]
     },
@@ -8320,7 +8176,7 @@
         "wires": [
             [
                 "687c3d5c.dfc7ac",
-                "d8719524.0097b"
+                "7053e35fdbab2a1e"
             ]
         ]
     },
@@ -8338,7 +8194,7 @@
         "wires": [
             [
                 "33d6ebc0.3cf344",
-                "abd5525b.19111"
+                "a4262b5c449a0850"
             ]
         ]
     },
@@ -8507,41 +8363,6 @@
         ]
     },
     {
-        "id": "509deedf5a2a9c33",
-        "type": "link call",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "links": [
-            "0da57b0b701845bd"
-        ],
-        "timeout": "30",
-        "x": 1310,
-        "y": 3360,
-        "wires": [
-            [
-                "2c971198.d456ee",
-                "4950c4ca.40fb6c"
-            ]
-        ]
-    },
-    {
-        "id": "c3a19d9593fd6981",
-        "type": "link call",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "links": [
-            "4de0f79bae30ea24"
-        ],
-        "timeout": "30",
-        "x": 1910,
-        "y": 3440,
-        "wires": [
-            [
-                "9c0c8569.eae818"
-            ]
-        ]
-    },
-    {
         "id": "ecdb807bb68818bc",
         "type": "link call",
         "z": "fd31082e.5487d8",
@@ -8555,7 +8376,7 @@
         "wires": [
             [
                 "8188be80.74de4",
-                "3baa6a51.8f0c46"
+                "3b4f4743e5be4b41"
             ]
         ]
     },
@@ -8726,8 +8547,7 @@
         "y": 3620,
         "wires": [
             [
-                "3dd50be3.e99724",
-                "6c8b8dd.0947374"
+                "221aeaeeea404061"
             ]
         ]
     },
@@ -8745,8 +8565,7 @@
         "y": 3760,
         "wires": [
             [
-                "9adaa7b9af390ff8",
-                "9ae0cc41.4f38e"
+                "58971b70a7ec39b2"
             ]
         ]
     },
@@ -9056,6 +8875,744 @@
         "x": 2050,
         "y": 3180,
         "wires": []
+    },
+    {
+        "id": "ffa13d32fb015158",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 1670,
+        "y": 1140,
+        "wires": [
+            [
+                "40e9769.02d7288"
+            ],
+            [
+                "11e5e5a34f3e9294"
+            ]
+        ]
+    },
+    {
+        "id": "11e5e5a34f3e9294",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\nlet splittedUrl = msg.req.url.split(\"/\");\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"\";\nlogEvent.observableReference = decodeURIComponent(msg.req.url);\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = \"Requested: \" + splittedUrl[splittedUrl.length - 1];\n\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\"; \nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1940,
+        "y": 1160,
+        "wires": [
+            [
+                "f5f82d971a5c6d8c"
+            ]
+        ]
+    },
+    {
+        "id": "f5f82d971a5c6d8c",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2290,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d12ffe7d689cee9",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 1670,
+        "y": 1220,
+        "wires": [
+            [
+                "c309c489.5ba748"
+            ],
+            [
+                "106b182a041ef77b"
+            ]
+        ]
+    },
+    {
+        "id": "106b182a041ef77b",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\nlet splittedUrl = msg.req.url.split(\"/\");\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"\";\nlogEvent.observableReference = decodeURIComponent(msg.req.url);\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = \"Requested: \" + splittedUrl[splittedUrl.length - 1];\n\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\"; \nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1920,
+        "y": 1260,
+        "wires": [
+            [
+                "af17f991990ac589"
+            ]
+        ]
+    },
+    {
+        "id": "af17f991990ac589",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2270,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "855e5b420bf514cf",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 1690,
+        "y": 1320,
+        "wires": [
+            [
+                "b14ea23f.c308a8"
+            ],
+            [
+                "e6173e89e8f5955b"
+            ]
+        ]
+    },
+    {
+        "id": "e6173e89e8f5955b",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\nlet splittedUrl = msg.req.url.split(\"/\");\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"\";\nlogEvent.observableReference = decodeURIComponent(msg.req.url);\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = \"Requested: \" + decodeURIComponent(splittedUrl[splittedUrl.length - 1]);\n\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\"; \nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1940,
+        "y": 1340,
+        "wires": [
+            [
+                "3b3c76099fbc0b29"
+            ]
+        ]
+    },
+    {
+        "id": "3b3c76099fbc0b29",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2290,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ed3c9284d887db08",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 1670,
+        "y": 1580,
+        "wires": [
+            [
+                "7cec632.7e15b9c"
+            ],
+            [
+                "0b726a524bf1c571"
+            ]
+        ]
+    },
+    {
+        "id": "0b726a524bf1c571",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\nlet splittedUrl = msg.req.url.split(\"/\");\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"\";\nlogEvent.observableReference = decodeURIComponent(msg.req.url);\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = \"Requested: \" + decodeURIComponent(splittedUrl[splittedUrl.length - 1]);\n\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\"; \nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1940,
+        "y": 1600,
+        "wires": [
+            [
+                "cce8f1f27b177676"
+            ]
+        ]
+    },
+    {
+        "id": "cce8f1f27b177676",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2290,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7053e35fdbab2a1e",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 1670,
+        "y": 1660,
+        "wires": [
+            [
+                "d8719524.0097b"
+            ],
+            [
+                "6dc4e4209b9d6839"
+            ]
+        ]
+    },
+    {
+        "id": "6dc4e4209b9d6839",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\nlet splittedUrl = msg.req.url.split(\"/\");\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"\";\nlogEvent.observableReference = decodeURIComponent(msg.req.url);\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = \"Requested: \" + decodeURIComponent(splittedUrl[splittedUrl.length - 1]);\n\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\"; \nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1940,
+        "y": 1680,
+        "wires": [
+            [
+                "70ac44bad1c49161"
+            ]
+        ]
+    },
+    {
+        "id": "70ac44bad1c49161",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2290,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a4262b5c449a0850",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 1670,
+        "y": 1760,
+        "wires": [
+            [
+                "abd5525b.19111"
+            ],
+            [
+                "e8ab899e568391a5"
+            ]
+        ]
+    },
+    {
+        "id": "e8ab899e568391a5",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\nlet splittedUrl = msg.req.url.split(\"/\");\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"\";\nlogEvent.observableReference = decodeURIComponent(msg.req.url);\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = \"Requested: \" + decodeURIComponent(splittedUrl[splittedUrl.length - 1]);\n\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\"; \nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1940,
+        "y": 1780,
+        "wires": [
+            [
+                "a307fbbb7398084a"
+            ]
+        ]
+    },
+    {
+        "id": "a307fbbb7398084a",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2290,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3b4f4743e5be4b41",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 1690,
+        "y": 2400,
+        "wires": [
+            [
+                "3baa6a51.8f0c46"
+            ],
+            [
+                "378dee6a58ebb56c"
+            ]
+        ]
+    },
+    {
+        "id": "378dee6a58ebb56c",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\n\nlet filterNamespaceUrl = msg.req.url.replace(context.global.get('namespace'), \"\");\nlet filterAPIElements1Url = filterNamespaceUrl.replace(\"/aasServer/shells/\", \"\");\nlet filterAPIElements2Url = filterAPIElements1Url.replace(\"/aas/submodels\", \"\");\nlet filterAPIElements3Url = filterAPIElements2Url.replace(\"/submodel/submodel-elements\", \"\");\n\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"Output\";\nlogEvent.observableReference = decodeURIComponent(filterAPIElements3Url.trim());\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = msg.payload.value;\n\nif(msg.payload.modelType.name == \"Property\"){\n    msg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\";\n} else if (msg.payload.modelType.name == \"File\"){\n    msg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, link) VALUES ($aasId, $observableRef, $timestamp, $link)\";\n}\nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1960,
+        "y": 2440,
+        "wires": [
+            [
+                "2608be2c4c4d26ba"
+            ]
+        ]
+    },
+    {
+        "id": "2608be2c4c4d26ba",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2310,
+        "y": 2440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74b9bd433d2c9aca",
+        "type": "link in",
+        "z": "fd31082e.5487d8",
+        "name": "newLogin in",
+        "links": [],
+        "x": 725,
+        "y": 3400,
+        "wires": [
+            [
+                "a19c56b5f12d6a15",
+                "cebed6788c3d39f0"
+            ]
+        ]
+    },
+    {
+        "id": "e846c829ec84fd28",
+        "type": "link out",
+        "z": "fd31082e.5487d8",
+        "name": "newConfiguration out",
+        "mode": "return",
+        "links": [],
+        "x": 2695,
+        "y": 3400,
+        "wires": []
+    },
+    {
+        "id": "a19c56b5f12d6a15",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "// Process msg payload\n\nlet logEvent = {};\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.timestamp = msg.payload.accessAt;\nlogEvent.payload = msg.payload.username;\n\nmsg.topic = \"INSERT INTO accountLogs (accessAt, username) VALUES ($accessAt, $username)\";\nmsg.payload = [logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 3400,
+        "wires": [
+            [
+                "b99f71edde4c9e13",
+                "9e9430c949e7c4e0"
+            ]
+        ]
+    },
+    {
+        "id": "b99f71edde4c9e13",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 1720,
+        "y": 3400,
+        "wires": [
+            [
+                "e846c829ec84fd28"
+            ]
+        ]
+    },
+    {
+        "id": "9e9430c949e7c4e0",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1600,
+        "y": 3340,
+        "wires": []
+    },
+    {
+        "id": "cebed6788c3d39f0",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1239.7222900390625,
+        "y": 3348.0556640625,
+        "wires": []
+    },
+    {
+        "id": "221aeaeeea404061",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "g": "d366c10f.cbf158",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 2010,
+        "y": 3640,
+        "wires": [
+            [
+                "8418bc85a15171df"
+            ],
+            [
+                "3dd50be3.e99724"
+            ]
+        ]
+    },
+    {
+        "id": "8418bc85a15171df",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "g": "d366c10f.cbf158",
+        "name": "prepare INSERT Statement",
+        "func": "let observation = msg.payload;\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\";\nmsg.payload = [context.global.get('AASIdentifier'), observation.observableReference, observation.timestamp, observation.payload];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2300,
+        "y": 3600,
+        "wires": [
+            [
+                "79bf2a43e0da209c"
+            ]
+        ]
+    },
+    {
+        "id": "79bf2a43e0da209c",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "g": "d366c10f.cbf158",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2650,
+        "y": 3600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "adf08ccd777abd70",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let observation = msg.payload;\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\";\nmsg.payload = [context.global.get('AASIdentifier'), observation.observableReference, observation.timestamp, observation.payload];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2300,
+        "y": 3740,
+        "wires": [
+            [
+                "5d275695f7ace20b"
+            ]
+        ]
+    },
+    {
+        "id": "5d275695f7ace20b",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2650,
+        "y": 3740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "58971b70a7ec39b2",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 2010,
+        "y": 3780,
+        "wires": [
+            [
+                "adf08ccd777abd70"
+            ],
+            [
+                "9ae0cc41.4f38e"
+            ]
+        ]
     },
     {
         "id": "25d4f75cef10182e",
@@ -12477,174 +13034,6 @@
         ]
     },
     {
-        "id": "b05b8675.6b0908",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 3710,
-        "y": 1680,
-        "wires": []
-    },
-    {
-        "id": "fef12c4c.00324",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "LiveDataToGet",
-        "func": "//Retreiving Libraries from the Settings.json file\nlet outputMsgsFileData = [];\nlet outputMsgsPropertyData = [];\n\nlet uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\nlet selectedElements = context.flow.get('selectedElements');\nfor (let element in selectedElements) {\n    let selected_element = \"\";\n    if (typeof selectedElements[element].path != \"undefined\") {\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].path + \"/\" + selectedElements[element].selectedElement.idShort;\n    }//let selected_element = selectedElements[element].submodelId + \";\" + selectedElements[element].selectedElement.idShort;\n    else {\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    let modelType = selectedElements[element].selectedElement.modelType.name;\n    let category = selectedElements[element].selectedElement.category;\n\n    if (modelType == \"File\") {\n        let observation = {};\n        observation.id = uuid;\n        observation.source = context.global.get(\"AASIdentifier\");\n        observation.direction = \"Output\";\n        observation.observableReference = selected_element;\n        observation.timestamp = new Date().getTime();\n        observation.payload = { href: selectedElements[element].selectedElement.value };\n        let msg = { payload: observation };\n        outputMsgsFileData.push(msg);\n    } else {\n        let msg = { payload: selected_element };\n        let shellId = encodeURIComponent(selectedElements[element].aasid);\n        let encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n\n        //\"/aasServer/shells/:aasid/aas/submodels/:submodelId/submodel/submodelElements/:id\"\n        if (typeof selectedElements[element].path != \"undefined\") {\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element + \"/submodel/submodel-elements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n        } else {\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element + \"/submodel/submodel-elements/\" + selectedElements[element].selectedElement.idShort;\n        }\n\n        outputMsgsPropertyData.push(msg);\n    }\n\n}\n\nreturn [outputMsgsFileData, outputMsgsPropertyData];",
-        "outputs": 2,
-        "noerr": 0,
-        "x": 1971.666748046875,
-        "y": 1640,
-        "wires": [
-            [
-                "d50039d0.bc4938",
-                "41bb2566.3acfdc"
-            ],
-            [
-                "2f54e93e.6944ae"
-            ]
-        ]
-    },
-    {
-        "id": "1ab68a79.a369be",
-        "type": "ui_template",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "group": "63d120af.ce7f5",
-        "name": "Log",
-        "order": 0,
-        "width": "35",
-        "height": "20",
-        "format": "<script>\n    (function(scope) {\n            scope.logs = [];\n        \n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    if (msg.payload) {\n                        scope.logs = msg.payload;\n                    }\n                }\n            });\n            scope.init = function() {\n                //scope.observations = [];\n                scope.send({payload:scope.observations});\n            }\n        })(scope)\n</script>\n<div id=\"logs_Table\" ng-init=\"init()\">\n    <table class=\"table table-sm\">\n        <thead class=\"text-dark\">\n            <tr>\n                <th scope=\"col\">AAS Id</th>\n                <th scope=\"col\">Observable Reference</th>\n                <th scope=\"col\">_msgId</th>\n                <th scope=\"col\">Timestamp</th>\n                <th scope=\"col\">Value</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr class=\"table-info\" ng-repeat=\"i in logs\">\n                <td><a class=\"text-dark\">{{i.AASID}}</a></td>\n                <td><a class=\"text-dark\">{{i.observableReference}}</a></td>\n                <td><a class=\"text-dark\">{{i._msgid}}</a></td>\n                <td><a class=\"text-dark\">{{i.time}}</a></td>\n                <td ng-if='i.link != undefined'><a class=\"btn btn-link\" target=\"_blank\" rel=\"noopener noreferrer\"\n                        ng-href=\"{{i.link}}\">{{i.link}}</a></td>\n                <td ng-if='i.value != undefined'><a class=\"text-dark\">{{i.value}}</a></td>\n\n                <!--<td><a class=\"text-dark\">{{i.value}}</a></td>!-->\n                <!--<td style=\"cursor:pointer;\" ng-click=\"remove(i)\" title=\"Remove\">&times;</td>!-->\n            </tr>\n        </tbody>\n\n    </table>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 3573.690185546875,
-        "y": 1678.8096923828125,
-        "wires": [
-            [
-                "b05b8675.6b0908",
-                "d32b5901.1a603"
-            ]
-        ]
-    },
-    {
-        "id": "eb351cb4.81437",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "LogsProcessing",
-        "func": "//Retreiving Libraries from the Settings.json file\nif(msg.payload){\n    //var observation = JSON.parse(msg.payload);\n    var observation = msg.payload;\n    var logs = context.flow.get('logs');\n    var copyLogs = logs.slice(Math.max(logs.length - 25, 0));\n    //for(var log in msg.payload){\n    //    logs.push(msg.payload[log]);\n    //}\n    var log = {};\n    if(typeof observation.payload.href !== \"undefined\"){\n        log.link = observation.payload.href;\n    } else{\n        log.value = observation.payload;\n    }\n    log.time = Date.now();\n    log._msgid = msg._msgid;\n    log.AASID = context.global.get('AASIdentifier');\n    log.observableReference = observation.observableReference;\n    if(copyLogs.length > 25){\n        copyLogs.pop();\n        copyLogs.push(log);\n        logs.push(log);\n    } else {\n        logs.push(log);\n    }\n    \n    context.flow.set('logs', logs);\n    var outputMsg = {};\n    //msg.payload = logs;\n    //outputMsg.payload = logs;\n    outputMsg.payload = copyLogs;\n    return outputMsg;\n}\nmsg.payload = \"\";\nreturn msg; ",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 3053.0234375,
-        "y": 1678.4285888671875,
-        "wires": [
-            [
-                "550830ba.1dfd1",
-                "1ab68a79.a369be",
-                "90530db5.87162"
-            ]
-        ]
-    },
-    {
-        "id": "66cf1c72.99bbcc",
-        "type": "delay",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 3649.7377319335938,
-        "y": 1751,
-        "wires": [
-            [
-                "1ab68a79.a369be"
-            ]
-        ]
-    },
-    {
-        "id": "d32b5901.1a603",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "GetLog",
-        "func": "//Retreiving Libraries from the Settings.json file\nvar logs = context.flow.get('logs');\nvar copyLogs = logs.slice(Math.max(logs.length - 25, 0));\nmsg.payload = copyLogs;\nreturn msg; ",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 3386.4043579101562,
-        "y": 1747.6666259765625,
-        "wires": [
-            [
-                "66cf1c72.99bbcc",
-                "27faa505.26a31a"
-            ]
-        ]
-    },
-    {
-        "id": "27faa505.26a31a",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 3578.5709838867188,
-        "y": 1786.333251953125,
-        "wires": []
-    },
-    {
-        "id": "d50039d0.bc4938",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 2170,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "2b4abcf3.ba6b04",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 3042.4043579101562,
-        "y": 1740.3333740234375,
-        "wires": []
-    },
-    {
         "id": "f45da4ee.8dafc8",
         "type": "ui_form",
         "z": "2164c119.f88826",
@@ -12699,8 +13088,8 @@
         "console": false,
         "tostatus": false,
         "complete": "payload",
-        "x": 627.5471801757812,
-        "y": 2399.094940185547,
+        "x": 660,
+        "y": 2340,
         "wires": []
     },
     {
@@ -12720,16 +13109,18 @@
         "z": "2164c119.f88826",
         "g": "d7076418.bb51d8",
         "name": "Account Log",
-        "func": "var accountlog =  flow.get(\"accountlog\") || [] ; \n\naccountlog.push({ accessAt : new Date(), username : msg.payload.username})\n\nflow.set(\"accountlog\", accountlog);\n\nmsg.payload = accountlog;\nreturn msg;",
+        "func": "\nlet username = msg.payload.username;\n\nmsg.payload = { accessAt: Date.now(), username: username };\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 372.54718017578125,
         "y": 2401.094940185547,
         "wires": [
             [
-                "e76f2790.4d439"
+                "e76f2790.4d439",
+                "9d9d4e513499c3ff"
             ]
         ]
     },
@@ -13155,222 +13546,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "9d155fa1.55784",
-        "type": "ui_button",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "Clear button",
-        "group": "b9aed87e.bdd0c8",
-        "order": 20,
-        "width": 3,
-        "height": 1,
-        "passthru": true,
-        "label": "Clear",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "#ff5555",
-        "icon": "clear_all",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 3210,
-        "y": 2280,
-        "wires": [
-            [
-                "856b84d2.58bc58"
-            ]
-        ]
-    },
-    {
-        "id": "856b84d2.58bc58",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "ResetObservations",
-        "func": "context.flow.set('logs', []);\ncontext.flow.set('accountlog', []);\nmsg.payload = context.flow.get('logs');\nreturn msg; ",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 3424.5,
-        "y": 2279,
-        "wires": [
-            [
-                "f73c7559.2f4508"
-            ]
-        ]
-    },
-    {
-        "id": "f73c7559.2f4508",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 3623.5,
-        "y": 2281,
-        "wires": []
-    },
-    {
-        "id": "50f38532.36990c",
-        "type": "http request",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "method": "PUT",
-        "ret": "obj",
-        "paytoqs": false,
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 2210,
-        "y": 1780,
-        "wires": [
-            [
-                "4a2fa6da.9b03d8",
-                "41bb2566.3acfdc"
-            ]
-        ]
-    },
-    {
-        "id": "4a2fa6da.9b03d8",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 2590,
-        "y": 1820,
-        "wires": []
-    },
-    {
-        "id": "41bb2566.3acfdc",
-        "type": "msg-router",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "routerType": "broadcast",
-        "topicDependent": false,
-        "counterReset": false,
-        "msgKeyField": "payload",
-        "undefinedHash": false,
-        "outputsInfo": [
-            {
-                "active": true,
-                "clone": true,
-                "delay": "0",
-                "weight": "0"
-            },
-            {
-                "active": true,
-                "clone": true,
-                "delay": "0",
-                "weight": "0"
-            },
-            {
-                "active": true,
-                "clone": true,
-                "delay": "0",
-                "weight": "0"
-            }
-        ],
-        "name": "",
-        "delaying": "unrelated",
-        "msgControl": false,
-        "outputs": 3,
-        "x": 2710,
-        "y": 1660,
-        "wires": [
-            [
-                "cb167da9.5407f8"
-            ],
-            [
-                "eb351cb4.81437"
-            ],
-            [
-                "2b4abcf3.ba6b04"
-            ]
-        ]
-    },
-    {
-        "id": "8b15d4c7.c880d",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "(Un)SubscriptionNotification",
-        "func": "var outMsg = {};\noutMsg.payload = msg.statusMessage;\nreturn [msg, outMsg]; ",
-        "outputs": 2,
-        "noerr": 0,
-        "x": 2500,
-        "y": 2100,
-        "wires": [
-            [
-                "abde95dc.e3d6d"
-            ],
-            [
-                "a11a2eee.a46c8",
-                "cb167da9.5407f8",
-                "eb351cb4.81437"
-            ]
-        ]
-    },
-    {
-        "id": "c65f095e.8a22d",
-        "type": "ui_toast",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "position": "bottom right",
-        "displayTime": "1",
-        "highlight": "",
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "topic": "Logs",
-        "name": "Notify Logs",
-        "x": 3320,
-        "y": 1600,
-        "wires": []
-    },
-    {
-        "id": "cb167da9.5407f8",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "NewLogsNotification",
-        "func": "//Retreiving Libraries from the Settings.json file\nmsg.payload = \"new Log\";\nreturn msg; ",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 3080,
-        "y": 1620,
-        "wires": [
-            [
-                "c65f095e.8a22d"
-            ]
-        ]
-    },
-    {
-        "id": "550830ba.1dfd1",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 3665.504150390625,
-        "y": 1622.7667846679688,
-        "wires": []
     },
     {
         "id": "2706d3c7.5d9a2c",
@@ -13909,36 +14084,6 @@
         "wires": []
     },
     {
-        "id": "a11a2eee.a46c8",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 2570,
-        "y": 2160,
-        "wires": []
-    },
-    {
-        "id": "abde95dc.e3d6d",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 2570,
-        "y": 2040,
-        "wires": []
-    },
-    {
         "id": "853a0e8f.857808",
         "type": "ui_template",
         "z": "2164c119.f88826",
@@ -14107,131 +14252,6 @@
         "wires": []
     },
     {
-        "id": "90530db5.87162",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 3227.1663208007812,
-        "y": 1737.4762573242188,
-        "wires": []
-    },
-    {
-        "id": "e76c094a.301b98",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "Prepare Log",
-        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n  let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n  return v.toString(16);\n});\n\n// Process msg payload\n\nlet filterNamespaceUrl = msg.url.replace(context.global.get('namespace'), \"\");\nlet filterAPIElements1Url = filterNamespaceUrl.replace(\"/aasServer/shells/\", \"\");\nlet filterAPIElements2Url = filterAPIElements1Url.replace(\"/aas/submodels\", \"\");\nlet filterAPIElements3Url = filterAPIElements2Url.replace(\"/submodel/submodel-elements\", \"\");\n\n//let splittedUrl = filterAPIElements2Url.split(\"/\");\n\n\n\n//\n\nlet observation = {};\nobservation.id = uuid;\nobservation.source = context.global.get('AASIdentifier');\nobservation.direction = \"Output\";\nobservation.observableReference = decodeURIComponent(filterAPIElements3Url.trim());\nobservation.timestamp = new Date().getTime();\nobservation.payload = msg.payload.value;\nmsg.payload = observation;\nreturn msg;\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 2410,
-        "y": 1680,
-        "wires": [
-            [
-                "41bb2566.3acfdc"
-            ]
-        ]
-    },
-    {
-        "id": "2f54e93e.6944ae",
-        "type": "http request",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 2190,
-        "y": 1680,
-        "wires": [
-            [
-                "e76c094a.301b98"
-            ]
-        ]
-    },
-    {
-        "id": "e4e4de93.93ecc",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 2183.333251953125,
-        "y": 1922.1431884765625,
-        "wires": []
-    },
-    {
-        "id": "55c3590c.12a6b",
-        "type": "http request",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "method": "PUT",
-        "ret": "obj",
-        "paytoqs": false,
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 2220,
-        "y": 1960,
-        "wires": [
-            [
-                "dfc2d587.5eb03",
-                "41bb2566.3acfdc"
-            ]
-        ]
-    },
-    {
-        "id": "ca22d6d6.76f3f",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "LiveDataToUnSubscribe",
-        "func": "//Retreiving Libraries from the Settings.json file\nlet outputMsgs = [];\nlet selectedElements = context.flow.get('selectedElements');\nfor(let element in selectedElements){\n    //let msg = {payload:selectedElements[element]};\n    \n    //let selected_element = selectedElements[element].submodelId + \"/\" +selectedElements[element].selectedElement.idShort;\n    let selected_element = \"\";\n    if(typeof selectedElements[element].path != \"undefined\"){\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].path + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    else {\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    let msg = {payload:selected_element};\n    let  shellId = encodeURIComponent(selectedElements[element].aasid);\n    let encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n    \n    if(typeof selectedElements[element].path != \"undefined\"){\n        msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/unsubscribe/submodel/submodel-elements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n    } else {\n        msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/unsubscribe/submodel/submodel-elements/\" + selectedElements[element].selectedElement.idShort;    \n    }\n    \n    outputMsgs.push(msg);\n    \n}\n\nreturn [outputMsgs];",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1983.1873779296875,
-        "y": 1960.7473754882812,
-        "wires": [
-            [
-                "55c3590c.12a6b",
-                "e4e4de93.93ecc"
-            ]
-        ]
-    },
-    {
-        "id": "dfc2d587.5eb03",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 2403.333251953125,
-        "y": 1962.1431884765625,
-        "wires": []
-    },
-    {
         "id": "eb868983.45c2e8",
         "type": "unsafe-function",
         "z": "2164c119.f88826",
@@ -14278,106 +14298,6 @@
         "x": 2922.857177734375,
         "y": 558.5714416503906,
         "wires": []
-    },
-    {
-        "id": "130f03a8.a2c444",
-        "type": "function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "Login Redirection",
-        "func": "var msg = {};\n//msg.payload = {tab: \"Login\"};\nmsg.payload = { group: {\n    hide : [\"Manifest_Commands\", \"Manifest_Headers\", \"Manifest_Body\"],\n    show : [\"Login_Login\"]\n}\n};\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1770,
-        "y": 2040,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1a246772.c01c29",
-        "type": "ui_button",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "Get button",
-        "group": "5b380ea4.54d28",
-        "order": 2,
-        "width": 3,
-        "height": 1,
-        "passthru": false,
-        "label": "Get",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "#14524e",
-        "icon": "swap_vert",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 1680,
-        "y": 1640,
-        "wires": [
-            [
-                "fef12c4c.00324"
-            ]
-        ]
-    },
-    {
-        "id": "d44825e7.f72cc",
-        "type": "ui_button",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "Observe button",
-        "group": "5b380ea4.54d28",
-        "order": 3,
-        "width": 3,
-        "height": 1,
-        "passthru": false,
-        "label": "Observe",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "#FF9000",
-        "icon": "visibility",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 1700,
-        "y": 1860,
-        "wires": [
-            [
-                "86227a90.b4dd58",
-                "2776ae57.9d57ea"
-            ]
-        ]
-    },
-    {
-        "id": "865b9995.0c7b08",
-        "type": "ui_button",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "Un-observe button",
-        "group": "5b380ea4.54d28",
-        "order": 4,
-        "width": 3,
-        "height": 1,
-        "passthru": false,
-        "label": "Un-observe",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "#ff5555",
-        "icon": "visibility_off",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 1710,
-        "y": 1960,
-        "wires": [
-            [
-                "ca22d6d6.76f3f"
-            ]
-        ]
     },
     {
         "id": "c378d360.44ac8",
@@ -14433,57 +14353,6 @@
                 "4558107f.b185"
             ]
         ]
-    },
-    {
-        "id": "86227a90.b4dd58",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "LiveDataToSubscribe",
-        "func": "//Retreiving Libraries from the Settings.json file\nlet outputMsgsLiveData = [];\nlet outputMsgsFileData = [];\nlet outputMsgsConstantData = [];\nlet outputMsgsPropertyData = [];\n\nlet uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nlet selectedElements = context.flow.get('selectedElements');\nfor(let element in selectedElements){\n    let selected_element = \"\";\n    if(typeof selectedElements[element].path != \"undefined\"){\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].path + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    else {\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    let modelType = selectedElements[element].selectedElement.modelType.name;\n    let category = selectedElements[element].selectedElement.category;\n    if(modelType == \"Property\" && category === \"VARIABLE\")\n    {\n        let msg = {payload:selected_element};\n        let  shellId = encodeURIComponent(selectedElements[element].aasid);\n        let encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n        \n        if(typeof selectedElements[element].path != \"undefined\"){\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/subscribe/submodel/submodel-elements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n        } else {\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/subscribe/submodel/submodel-elements/\" + selectedElements[element].selectedElement.idShort;    \n        }\n        \n        outputMsgsLiveData.push(msg);\n    } else if (modelType == \"Property\" && category === \"CONSTANT\" || modelType == \"File\"){\n        let observation = {};\n        observation.id = uuid;\n        observation.source = context.global.get(\"AASIdentifier\");\n        observation.direction = \"Output\";\n        observation.observableReference = selected_element;\n        observation.timestamp = new Date().getTime();\n        observation.payload = \"No Live Data Possible for Category: \" + category;\n        let msg = {payload:observation};\n        outputMsgsConstantData.push(msg);\n    }\n    \n}\n\nreturn [outputMsgsLiveData, outputMsgsConstantData];",
-        "outputs": 2,
-        "noerr": 0,
-        "x": 1980,
-        "y": 1860,
-        "wires": [
-            [
-                "50f38532.36990c"
-            ],
-            [
-                "41bb2566.3acfdc",
-                "62f98cdc.581cc4"
-            ]
-        ]
-    },
-    {
-        "id": "62f98cdc.581cc4",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 2230,
-        "y": 1860,
-        "wires": []
-    },
-    {
-        "id": "2776ae57.9d57ea",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 1870,
-        "y": 1900,
-        "wires": []
     },
     {
         "id": "b36514b5.7418a8",
@@ -14957,80 +14826,6 @@
         "wires": []
     },
     {
-        "id": "da93d1b7.9c1328",
-        "type": "ui_ui_control",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "events": "all",
-        "x": 3120,
-        "y": 2020,
-        "wires": [
-            [
-                "e8c93d79.6993d"
-            ]
-        ]
-    },
-    {
-        "id": "e8c93d79.6993d",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "accountLog",
-        "func": "//Retreiving Libraries from the Settings.json file\nif(msg.payload){\n    var accountLogs = context.flow.get('accountlog');\n    var outputMsg = {};\n    outputMsg.payload = accountLogs;\n    return outputMsg;\n}\nmsg.payload = \"\";\nreturn msg; ",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 3310,
-        "y": 2020,
-        "wires": [
-            [
-                "323548f1.1a0c1",
-                "515aafe.e6c17d"
-            ]
-        ]
-    },
-    {
-        "id": "323548f1.1a0c1",
-        "type": "ui_template",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "group": "16ffbcf4.6cfa43",
-        "name": "AccountLog",
-        "order": 0,
-        "width": "35",
-        "height": "15",
-        "format": "    <script>\n        (function(scope) {\n            scope.logs = [];\n        \n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    if (msg.payload) {\n                        scope.logs = msg.payload;\n                    }\n                }\n            });\n        })(scope)\n    </script>\n    <div id=\"accountLog_Table\">\n        <table class=\"table table-sm\">\n            <thead class=\"text-dark\">\n                <tr>\n                    <th scope=\"col\">access At</th>\n                    <th scope=\"col\">username</th>\n                </tr>\n            </thead>\n            <tbody>\n            <tr class=\"table-success\" ng-repeat=\"i in logs\">\n                <td><a class=\"text-dark\">{{i.accessAt}}</a></td>\n                <td><a class=\"text-dark\">{{i.username}}</a></td>\n            </tr>\n            </tbody>\n            \n        </table>\n    </div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "x": 3570,
-        "y": 2020,
-        "wires": [
-            [
-                "ae5e1f90.74594"
-            ]
-        ]
-    },
-    {
-        "id": "515aafe.e6c17d",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3450,
-        "y": 1960,
-        "wires": []
-    },
-    {
         "id": "4b043c0a.8457ec",
         "type": "ui_gauge",
         "z": "2164c119.f88826",
@@ -15098,48 +14893,6 @@
         "y": 3155,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "ae5e1f90.74594",
-        "type": "unsafe-function",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "GetLog",
-        "func": "//Retreiving Libraries from the Settings.json file\nmsg.payload = context.flow.get('accountlog');\nreturn msg; ",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 3420,
-        "y": 2100,
-        "wires": [
-            [
-                "c26f366a.bc9c88"
-            ]
-        ]
-    },
-    {
-        "id": "c26f366a.bc9c88",
-        "type": "delay",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "250",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 3590,
-        "y": 2100,
-        "wires": [
-            [
-                "323548f1.1a0c1"
-            ]
         ]
     },
     {
@@ -16373,21 +16126,6 @@
         ]
     },
     {
-        "id": "510bb40f.d3429c",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 2330,
-        "y": 1720,
-        "wires": []
-    },
-    {
         "id": "f5d81204558f97fa",
         "type": "link in",
         "z": "2164c119.f88826",
@@ -16409,25 +16147,6 @@
                 "2cf012d1.4a7f5e",
                 "2706d3c7.5d9a2c",
                 "648a464.2a92838"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "3da1a7ea98029b38",
-        "type": "link in",
-        "z": "2164c119.f88826",
-        "g": "7f3265a4.23ba94",
-        "name": "NOVAAS_(Un)SubscriptionEvent_UI",
-        "links": [
-            "49f6617c1a03ff11",
-            "3b6f974617ed5d03"
-        ],
-        "x": 1800,
-        "y": 2100,
-        "wires": [
-            [
-                "8b15d4c7.c880d"
             ]
         ],
         "l": true
@@ -16978,6 +16697,719 @@
         ]
     },
     {
+        "id": "aacf63e8ceeee35c",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 3710,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "cee4988e25149744",
+        "type": "unsafe-function",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "LiveDataToGet",
+        "func": "//Retreiving Libraries from the Settings.json file\nlet outputMsgsFileData = [];\nlet outputMsgsPropertyData = [];\n\nlet uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nlet selectedElements = context.flow.get('selectedElements');\nfor(let element in selectedElements){\n    let selected_element = \"\";\n    if(typeof selectedElements[element].path != \"undefined\"){\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].path + \"/\" + selectedElements[element].selectedElement.idShort;\n    }//let selected_element = selectedElements[element].submodelId + \";\" + selectedElements[element].selectedElement.idShort;\n    else {\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    let modelType = selectedElements[element].selectedElement.modelType.name;\n    let category = selectedElements[element].selectedElement.category;\n    \n    /*if (modelType == \"File\")\n    {\n        let observation = {};\n        observation.id = uuid;\n        observation.source = context.global.get(\"AASIdentifier\");\n        observation.direction = \"Output\";\n        observation.observableReference = selected_element;\n        observation.timestamp = new Date().getTime();\n        observation.payload = {href: selectedElements[element].selectedElement.value};\n        let msg = {payload:observation};\n        outputMsgsFileData.push(msg);\n    } else {*/\n        let msg = {payload:selected_element};\n        let shellId = encodeURIComponent(selectedElements[element].aasid);\n        let encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n        \n        //\"/aasServer/shells/:aasid/aas/submodels/:submodelId/submodel/submodelElements/:id\"\n        if(typeof selectedElements[element].path != \"undefined\"){\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/submodel/submodel-elements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n        } else {\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/submodel/submodel-elements/\" + selectedElements[element].selectedElement.idShort;\n        }\n        \n        outputMsgsPropertyData.push(msg);\n    //}\n    \n}\n\nreturn [outputMsgsFileData, outputMsgsPropertyData];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1971.666748046875,
+        "y": 1460,
+        "wires": [
+            [
+                "41ba758961e63aca",
+                "d14f3c4932886142"
+            ],
+            [
+                "6d34898f536e0cf8"
+            ]
+        ]
+    },
+    {
+        "id": "92881cddd0cc2ba2",
+        "type": "ui_template",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "group": "63d120af.ce7f5",
+        "name": "Log",
+        "order": 0,
+        "width": "35",
+        "height": "20",
+        "format": "    <script>\n        (function(scope) {\n            scope.logs = [];\n        \n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    if (msg.payload) {\n                        scope.logs = msg.payload;\n                    }\n                }\n            });\n            scope.init = function() {\n                //scope.observations = [];\n                scope.send({payload:scope.observations});\n            }\n        })(scope)\n    </script>\n    <div id=\"logs_Table\" ng-init=\"init()\">\n        <table class=\"table table-sm\">\n            <thead class=\"text-dark\">\n                <tr>\n                    <th scope=\"col\">AAS Id</th>\n                    <th scope=\"col\">Observable Reference</th>\n                    <th scope=\"col\">_msgId</th>\n                    <th scope=\"col\">Timestamp</th>\n                    <th scope=\"col\">Value</th>\n                </tr>\n            </thead>\n            <tbody>\n            <tr class=\"table-info\" ng-repeat=\"i in logs\">\n                <td><a class=\"text-dark\">{{i.aasId}}</a></td>\n                <td><a class=\"text-dark\">{{i.observableRef}}</a></td>\n                <td><a class=\"text-dark\">{{i.id}}</a></td>\n                <td><a class=\"text-dark\">{{i.timestamp}}</a></td>\n                <td ng-if='i.link != undefined'><a class=\"btn btn-link\" target=\"_blank\" rel=\"noopener noreferrer\" ng-href=\"{{i.link}}\">{{i.link}}</a></td>\n                <td ng-if='i.value != undefined'><a class=\"text-dark\">{{i.value}}</a></td>\n                \n                <!--<td><a class=\"text-dark\">{{i.value}}</a></td>!-->\n                <!--<td style=\"cursor:pointer;\" ng-click=\"remove(i)\" title=\"Remove\">&times;</td>!-->\n            </tr>\n            </tbody>\n            \n        </table>\n    </div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 3573.690185546875,
+        "y": 1498.8096923828125,
+        "wires": [
+            [
+                "aacf63e8ceeee35c"
+            ]
+        ]
+    },
+    {
+        "id": "1f13b4e8073b244d",
+        "type": "unsafe-function",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "LogsProcessing",
+        "func": "//Retreiving Libraries from the Settings.json file\nif(msg.payload){\n    /*\n    //var observation = JSON.parse(msg.payload);\n    var observation = msg.payload;\n    var logs = context.flow.get('logs');\n    var copyLogs = logs.slice(Math.max(logs.length - 25, 0));\n    //for(var log in msg.payload){\n    //    logs.push(msg.payload[log]);\n    //}\n    var log = {};\n    if(typeof observation.payload.href !== \"undefined\"){\n        log.link = observation.payload.href;\n    } else{\n        log.value = observation.payload;\n    }\n    //log.time = Date.now();\n    log.time = observation.timestamp;\n    log._msgid = msg._msgid;\n    log.AASID = context.global.get('AASIdentifier');\n    log.observableReference = observation.observableReference;\n    if(copyLogs.length > 25){\n        copyLogs.pop();\n        copyLogs.push(log);\n        logs.push(log);\n    } else {\n        logs.push(log);\n    }*/\n    \n    context.flow.set('logs', msg.payload);\n    var outputMsg = {};\n    //msg.payload = logs;\n    //outputMsg.payload = logs;\n    outputMsg.payload = msg.payload;\n    return outputMsg;\n}\nmsg.payload = \"\";\nreturn msg; ",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 3053.0234375,
+        "y": 1498.4285888671875,
+        "wires": [
+            [
+                "989e33de970edf07",
+                "92881cddd0cc2ba2",
+                "bf8cb734c6cd142a"
+            ]
+        ]
+    },
+    {
+        "id": "d14f3c4932886142",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 2170,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "d32cd143ef1fe43d",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 3042.4043579101562,
+        "y": 1560.3333740234375,
+        "wires": []
+    },
+    {
+        "id": "621a0c101a40d65a",
+        "type": "ui_button",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "Clear button",
+        "group": "b9aed87e.bdd0c8",
+        "order": 23,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "label": "Clear",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#ff5555",
+        "icon": "clear_all",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 2250,
+        "y": 2100,
+        "wires": [
+            [
+                "8fab44a338fed3c5",
+                "963669c836468734"
+            ]
+        ]
+    },
+    {
+        "id": "018648d5824dafe8",
+        "type": "http request",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 2210,
+        "y": 1600,
+        "wires": [
+            [
+                "45ed2515de0fcfe5",
+                "41ba758961e63aca"
+            ]
+        ]
+    },
+    {
+        "id": "45ed2515de0fcfe5",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 2590,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "41ba758961e63aca",
+        "type": "msg-router",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": true,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": true,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": true,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 3,
+        "x": 2710,
+        "y": 1480,
+        "wires": [
+            [
+                "1496e150e0865fb9"
+            ],
+            [
+                "1f13b4e8073b244d"
+            ],
+            [
+                "d32cd143ef1fe43d"
+            ]
+        ]
+    },
+    {
+        "id": "4d1641c6d39c1cf8",
+        "type": "ui_toast",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "position": "bottom right",
+        "displayTime": "1",
+        "highlight": "",
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "Logs",
+        "name": "Notify Logs",
+        "x": 3320,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "1496e150e0865fb9",
+        "type": "unsafe-function",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "NewLogsNotification",
+        "func": "//Retreiving Libraries from the Settings.json file\nmsg.payload = \"new Log\";\nreturn msg; ",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 3080,
+        "y": 1440,
+        "wires": [
+            [
+                "4d1641c6d39c1cf8"
+            ]
+        ]
+    },
+    {
+        "id": "989e33de970edf07",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 3665.504150390625,
+        "y": 1442.7667846679688,
+        "wires": []
+    },
+    {
+        "id": "bf8cb734c6cd142a",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 3227.1663208007812,
+        "y": 1557.4762573242188,
+        "wires": []
+    },
+    {
+        "id": "a8c69b6a8081ed3c",
+        "type": "unsafe-function",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "Prepare Log",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n\n// Process msg payload\n\nlet filterNamespaceUrl = msg.url.replace(context.global.get('namespace'), \"\");\nlet filterAPIElements1Url = filterNamespaceUrl.replace(\"/aasServer/shells/\", \"\");\nlet filterAPIElements2Url = filterAPIElements1Url.replace(\"/aas/submodels\", \"\");\nlet filterAPIElements3Url = filterAPIElements2Url.replace(\"/submodel/submodel-elements\", \"\");\n\n//let splittedUrl = filterAPIElements2Url.split(\"/\");\n\n\n\n//\n\nlet observation = {};\nobservation.id = uuid;\nobservation.source = context.global.get('AASIdentifier');\nobservation.direction = \"Output\";\nobservation.observableReference = decodeURIComponent(filterAPIElements3Url.trim());\nobservation.timestamp = new Date().getTime();\nobservation.payload = msg.payload.value;\nmsg.payload = observation;\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 2410,
+        "y": 1500,
+        "wires": [
+            [
+                "41ba758961e63aca"
+            ]
+        ]
+    },
+    {
+        "id": "6d34898f536e0cf8",
+        "type": "http request",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 2190,
+        "y": 1500,
+        "wires": [
+            [
+                "d40fac3b96e6d6cf",
+                "a8c69b6a8081ed3c"
+            ]
+        ]
+    },
+    {
+        "id": "177ea848e02a250c",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 2183.333251953125,
+        "y": 1742.1431884765625,
+        "wires": []
+    },
+    {
+        "id": "03e11d60660d630d",
+        "type": "http request",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 2220,
+        "y": 1780,
+        "wires": [
+            [
+                "8352c369ab4a9508",
+                "41ba758961e63aca"
+            ]
+        ]
+    },
+    {
+        "id": "c40f3dc0c15caa88",
+        "type": "unsafe-function",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "LiveDataToUnSubscribe",
+        "func": "//Retreiving Libraries from the Settings.json file\nlet outputMsgs = [];\nlet selectedElements = context.flow.get('selectedElements');\nfor(let element in selectedElements){\n    //let msg = {payload:selectedElements[element]};\n    \n    //let selected_element = selectedElements[element].submodelId + \"/\" +selectedElements[element].selectedElement.idShort;\n    let selected_element = \"\";\n    if(typeof selectedElements[element].path != \"undefined\"){\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].path + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    else {\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    let msg = {payload:selected_element};\n    let  shellId = encodeURIComponent(selectedElements[element].aasid);\n    let encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n    \n    if(typeof selectedElements[element].path != \"undefined\"){\n        msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/unsubscribe/submodel/submodel-elements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n    } else {\n        msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/unsubscribe/submodel/submodel-elements/\" + selectedElements[element].selectedElement.idShort;    \n    }\n    \n    outputMsgs.push(msg);\n    \n}\n\nreturn [outputMsgs];",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1983.1873779296875,
+        "y": 1780.7473754882812,
+        "wires": [
+            [
+                "03e11d60660d630d",
+                "177ea848e02a250c"
+            ]
+        ]
+    },
+    {
+        "id": "8352c369ab4a9508",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 2403.333251953125,
+        "y": 1782.1431884765625,
+        "wires": []
+    },
+    {
+        "id": "865400ef1a2a48e8",
+        "type": "function",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "Login Redirection",
+        "func": "var msg = {};\n//msg.payload = {tab: \"Login\"};\nmsg.payload = { group: {\n    hide : [\"Manifest_Commands\", \"Manifest_Headers\", \"Manifest_Body\"],\n    show : [\"Login_Login\"]\n}\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1770,
+        "y": 1860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d3502ab6f6acda9",
+        "type": "ui_button",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "Get button",
+        "group": "5b380ea4.54d28",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Get",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#14524e",
+        "icon": "swap_vert",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 1680,
+        "y": 1460,
+        "wires": [
+            [
+                "cee4988e25149744"
+            ]
+        ]
+    },
+    {
+        "id": "31fd26886a4845db",
+        "type": "ui_button",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "Observe button",
+        "group": "5b380ea4.54d28",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Observe",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#FF9000",
+        "icon": "visibility",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 1700,
+        "y": 1680,
+        "wires": [
+            [
+                "c9252c526e4fed93",
+                "870db6c250754c4e"
+            ]
+        ]
+    },
+    {
+        "id": "589bd838d3771e0c",
+        "type": "ui_button",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "Un-observe button",
+        "group": "5b380ea4.54d28",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Un-observe",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#ff5555",
+        "icon": "visibility_off",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 1710,
+        "y": 1780,
+        "wires": [
+            [
+                "c40f3dc0c15caa88"
+            ]
+        ]
+    },
+    {
+        "id": "c9252c526e4fed93",
+        "type": "unsafe-function",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "LiveDataToSubscribe",
+        "func": "//Retreiving Libraries from the Settings.json file\nlet outputMsgsLiveData = [];\nlet outputMsgsFileData = [];\nlet outputMsgsConstantData = [];\nlet outputMsgsPropertyData = [];\n\nlet uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\nlet selectedElements = context.flow.get('selectedElements');\nfor(let element in selectedElements){\n    let selected_element = \"\";\n    if(typeof selectedElements[element].path != \"undefined\"){\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].path + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    else {\n        selected_element = selectedElements[element].aasid + \"/\" + selectedElements[element].submodelId + \"/\" + selectedElements[element].selectedElement.idShort;\n    }\n    let modelType = selectedElements[element].selectedElement.modelType.name;\n    let category = selectedElements[element].selectedElement.category;\n    if(modelType == \"Property\" && category === \"VARIABLE\")\n    {\n        let msg = {payload:selected_element};\n        let  shellId = encodeURIComponent(selectedElements[element].aasid);\n        let encodedSelected_Element = encodeURIComponent(selectedElements[element].submodelId);\n        \n        if(typeof selectedElements[element].path != \"undefined\"){\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/subscribe/submodel/submodel-elements/\" + selectedElements[element].path + \".\" + selectedElements[element].selectedElement.idShort;\n        } else {\n            msg.url = context.global.get('namespace') + \"/aasServer/shells/\" + shellId + \"/aas/submodels/\" + encodedSelected_Element +\"/liveData/subscribe/submodel/submodel-elements/\" + selectedElements[element].selectedElement.idShort;    \n        }\n        \n        outputMsgsLiveData.push(msg);\n    } else if (modelType == \"Property\" && category === \"CONSTANT\" || modelType == \"File\"){\n        let observation = {};\n        observation.id = uuid;\n        observation.source = context.global.get(\"AASIdentifier\");\n        observation.direction = \"Output\";\n        observation.observableReference = selected_element;\n        observation.timestamp = new Date().getTime();\n        observation.payload = \"No Live Data Possible for Category: \" + category;\n        let msg = {payload:observation};\n        outputMsgsConstantData.push(msg);\n    }\n    \n}\n\nreturn [outputMsgsLiveData, outputMsgsConstantData];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1980,
+        "y": 1680,
+        "wires": [
+            [
+                "018648d5824dafe8"
+            ],
+            [
+                "41ba758961e63aca",
+                "3728db12b792c686"
+            ]
+        ]
+    },
+    {
+        "id": "3728db12b792c686",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 2230,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "870db6c250754c4e",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1870,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "74a8e33e521b2bbd",
+        "type": "ui_template",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "group": "16ffbcf4.6cfa43",
+        "name": "AccountLog",
+        "order": 0,
+        "width": "35",
+        "height": "15",
+        "format": "    <script>\n        (function(scope) {\n            scope.logs = [];\n        \n            scope.$watch('msg', function(msg){\n                if (msg) {\n                    if (msg.payload) {\n                        scope.logs = msg.payload;\n                    }\n                }\n            });\n        })(scope)\n    </script>\n    <div id=\"accountLog_Table\">\n        <table class=\"table table-sm\">\n            <thead class=\"text-dark\">\n                <tr>\n                    <th scope=\"col\">access At</th>\n                    <th scope=\"col\">username</th>\n                </tr>\n            </thead>\n            <tbody>\n            <tr class=\"table-success\" ng-repeat=\"i in logs\">\n                <td><a class=\"text-dark\">{{i.accessAt}}</a></td>\n                <td><a class=\"text-dark\">{{i.username}}</a></td>\n            </tr>\n            </tbody>\n            \n        </table>\n    </div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 3550,
+        "y": 1980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d40fac3b96e6d6cf",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 2330,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "9359c92beccf3562",
+        "type": "sqlite",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "fixed",
+        "sql": "select * FROM aasLogs",
+        "name": "",
+        "x": 2770,
+        "y": 1980,
+        "wires": [
+            [
+                "1f13b4e8073b244d",
+                "93d6b801e4cca259",
+                "74a8e33e521b2bbd"
+            ]
+        ]
+    },
+    {
+        "id": "a5061588fbdc31a1",
+        "type": "ui_ui_control",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "events": "change",
+        "x": 1940,
+        "y": 1980,
+        "wires": [
+            [
+                "01a20d93df575d86"
+            ]
+        ]
+    },
+    {
+        "id": "93d6b801e4cca259",
+        "type": "debug",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3170,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "8fab44a338fed3c5",
+        "type": "sqlite",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "fixed",
+        "sql": "delete FROM accountLogs",
+        "name": "",
+        "x": 2890,
+        "y": 2080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "963669c836468734",
+        "type": "sqlite",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "fixed",
+        "sql": "delete FROM aasLogs",
+        "name": "",
+        "x": 2890,
+        "y": 2120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "01a20d93df575d86",
+        "type": "ui_button",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "Refresh button",
+        "group": "b9aed87e.bdd0c8",
+        "order": 22,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#14524e",
+        "className": "",
+        "icon": "cached",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 2320,
+        "y": 1980,
+        "wires": [
+            [
+                "9359c92beccf3562"
+            ]
+        ]
+    },
+    {
+        "id": "9d9d4e513499c3ff",
+        "type": "link call",
+        "z": "2164c119.f88826",
+        "g": "d7076418.bb51d8",
+        "name": "",
+        "links": [
+            "74b9bd433d2c9aca"
+        ],
+        "timeout": "30",
+        "x": 610,
+        "y": 2400,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "22f61ac3b3943fef",
         "type": "inject",
         "z": "2d13dfa7624a2c89",
@@ -17258,6 +17690,11 @@
                 "name": "PropertyLink",
                 "value": "https://example.prosys.com/ids/aas/9574_3103_7012_8644/OperationalData/Counter",
                 "type": "str"
+            },
+            {
+                "name": "HistoryLength",
+                "value": "14400",
+                "type": "str"
             }
         ],
         "x": 1270,
@@ -17335,6 +17772,11 @@
                 "type": "str"
             },
             {
+                "name": "HistoryLength",
+                "value": "14400",
+                "type": "str"
+            },
+            {
                 "name": "TEST",
                 "value": "2",
                 "type": "str"
@@ -17393,10 +17835,12 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1860,
+        "x": 2060,
         "y": 920,
         "wires": [
-            []
+            [
+                "39c8ca4825324b7b"
+            ]
         ]
     },
     {
@@ -17413,6 +17857,11 @@
             {
                 "name": "PropertyLink",
                 "value": "https://example.prosys.com/ids/aas/9574_3103_7012_8644/OperationalData/Sawtooth",
+                "type": "str"
+            },
+            {
+                "name": "HistoryLength",
+                "value": "14400",
                 "type": "str"
             },
             {
@@ -17475,10 +17924,12 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1820,
+        "x": 2040,
         "y": 1180,
         "wires": [
-            []
+            [
+                "e496b90bccddaf73"
+            ]
         ]
     },
     {
@@ -17495,6 +17946,11 @@
             {
                 "name": "PropertyLink",
                 "value": "https://example.prosys.com/ids/aas/9574_3103_7012_8644/OperationalData/Sinusoid",
+                "type": "str"
+            },
+            {
+                "name": "HistoryLength",
+                "value": "14400",
                 "type": "str"
             },
             {
@@ -17556,10 +18012,12 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1840,
-        "y": 1460,
+        "x": 2040,
+        "y": 1440,
         "wires": [
-            []
+            [
+                "789a30b07dee2369"
+            ]
         ]
     },
     {
@@ -17576,6 +18034,11 @@
             {
                 "name": "PropertyLink",
                 "value": "https://example.prosys.com/ids/aas/9574_3103_7012_8644/OperationalData/Square",
+                "type": "str"
+            },
+            {
+                "name": "HistoryLength",
+                "value": "14400",
                 "type": "str"
             },
             {
@@ -17637,10 +18100,12 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1810,
-        "y": 1720,
+        "x": 2030,
+        "y": 1700,
         "wires": [
-            []
+            [
+                "bd5342eb231b7b67"
+            ]
         ]
     },
     {
@@ -17657,6 +18122,11 @@
             {
                 "name": "PropertyLink",
                 "value": "https://example.prosys.com/ids/aas/9574_3103_7012_8644/OperationalData/Triangle",
+                "type": "str"
+            },
+            {
+                "name": "HistoryLength",
+                "value": "14400",
                 "type": "str"
             },
             {
@@ -17718,10 +18188,12 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1820,
-        "y": 1960,
+        "x": 2040,
+        "y": 1940,
         "wires": [
-            []
+            [
+                "1caeccf29b7b91ec"
+            ]
         ]
     },
     {
@@ -17749,10 +18221,12 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 1840,
+        "x": 2040,
         "y": 600,
         "wires": [
-            []
+            [
+                "25d0583475286e1d"
+            ]
         ]
     },
     {
@@ -18817,6 +19291,126 @@
                 "acf92012ced460ff",
                 "e64f5c9d7d87f6e8",
                 "2d391474633af659"
+            ]
+        ]
+    },
+    {
+        "id": "25d0583475286e1d",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "2d13dfa7624a2c89",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "Counter_hist",
+                "type": "str"
+            }
+        ],
+        "x": 2080,
+        "y": 640,
+        "wires": [
+            [
+                "b61a3e9258665910"
+            ]
+        ]
+    },
+    {
+        "id": "39c8ca4825324b7b",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "2d13dfa7624a2c89",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "RandomNumber_hist",
+                "type": "str"
+            }
+        ],
+        "x": 2080,
+        "y": 960,
+        "wires": [
+            [
+                "637bb1dc01a87c8a"
+            ]
+        ]
+    },
+    {
+        "id": "e496b90bccddaf73",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "2d13dfa7624a2c89",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "Sawtooth_hist",
+                "type": "str"
+            }
+        ],
+        "x": 2080,
+        "y": 1220,
+        "wires": [
+            [
+                "18da1f3dd99ef51c"
+            ]
+        ]
+    },
+    {
+        "id": "789a30b07dee2369",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "2d13dfa7624a2c89",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "Sinusoid_hist",
+                "type": "str"
+            }
+        ],
+        "x": 2080,
+        "y": 1480,
+        "wires": [
+            [
+                "ad4a3b5283c3ed4e"
+            ]
+        ]
+    },
+    {
+        "id": "bd5342eb231b7b67",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "2d13dfa7624a2c89",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "Square_hist",
+                "type": "str"
+            }
+        ],
+        "x": 2080,
+        "y": 1740,
+        "wires": [
+            [
+                "e6ae7b90e8d42b54"
+            ]
+        ]
+    },
+    {
+        "id": "1caeccf29b7b91ec",
+        "type": "subflow:5ed335e57e3a0a3e",
+        "z": "2d13dfa7624a2c89",
+        "name": "",
+        "env": [
+            {
+                "name": "historyArrayName",
+                "value": "Triangle_hist",
+                "type": "str"
+            }
+        ],
+        "x": 2080,
+        "y": 1980,
+        "wires": [
+            [
+                "379ee49b7185556f"
             ]
         ]
     }
