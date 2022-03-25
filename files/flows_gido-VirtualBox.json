@@ -549,9 +549,7 @@
             "e1994719bd7b4722"
         ],
         "x": 194,
-        "y": 4242,
-        "w": 2272,
-        "h": 239
+        "y": 4242
     },
     {
         "id": "d366c10f.cbf158",
@@ -593,9 +591,7 @@
             "79bf2a43e0da209c"
         ],
         "x": 194,
-        "y": 3499,
-        "w": 2962,
-        "h": 562
+        "y": 3499
     },
     {
         "id": "d7076418.bb51d8",
@@ -926,9 +922,7 @@
             "0fd9cb57d05e439b"
         ],
         "x": 124,
-        "y": 59,
-        "w": 1522,
-        "h": 322
+        "y": 59
     },
     {
         "id": "86587604e63a7f67",
@@ -950,9 +944,7 @@
             "300602ba72caedfd"
         ],
         "x": 654,
-        "y": 2739,
-        "w": 1052,
-        "h": 382
+        "y": 2739
     },
     {
         "id": "d947d8372ebcf4da",
@@ -999,10 +991,11 @@
             "d40fac3b96e6d6cf",
             "9359c92beccf3562",
             "a5061588fbdc31a1",
-            "93d6b801e4cca259",
             "8fab44a338fed3c5",
             "963669c836468734",
-            "01a20d93df575d86"
+            "01a20d93df575d86",
+            "52aab04cdbf63141",
+            "c22a134df446b17f"
         ],
         "x": 1584,
         "y": 1359,
@@ -17295,9 +17288,7 @@
         "y": 1980,
         "wires": [
             [
-                "1f13b4e8073b244d",
-                "93d6b801e4cca259",
-                "74a8e33e521b2bbd"
+                "c22a134df446b17f"
             ]
         ]
     },
@@ -17315,24 +17306,6 @@
                 "01a20d93df575d86"
             ]
         ]
-    },
-    {
-        "id": "93d6b801e4cca259",
-        "type": "debug",
-        "z": "2164c119.f88826",
-        "g": "d947d8372ebcf4da",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3170,
-        "y": 2000,
-        "wires": []
     },
     {
         "id": "8fab44a338fed3c5",
@@ -17389,7 +17362,8 @@
         "y": 1980,
         "wires": [
             [
-                "9359c92beccf3562"
+                "9359c92beccf3562",
+                "52aab04cdbf63141"
             ]
         ]
     },
@@ -17407,6 +17381,40 @@
         "y": 2400,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "52aab04cdbf63141",
+        "type": "sqlite",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "fixed",
+        "sql": "select * FROM aasLogs",
+        "name": "",
+        "x": 2770,
+        "y": 1940,
+        "wires": [
+            [
+                "1f13b4e8073b244d"
+            ]
+        ]
+    },
+    {
+        "id": "c22a134df446b17f",
+        "type": "unsafe-function",
+        "z": "2164c119.f88826",
+        "g": "d947d8372ebcf4da",
+        "name": "LogsProcessing",
+        "func": "//Retreiving Libraries from the Settings.json file\nif(msg.payload){\n    /*\n    //var observation = JSON.parse(msg.payload);\n    var observation = msg.payload;\n    var logs = context.flow.get('logs');\n    var copyLogs = logs.slice(Math.max(logs.length - 25, 0));\n    //for(var log in msg.payload){\n    //    logs.push(msg.payload[log]);\n    //}\n    var log = {};\n    if(typeof observation.payload.href !== \"undefined\"){\n        log.link = observation.payload.href;\n    } else{\n        log.value = observation.payload;\n    }\n    //log.time = Date.now();\n    log.time = observation.timestamp;\n    log._msgid = msg._msgid;\n    log.AASID = context.global.get('AASIdentifier');\n    log.observableReference = observation.observableReference;\n    if(copyLogs.length > 25){\n        copyLogs.pop();\n        copyLogs.push(log);\n        logs.push(log);\n    } else {\n        logs.push(log);\n    }*/\n    \n    context.flow.set('accountlog', msg.payload);\n    var outputMsg = {};\n    //msg.payload = logs;\n    //outputMsg.payload = logs;\n    outputMsg.payload = msg.payload;\n    return outputMsg;\n}\nmsg.payload = \"\";\nreturn msg; ",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 3320,
+        "y": 1980,
+        "wires": [
+            [
+                "74a8e33e521b2bbd"
+            ]
         ]
     },
     {
