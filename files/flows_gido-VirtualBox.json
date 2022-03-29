@@ -247,7 +247,7 @@
                 "y": 80,
                 "wires": [
                     {
-                        "id": "09d05abc4fc708a6"
+                        "id": "407f394e39d1235e"
                     }
                 ]
             }
@@ -258,7 +258,7 @@
                 "y": 80,
                 "wires": [
                     {
-                        "id": "09d05abc4fc708a6",
+                        "id": "407f394e39d1235e",
                         "port": 0
                     }
                 ]
@@ -267,6 +267,11 @@
         "env": [
             {
                 "name": "historyArrayName",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "PathTo",
                 "type": "str",
                 "value": ""
             }
@@ -340,6 +345,45 @@
             },
             {
                 "name": "HistoryLength",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "fd3d002b9eb19bb9",
+        "type": "subflow",
+        "name": "JSON_Paths",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "5e0172f602c4e2b7"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 340,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "5e0172f602c4e2b7",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "PathTo",
                 "type": "str",
                 "value": ""
             }
@@ -645,9 +689,7 @@
             "9d9d4e513499c3ff"
         ],
         "x": 54,
-        "y": 2319,
-        "w": 1272,
-        "h": 446.09493827819824
+        "y": 2319
     },
     {
         "id": "9eaca16.128cb6",
@@ -668,9 +710,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -757,9 +797,7 @@
             "cb32083a9440c96a"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3532,
-        "h": 962
+        "y": 99
     },
     {
         "id": "48a4f908.86ced8",
@@ -785,9 +823,7 @@
             "f826e42f.85708"
         ],
         "x": 1584,
-        "y": 2359,
-        "w": 1132,
-        "h": 304.3541259765625
+        "y": 2359
     },
     {
         "id": "a4c26498.4d1758",
@@ -815,9 +851,7 @@
             "2845e87d990395ef"
         ],
         "x": 1574,
-        "y": 2679,
-        "w": 912,
-        "h": 282
+        "y": 2679
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -855,9 +889,7 @@
             "df98a659a5b217dc"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -899,9 +931,7 @@
             "a6820e84.1e723"
         ],
         "x": 34,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "87ab59891ed7e8db",
@@ -929,9 +959,7 @@
             "29f86e6b7bf0b7d0"
         ],
         "x": 124,
-        "y": 59,
-        "w": 1522,
-        "h": 322
+        "y": 59
     },
     {
         "id": "bb08df161cf08ad2",
@@ -953,9 +981,7 @@
             "8c6f30cfc37c395d"
         ],
         "x": 654,
-        "y": 2739,
-        "w": 1052,
-        "h": 382
+        "y": 2739
     },
     {
         "id": "5b251fb3a0b9aa81",
@@ -1009,9 +1035,7 @@
             "7109cd6fa41b4b3b"
         ],
         "x": 1584,
-        "y": 1459,
-        "w": 2222,
-        "h": 802
+        "y": 1459
     },
     {
         "id": "37a4080e.40ed9",
@@ -2955,11 +2979,11 @@
         ]
     },
     {
-        "id": "09d05abc4fc708a6",
+        "id": "407f394e39d1235e",
         "type": "function",
         "z": "5ed335e57e3a0a3e",
         "name": "History",
-        "func": "// Get request timestamps\nvar start = msg.payload.start;\nvar end = (msg.payload.end - start)/1000;\n//var end = msg.payload.end;\nvar history = context.flow.get(\"$parent.\" + env.get(\"historyArrayName\"));\nif(end > history.length){\n    start = history.length;\n} else {\n    start = history.length - end;\n}\n\nvar data = [];\nfor (var ts = start; ts < history.length; ts++ )\n{   \n    var element = history[ts];\n\n    data.push( {\n        tstamp: element.tstamp,\n        data: element.data\n    } );\n}\nmsg.payload = data;\nreturn msg;",
+        "func": "var extract = function (point, keyIndex, keysArray) {\n    if (keyIndex < keysArray.length) {\n        let element = keysArray[keyIndex];\n        if (typeof point[element] !== 'object') {\n            let simpleValue = {};\n            simpleValue[element] = point[element];\n            return simpleValue\n        } else {\n            keyIndex = keyIndex + 1;\n            return extract(point[element], keyIndex, keysArray);\n\n        }\n\n    }\n\n}\n\nlet keys = env.get(\"PathTo\");\nlet keysArray = keys.split(\".\");\n\n\n// Get request timestamps\nvar start = msg.payload.start;\nvar end = (msg.payload.end - start)/1000;\n//var end = msg.payload.end;\nvar history = context.flow.get(\"$parent.\" + env.get(\"historyArrayName\"));\nif(end > history.length){\n    start = history.length;\n} else {\n    start = history.length - end;\n}\n\nvar data = [];\nfor (var ts = start; ts < history.length; ts++ )\n{   \n    var element = history[ts];\n\n    data.push( {\n        tstamp: element.tstamp,\n        data: extract(element.data, 0, keysArray)\n    } );\n}\nmsg.payload = data;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3210,6 +3234,23 @@
             ]
         ],
         "l": false
+    },
+    {
+        "id": "5e0172f602c4e2b7",
+        "type": "function",
+        "z": "fd3d002b9eb19bb9",
+        "name": "",
+        "func": "var extract = function (point, keyIndex, keysArray) {\n    if(keyIndex < keysArray.length){\n        let element = keysArray[keyIndex];\n        if (typeof point[element] !== 'object') {\n            let simpleValue = {};\n            simpleValue[element] = point[element];\n            return simpleValue\n        } else {\n            keyIndex = keyIndex + 1;\n            return extract(point[element], keyIndex, keysArray);\n            \n        }\n\n    }\n    \n}\n\nlet keys = env.get(\"PathTo\");\nlet keysArray = keys.split(\".\");\nlet point = msg.payload;\nmsg.payload.data = extract(point.data, 0, keysArray);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 80,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "cac1db39.b04078",
@@ -10164,7 +10205,7 @@
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
         "name": "UpdatingSubmodelElement...",
-        "func": "let submodelElement = \"\";\nlet submodelElementId = msg.req.params.id;\nlet submodelId = msg.req.params.submodelId;\nlet persist = \"false\";\nif (msg.req.query.content == \"value\") {\n\n    msg.payload.value = msg.submodelElement[msg.submodelElementId];\n    submodelElement = msg.payload;\n\n} else {\n    submodelElement = msg.submodelElement;\n    persist = \"true\";\n}\n\nvar updateSubmodelElement = function (submodelElements, submodelElement, value) {\n\n    let updated = false;\n    for (let index in submodelElements) {\n        let element = submodelElements[index];\n        if (element.modelType.name == \"SubmodelElementCollection\") {\n            updated = updateSubmodelElement(element.value, submodelElement, value);\n            if (updated) {\n                return updated;\n            }\n        } else {\n\n            if (element.idShort == submodelElement.idShort) {\n                element.value = value;\n                return true;\n            }\n\n        }\n    }\n    return updated;\n\n}\n\nif (msg.jsonataStatus == \"Success\") {\n    let value = msg.submodelElement[msg.submodelElementId];\n    let submodelElement = msg.payload;\n    let submodel = msg.jsonataResult[0];\n    let submodelIdentifier = submodel.identification.id;\n    let manifestSubmodelToUpdate = \"\";\n    let result = false;\n    let manifest = context.flow.get(\"manifest\");\n    let manifestSubmodels = manifest.submodels;\n    for (let manifestSubmodel in manifestSubmodels) {\n        let manifestSubmodelIdentifier = manifestSubmodels[manifestSubmodel].identification.id;\n        if (submodelIdentifier == manifestSubmodelIdentifier) {\n            let manifestSubmodelElements = manifestSubmodels[manifestSubmodel].submodelElements;\n            result = updateSubmodelElement(manifestSubmodelElements, submodelElement, value);\n            if (result) {\n                context.flow.set(\"manifest\", manifest);\n                if (persist == \"true\") {\n                    return [msg, null];\n                } else {\n                    return [null, msg];\n                }\n            }\n        }\n    }\n\n    msg.statusCode = \"404\";\n    //msg.payload = \"Submodel with id:\" + submodelIdentifier + \" not found!!!\";\n    return [null, msg];\n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n    return [null, msg];\n}\n\n\n\n",
+        "func": "let submodelElement = \"\";\nlet submodelElementId = msg.req.params.id;\nlet submodelId = msg.req.params.submodelId;\nlet persist = \"false\";\nif (msg.req.query.content == \"value\") {\n\n    msg.payload.value = msg.submodelElement[msg.submodelElementId];\n    submodelElement = msg.payload;\n\n} else {\n    submodelElement = msg.submodelElement;\n    persist = \"true\";\n}\n\nlet updateSubmodelElementValues = function (submodelElements, indexIdPath, collectionIds, value) {\n\n    if (indexIdPath < collectionIds.length) {\n\n        let idPath = collectionIds[indexIdPath];\n\n        for (let submodelElement in submodelElements) {\n\n            let submodelElementIdentifier = submodelElements[submodelElement].idShort;\n\n            let modelType = submodelElements[submodelElement].modelType.name;\n\n            if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath < (collectionIds.length - 1)) {\n\n                indexIdPath = indexIdPath + 1;\n\n                return updateSubmodelElementValues(submodelElements[submodelElement].value, indexIdPath, collectionIds, value);\n\n            } else if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath === (collectionIds.length - 1)) {\n\n                //msg.debug3 = \"entrei\";\n\n                let values = JSON.parse(value);\n\n                let keys = Object.keys(values);\n\n\n                for (let keyIndex in keys) {\n\n                    let selectedValue = 0;\n\n                    selectedValue = values[keys[keyIndex]];\n\n                    submodelElements[submodelElement].value[keyIndex].value = selectedValue;\n\n                }\n\n                return true;\n\n            }\n            else if (submodelElementIdentifier === idPath && modelType === \"Property\") {\n\n                submodelElements[submodelElement].value = value;\n\n                return true;\n\n            }\n\n        }\n\n    } else {\n\n        return false;\n\n    }\n\n}\n\nvar submodelCollectionId = [];\n\nif (msg.jsonataStatus == \"Success\") {\n\n    let submodelRoot = msg.jsonataResult[0];\n\n    let pathToSubmodelElement = submodelElementId;\n\n    let collectionIds = pathToSubmodelElement.split(\".\");\n\n    let value = msg.submodelElement[msg.submodelElementId];\n\n    let submodelRootIdentifier = submodelRoot.identification.id;\n\n    let result = false;\n\n    let manifest = context.flow.get(\"manifest\");\n\n    let manifestSubmodels = manifest.submodels;\n\n    for (let manifestSubmodel in manifestSubmodels) {\n\n        let manifestSubmodelIdentifier = manifestSubmodels[manifestSubmodel].identification.id;\n\n        if (submodelRootIdentifier === manifestSubmodelIdentifier) {\n\n            let manifestSubmodelElements = manifestSubmodels[manifestSubmodel].submodelElements;\n\n            //msg.debug1 = collectionIds;\n\n            //msg.debug2 = manifestSubmodelElements;\n\n            result = updateSubmodelElementValues(manifestSubmodelElements, 0, collectionIds, value);\n\n            //msg.result = result;\n\n            if (result) {\n\n                context.flow.set(\"manifest\", manifest);\n\n                if (persist == \"true\") {\n\n                    return [msg, null];\n\n                } else {\n                    //msg.parsedValue = Object.keys(JSON.parse(value));\n                    //msg.values = JSON.parse(value);\n                    return [null, msg];\n\n                }\n            } else {\n\n                msg.statusCode = \"404\";\n                //msg.payload = \"Submodel with id:\" + submodelIdentifier + \" not found!!!\";\n                return [null, msg];\n\n            }\n\n        }\n\n    }\n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n    return [null, msg];\n}",
         "outputs": 2,
         "noerr": 0,
         "x": 1810,
@@ -10472,7 +10513,7 @@
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
         "name": "ReadSubmodelElement",
-        "func": "var iterate = function(submodelElementId, collectionIds, submodelElements){\n    for(var index in submodelElements){\n        var submodelElement = submodelElements[index];\n        if(submodelElement.modelType.name !== \"SubmodelElementCollection\"){\n                if(submodelElement.idShort === submodelElementId){\n                    return submodelElement;\n                    \n                }\n            }  else {\n                for(var collIndex in collectionIds){\n                    var collectionId = collectionIds[collIndex];\n                    if(submodelElement.idShort === collectionId){\n                        collectionIds.splice(collIndex, 1);\n                        var result = iterate(submodelElementId, collectionIds, submodelElement.value);\n                        return result;\n                }\n                }\n                \n            }\n    }\n    return \"\";\n}\n\nvar submodelElementId = msg.req.params.id;\nvar submodelId = msg.req.params.submodelId;\n\nvar submodelCollectionId = [];\nvar splittedSubmodel = submodelElementId.split(\".\");\n//submodelId = splittedSubmodel[0];\n\nif(splittedSubmodel.length > 1){\n    for(var index in splittedSubmodel){\n        // @ts-ignore\n        if(index < (splittedSubmodel.length - 1)){\n            submodelCollectionId.push(splittedSubmodel[index]);\n        } else {\n            submodelElementId = splittedSubmodel[index];\n        }\n    }\n}\n\nvar selectedSubmodels = [];\nvar selctedSubmodelElements = [];\nif(msg.jsonataStatus == \"Success\"){\n    var submodels = msg.jsonataResult;\n    for(var index1 in submodels){\n        var submodelElements = submodels[index1].submodelElements;\n        var result = iterate(submodelElementId, submodelCollectionId, submodelElements);\n        if (result != \"\"){\n            selectedSubmodels.push(submodels[index1]);\n            selctedSubmodelElements.push(result);\n        }\n    }\n    if(selectedSubmodels.length > 0){\n        var manifest = context.flow.get(\"manifest\");\n        var shells = manifest.assetAdministrationShells;\n        var ShellId = msg.req.params.aasid;\n        for(var index3 in shells){\n            if(shells[index3].identification.id === ShellId){\n                var submodelRefs = shells[index3].submodels;\n                for(var index4 in submodelRefs){\n                    var ref = submodelRefs[index4];\n                    for(var index5 in selectedSubmodels){\n                        if(ref.keys[0].value === selectedSubmodels[index5].identification.id){\n                            msg.statusCode = \"200\";\n                            msg.payload = selctedSubmodelElements[index5];\n                        }\n                    }\n                }\n            }\n        }\n    } else {\n        msg.statusCode = \"404\";\n        msg.payload = \"SubmodelElement with id:\" + submodelElementId + \" not found\";\n    }\n    \n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n}\n\n\n\nreturn msg;",
+        "func": "var iterate = function (submodelElementId, collectionIds, submodelElements) {\n    for (var index in submodelElements) {\n        var submodelElement = submodelElements[index];\n        if (submodelElement.modelType.name !== \"SubmodelElementCollection\" || (submodelElement.modelType.name === \"SubmodelElementCollection\" && collectionIds.length < 1)) {\n            if (submodelElement.idShort === submodelElementId) {\n                return submodelElement;\n\n            }\n\n        } else {\n            for (var collIndex in collectionIds) {\n                var collectionId = collectionIds[collIndex];\n                if (submodelElement.idShort === collectionId) {\n                    collectionIds.splice(collIndex, 1);\n                    var result = iterate(submodelElementId, collectionIds, submodelElement.value);\n                    return result;\n                }\n            }\n\n        }\n    }\n    return \"\";\n}\n\nvar submodelElementId = msg.req.params.id;\nvar submodelId = msg.req.params.submodelId;\n\nvar submodelCollectionId = [];\nvar splittedSubmodel = submodelElementId.split(\".\");\n//submodelId = splittedSubmodel[0];\n\nif (splittedSubmodel.length > 1) {\n    for (var index in splittedSubmodel) {\n        // @ts-ignore\n        if (index < (splittedSubmodel.length - 1)) {\n            submodelCollectionId.push(splittedSubmodel[index]);\n        } else {\n            submodelElementId = splittedSubmodel[index];\n        }\n    }\n}\n\nvar selectedSubmodels = [];\nvar selctedSubmodelElements = [];\nif (msg.jsonataStatus == \"Success\") {\n    var submodels = msg.jsonataResult;\n    for (var index1 in submodels) {\n        var submodelElements = submodels[index1].submodelElements;\n        var result = iterate(submodelElementId, submodelCollectionId, submodelElements);\n        if (result != \"\") {\n            selectedSubmodels.push(submodels[index1]);\n            selctedSubmodelElements.push(result);\n        }\n    }\n    if (selectedSubmodels.length > 0) {\n        var manifest = context.flow.get(\"manifest\");\n        var shells = manifest.assetAdministrationShells;\n        var ShellId = msg.req.params.aasid;\n        for (var index3 in shells) {\n            if (shells[index3].identification.id === ShellId) {\n                var submodelRefs = shells[index3].submodels;\n                for (var index4 in submodelRefs) {\n                    var ref = submodelRefs[index4];\n                    for (var index5 in selectedSubmodels) {\n                        if (ref.keys[0].value === selectedSubmodels[index5].identification.id) {\n                            msg.statusCode = \"200\";\n                            msg.payload = selctedSubmodelElements[index5];\n                        }\n                    }\n                }\n            }\n        }\n    } else {\n        msg.statusCode = \"404\";\n        msg.payload = \"SubmodelElement with id:\" + submodelElementId + \" not found\";\n    }\n\n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n}\n\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1330,
@@ -17310,8 +17351,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1860,
-        "y": 640,
+        "x": 1880,
+        "y": 580,
         "wires": []
     },
     {
@@ -17411,8 +17452,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 2060,
-        "y": 920,
+        "x": 2120,
+        "y": 1040,
         "wires": [
             [
                 "e8d0896afb1b3e06"
@@ -17500,8 +17541,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 2040,
-        "y": 1180,
+        "x": 2100,
+        "y": 1300,
         "wires": [
             [
                 "76656f95755bedbc"
@@ -17588,8 +17629,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 2040,
-        "y": 1440,
+        "x": 2100,
+        "y": 1580,
         "wires": [
             [
                 "e7130ac176dd9630"
@@ -17676,8 +17717,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 2030,
-        "y": 1700,
+        "x": 2090,
+        "y": 1840,
         "wires": [
             [
                 "fe861fb4bd68a5b7"
@@ -17712,7 +17753,7 @@
             }
         ],
         "x": 1270,
-        "y": 1940,
+        "y": 2000,
         "wires": [
             [
                 "f1516331310ab424",
@@ -17736,7 +17777,7 @@
         "aliasType": "str",
         "link": "d2edf304.fdfa2",
         "x": 1600,
-        "y": 1940,
+        "y": 2000,
         "wires": []
     },
     {
@@ -17752,8 +17793,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1600,
-        "y": 1860,
+        "x": 1570,
+        "y": 1940,
         "wires": []
     },
     {
@@ -17764,8 +17805,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 2040,
-        "y": 1940,
+        "x": 2100,
+        "y": 2140,
         "wires": [
             [
                 "29069de8364f95e6"
@@ -17797,8 +17838,8 @@
         "tstampField": "",
         "dataField": "",
         "disableDiscover": false,
-        "x": 2040,
-        "y": 600,
+        "x": 2120,
+        "y": 720,
         "wires": [
             [
                 "a58ecb9f6b3d9734"
@@ -18200,8 +18241,8 @@
         "name": "",
         "mode": "return",
         "links": [],
-        "x": 2385,
-        "y": 1100,
+        "x": 2715,
+        "y": 1120,
         "wires": []
     },
     {
@@ -18230,8 +18271,8 @@
             "53255321c086c472",
             "20ebd5a8e1ae781e"
         ],
-        "x": 2195,
-        "y": 1100,
+        "x": 2525,
+        "y": 1120,
         "wires": [
             [
                 "03e30b06eef55a66"
@@ -18300,7 +18341,7 @@
             "f962b26ee5e970d0"
         ],
         "x": 1815,
-        "y": 1900,
+        "y": 1960,
         "wires": []
     },
     {
@@ -18340,13 +18381,13 @@
         "y": 640,
         "wires": [
             [
-                "40f272b5cf6afe22"
-            ],
-            [
                 "9e9feda5cffcd2c7"
             ],
             [
-                "960112e909d85fa3"
+                "b9407330d9a6d302"
+            ],
+            [
+                "c6da7bbad0fdbbaf"
             ]
         ]
     },
@@ -18361,8 +18402,8 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1860,
-        "y": 700,
+        "x": 1910,
+        "y": 640,
         "wires": []
     },
     {
@@ -18402,13 +18443,13 @@
         "y": 960,
         "wires": [
             [
-                "015ab657d82ea67b"
-            ],
-            [
                 "2fc4981f936eb7ee"
             ],
             [
-                "7c44e55c97f51b9d"
+                "b1ece8c62f706e75"
+            ],
+            [
+                "e0d2c97b26c70db5"
             ]
         ]
     },
@@ -18421,8 +18462,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1850,
-        "y": 960,
+        "x": 1860,
+        "y": 920,
         "wires": []
     },
     {
@@ -18436,8 +18477,8 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1850,
-        "y": 1020,
+        "x": 1910,
+        "y": 980,
         "wires": []
     },
     {
@@ -18477,13 +18518,13 @@
         "y": 1220,
         "wires": [
             [
-                "4d37440aea3248a9"
-            ],
-            [
                 "6920e7b74700c6ff"
             ],
             [
-                "ebb61d92864c9e55"
+                "12d2514a3259eb9f"
+            ],
+            [
+                "98510eeeebede605"
             ]
         ]
     },
@@ -18496,8 +18537,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1840,
-        "y": 1220,
+        "x": 1860,
+        "y": 1180,
         "wires": []
     },
     {
@@ -18511,8 +18552,8 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1830,
-        "y": 1280,
+        "x": 1910,
+        "y": 1240,
         "wires": []
     },
     {
@@ -18552,13 +18593,13 @@
         "y": 1506.0714111328125,
         "wires": [
             [
-                "489534845221d083"
-            ],
-            [
                 "c91d66508430eb5e"
             ],
             [
-                "e308fd898f8c7443"
+                "2ee41b7e49d58023"
+            ],
+            [
+                "5cab3177af6c7438"
             ]
         ]
     },
@@ -18571,8 +18612,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1863.21435546875,
-        "y": 1506.0714111328125,
+        "x": 1860,
+        "y": 1460,
         "wires": []
     },
     {
@@ -18586,8 +18627,8 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1853.21435546875,
-        "y": 1566.0714111328125,
+        "x": 1910,
+        "y": 1520,
         "wires": []
     },
     {
@@ -18627,13 +18668,13 @@
         "y": 1760,
         "wires": [
             [
-                "85194ac3188e1ff5"
-            ],
-            [
                 "54772ce1ada16e79"
             ],
             [
-                "1853d4a265423de1"
+                "ca2002bab2aec0c5"
+            ],
+            [
+                "33cbda00627a1848"
             ]
         ]
     },
@@ -18646,8 +18687,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1840,
-        "y": 1760,
+        "x": 1860,
+        "y": 1720,
         "wires": []
     },
     {
@@ -18661,8 +18702,8 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1830,
-        "y": 1820,
+        "x": 1910,
+        "y": 1780,
         "wires": []
     },
     {
@@ -18699,16 +18740,16 @@
         "msgControl": false,
         "outputs": 3,
         "x": 1590,
-        "y": 2000,
+        "y": 2060,
         "wires": [
-            [
-                "6a1d18cc8ef9eb26"
-            ],
             [
                 "bdced947189b947d"
             ],
             [
-                "ac923a422e71dc4c"
+                "8ab41c47bb7582a9"
+            ],
+            [
+                "224d642b60efe4ba"
             ]
         ]
     },
@@ -18721,8 +18762,8 @@
         "alias": "",
         "aliasType": "str",
         "link": "72ae2011.f3d7b",
-        "x": 1840,
-        "y": 2000,
+        "x": 1860,
+        "y": 2020,
         "wires": []
     },
     {
@@ -18736,8 +18777,8 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1830,
-        "y": 2060,
+        "x": 1910,
+        "y": 2080,
         "wires": []
     },
     {
@@ -18880,10 +18921,15 @@
                 "name": "historyArrayName",
                 "value": "Counter_hist",
                 "type": "str"
+            },
+            {
+                "name": "PathTo",
+                "value": "Counter",
+                "type": "str"
             }
         ],
-        "x": 2080,
-        "y": 640,
+        "x": 2120,
+        "y": 760,
         "wires": [
             [
                 "40f272b5cf6afe22"
@@ -18900,10 +18946,15 @@
                 "name": "historyArrayName",
                 "value": "RandomNumber_hist",
                 "type": "str"
+            },
+            {
+                "name": "PathTo",
+                "value": "RandomNumber",
+                "type": "str"
             }
         ],
-        "x": 2080,
-        "y": 960,
+        "x": 2120,
+        "y": 1080,
         "wires": [
             [
                 "015ab657d82ea67b"
@@ -18920,10 +18971,15 @@
                 "name": "historyArrayName",
                 "value": "Sawtooth_hist",
                 "type": "str"
+            },
+            {
+                "name": "PathTo",
+                "value": "Sawtooth",
+                "type": "str"
             }
         ],
-        "x": 2080,
-        "y": 1220,
+        "x": 2120,
+        "y": 1340,
         "wires": [
             [
                 "4d37440aea3248a9"
@@ -18940,10 +18996,15 @@
                 "name": "historyArrayName",
                 "value": "Sinusoid_hist",
                 "type": "str"
+            },
+            {
+                "name": "PathTo",
+                "value": "Sinusoid",
+                "type": "str"
             }
         ],
-        "x": 2080,
-        "y": 1480,
+        "x": 2140,
+        "y": 1620,
         "wires": [
             [
                 "489534845221d083"
@@ -18960,10 +19021,15 @@
                 "name": "historyArrayName",
                 "value": "Square_hist",
                 "type": "str"
+            },
+            {
+                "name": "PathTo",
+                "value": "Square",
+                "type": "str"
             }
         ],
-        "x": 2080,
-        "y": 1740,
+        "x": 2140,
+        "y": 1880,
         "wires": [
             [
                 "85194ac3188e1ff5"
@@ -18980,13 +19046,234 @@
                 "name": "historyArrayName",
                 "value": "Triangle_hist",
                 "type": "str"
+            },
+            {
+                "name": "PathTo",
+                "value": "Triangle",
+                "type": "str"
             }
         ],
-        "x": 2080,
-        "y": 1980,
+        "x": 2140,
+        "y": 2180,
         "wires": [
             [
                 "6a1d18cc8ef9eb26"
+            ]
+        ]
+    },
+    {
+        "id": "c6da7bbad0fdbbaf",
+        "type": "subflow:fd3d002b9eb19bb9",
+        "z": "a180c7862a37e8ce",
+        "name": "",
+        "env": [
+            {
+                "name": "PathTo",
+                "value": "Counter",
+                "type": "str"
+            }
+        ],
+        "x": 1850,
+        "y": 720,
+        "wires": [
+            [
+                "40f272b5cf6afe22"
+            ]
+        ]
+    },
+    {
+        "id": "e0d2c97b26c70db5",
+        "type": "subflow:fd3d002b9eb19bb9",
+        "z": "a180c7862a37e8ce",
+        "name": "",
+        "env": [
+            {
+                "name": "PathTo",
+                "value": "RandomNumber",
+                "type": "str"
+            }
+        ],
+        "x": 1850,
+        "y": 1040,
+        "wires": [
+            [
+                "015ab657d82ea67b"
+            ]
+        ]
+    },
+    {
+        "id": "98510eeeebede605",
+        "type": "subflow:fd3d002b9eb19bb9",
+        "z": "a180c7862a37e8ce",
+        "name": "",
+        "env": [
+            {
+                "name": "PathTo",
+                "value": "Sawtooth",
+                "type": "str"
+            }
+        ],
+        "x": 1850,
+        "y": 1300,
+        "wires": [
+            [
+                "4d37440aea3248a9"
+            ]
+        ]
+    },
+    {
+        "id": "5cab3177af6c7438",
+        "type": "subflow:fd3d002b9eb19bb9",
+        "z": "a180c7862a37e8ce",
+        "name": "",
+        "env": [
+            {
+                "name": "PathTo",
+                "value": "Sinusoid",
+                "type": "str"
+            }
+        ],
+        "x": 1850,
+        "y": 1580,
+        "wires": [
+            [
+                "489534845221d083"
+            ]
+        ]
+    },
+    {
+        "id": "33cbda00627a1848",
+        "type": "subflow:fd3d002b9eb19bb9",
+        "z": "a180c7862a37e8ce",
+        "name": "",
+        "env": [
+            {
+                "name": "PathTo",
+                "value": "Square",
+                "type": "str"
+            }
+        ],
+        "x": 1850,
+        "y": 1840,
+        "wires": [
+            [
+                "85194ac3188e1ff5"
+            ]
+        ]
+    },
+    {
+        "id": "224d642b60efe4ba",
+        "type": "subflow:fd3d002b9eb19bb9",
+        "z": "a180c7862a37e8ce",
+        "name": "",
+        "env": [
+            {
+                "name": "PathTo",
+                "value": "Triangle",
+                "type": "str"
+            }
+        ],
+        "x": 1850,
+        "y": 2140,
+        "wires": [
+            [
+                "6a1d18cc8ef9eb26"
+            ]
+        ]
+    },
+    {
+        "id": "b9407330d9a6d302",
+        "type": "json",
+        "z": "a180c7862a37e8ce",
+        "name": "",
+        "property": "payload.data",
+        "action": "",
+        "pretty": false,
+        "x": 1770,
+        "y": 640,
+        "wires": [
+            [
+                "960112e909d85fa3"
+            ]
+        ]
+    },
+    {
+        "id": "b1ece8c62f706e75",
+        "type": "json",
+        "z": "a180c7862a37e8ce",
+        "name": "",
+        "property": "payload.data",
+        "action": "",
+        "pretty": false,
+        "x": 1770,
+        "y": 980,
+        "wires": [
+            [
+                "7c44e55c97f51b9d"
+            ]
+        ]
+    },
+    {
+        "id": "12d2514a3259eb9f",
+        "type": "json",
+        "z": "a180c7862a37e8ce",
+        "name": "",
+        "property": "payload.data",
+        "action": "",
+        "pretty": false,
+        "x": 1770,
+        "y": 1240,
+        "wires": [
+            [
+                "ebb61d92864c9e55"
+            ]
+        ]
+    },
+    {
+        "id": "2ee41b7e49d58023",
+        "type": "json",
+        "z": "a180c7862a37e8ce",
+        "name": "",
+        "property": "payload.data",
+        "action": "",
+        "pretty": false,
+        "x": 1770,
+        "y": 1520,
+        "wires": [
+            [
+                "e308fd898f8c7443"
+            ]
+        ]
+    },
+    {
+        "id": "ca2002bab2aec0c5",
+        "type": "json",
+        "z": "a180c7862a37e8ce",
+        "name": "",
+        "property": "payload.data",
+        "action": "",
+        "pretty": false,
+        "x": 1770,
+        "y": 1780,
+        "wires": [
+            [
+                "1853d4a265423de1"
+            ]
+        ]
+    },
+    {
+        "id": "8ab41c47bb7582a9",
+        "type": "json",
+        "z": "a180c7862a37e8ce",
+        "name": "",
+        "property": "payload.data",
+        "action": "",
+        "pretty": false,
+        "x": 1770,
+        "y": 2080,
+        "wires": [
+            [
+                "ac923a422e71dc4c"
             ]
         ]
     }
