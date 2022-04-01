@@ -689,9 +689,7 @@
             "9d9d4e513499c3ff"
         ],
         "x": 54,
-        "y": 2319,
-        "w": 1272,
-        "h": 446.09493827819824
+        "y": 2319
     },
     {
         "id": "9eaca16.128cb6",
@@ -712,9 +710,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -801,9 +797,7 @@
             "cb32083a9440c96a"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3532,
-        "h": 962
+        "y": 99
     },
     {
         "id": "48a4f908.86ced8",
@@ -829,9 +823,7 @@
             "f826e42f.85708"
         ],
         "x": 1584,
-        "y": 2359,
-        "w": 1132,
-        "h": 304.3541259765625
+        "y": 2359
     },
     {
         "id": "a4c26498.4d1758",
@@ -859,9 +851,7 @@
             "2845e87d990395ef"
         ],
         "x": 1574,
-        "y": 2679,
-        "w": 912,
-        "h": 282
+        "y": 2679
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -899,9 +889,7 @@
             "df98a659a5b217dc"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -943,9 +931,7 @@
             "a6820e84.1e723"
         ],
         "x": 34,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
+        "y": 2999
     },
     {
         "id": "e8501749a8186080",
@@ -999,9 +985,61 @@
             "53da882cf73ecacf"
         ],
         "x": 1524,
-        "y": 1299,
-        "w": 2222,
-        "h": 802
+        "y": 1299
+    },
+    {
+        "id": "8c31b4cce46c569f",
+        "type": "group",
+        "z": "078ead1af3884574",
+        "name": "Set-up",
+        "style": {
+            "fill": "#e3f3d3",
+            "fill-opacity": "0.4",
+            "label": true
+        },
+        "nodes": [
+            "a49d08485cebeace",
+            "ea7035dca349859b",
+            "4a8c5314b4d65002",
+            "561c072c1f76f254",
+            "af6cfe54dd24575b",
+            "fed0c086ec26cc25",
+            "329790be34b08ea7",
+            "0944f40119d31d07",
+            "297506f851677ae5",
+            "ad41aba1a364219c",
+            "4a9ca281f1081366",
+            "ab15947f4bd511ca",
+            "912adac72c708cd7"
+        ],
+        "x": 124,
+        "y": 59,
+        "w": 1522,
+        "h": 322
+    },
+    {
+        "id": "34222712b68f27a0",
+        "type": "group",
+        "z": "078ead1af3884574",
+        "name": "Connecting to the PROSYS OPC UA Simulation Server",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "75c8ff57e64ffc04",
+            "7c40c2978c050342",
+            "89b73c6754cb5e79",
+            "98978a1fba0c84d4",
+            "fcbf6201b4fdd0c1",
+            "da572d7b27fbae91",
+            "274a2e049e8e850d",
+            "f064620a0fbd67bc",
+            "a5eb9f77323b6dc6"
+        ],
+        "x": 654,
+        "y": 2739,
+        "w": 1052,
+        "h": 382
     },
     {
         "id": "37a4080e.40ed9",
@@ -1101,60 +1139,6 @@
         "y": 1909,
         "w": 1902,
         "h": 552
-    },
-    {
-        "id": "8c31b4cce46c569f",
-        "type": "group",
-        "z": "078ead1af3884574",
-        "name": "Set-up",
-        "style": {
-            "fill": "#e3f3d3",
-            "fill-opacity": "0.4",
-            "label": true
-        },
-        "nodes": [
-            "a49d08485cebeace",
-            "ea7035dca349859b",
-            "4a8c5314b4d65002",
-            "561c072c1f76f254",
-            "af6cfe54dd24575b",
-            "fed0c086ec26cc25",
-            "329790be34b08ea7",
-            "0944f40119d31d07",
-            "297506f851677ae5",
-            "ad41aba1a364219c",
-            "4a9ca281f1081366",
-            "ab15947f4bd511ca",
-            "912adac72c708cd7"
-        ],
-        "x": 124,
-        "y": 59,
-        "w": 1522,
-        "h": 322
-    },
-    {
-        "id": "34222712b68f27a0",
-        "type": "group",
-        "z": "078ead1af3884574",
-        "name": "Connecting to the PROSYS OPC UA Simulation Server",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "75c8ff57e64ffc04",
-            "7c40c2978c050342",
-            "89b73c6754cb5e79",
-            "98978a1fba0c84d4",
-            "fcbf6201b4fdd0c1",
-            "da572d7b27fbae91",
-            "274a2e049e8e850d",
-            "f064620a0fbd67bc",
-            "a5eb9f77323b6dc6"
-        ],
-        "x": 654,
-        "y": 2739,
-        "w": 1052,
-        "h": 382
     },
     {
         "id": "de00f046.a69e6",
@@ -2936,7 +2920,7 @@
         "type": "unsafe-function",
         "z": "ed3a5601fc579e40",
         "name": "PrepareOutput",
-        "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Create an Observation Event Object ------------------------------------\nvar observation = {};\nobservation.id = uuid;\n//observation.source = msg.source;\nobservation.direction = \"Output\";\n\nvar observableReference = \"\";\n\nvar observedKeys = msg.payload.observed.keys;\nfor (var key in observedKeys) {\n    if (parseInt(key) < 2) {\n        observableReference = observableReference + observedKeys[key].value + \"/\";\n    } else if (parseInt(key) >= 2 && parseInt(key) < (observedKeys.length - 1)) {\n        observableReference = observableReference + observedKeys[key].value + \";\";\n    } else {\n        observableReference = observableReference + observedKeys[key].value;\n    }\n}\n\nobservation.observableReference = observableReference;\nobservation.source = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\n\nif (context.flow.get(\"timestamp\")) {\n    observation.timestamp = context.flow.get(\"timestamp\");\n} else {\n    observation.timestamp = new Date().getTime();\n}\nobservation.payload = \"Data Flow Created\";\n//observation.href = msg.href;\n// END Create an Observation Object --------------------------------\n//outputMsgs.push(observation);\ncontext.flow.set('ObsObj', observation);\n//msg.payload = outputMsgs;\n//msg.payload = JSON.stringify(observation);\n//msg.test = JSON.parse(msg.payload);\nmsg.payload = observation;\nreturn msg;\n\n\n",
+        "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Create an Observation Event Object ------------------------------------\nvar observation = {};\nobservation.id = uuid;\n//observation.source = msg.source;\nobservation.direction = \"Output\";\n\nvar observableReference = \"\";\n\nvar observedKeys = msg.payload.observed.keys;\nfor (var key in observedKeys) {\n    if (parseInt(key) < 2) {\n        observableReference = observableReference + observedKeys[key].value + \"/\";\n    } else if (parseInt(key) >= 2 && parseInt(key) < (observedKeys.length - 1)) {\n        observableReference = observableReference + observedKeys[key].value + \".\";\n    } else {\n        observableReference = observableReference + observedKeys[key].value;\n    }\n}\n\nobservation.observableReference = observableReference;\nobservation.source = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\n\nif (context.flow.get(\"timestamp\")) {\n    observation.timestamp = context.flow.get(\"timestamp\");\n} else {\n    observation.timestamp = new Date().getTime();\n}\nobservation.payload = \"Data Flow Created\";\n//observation.href = msg.href;\n// END Create an Observation Object --------------------------------\n//outputMsgs.push(observation);\ncontext.flow.set('ObsObj', observation);\n//msg.payload = outputMsgs;\n//msg.payload = JSON.stringify(observation);\n//msg.test = JSON.parse(msg.payload);\nmsg.payload = observation;\nreturn msg;\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "x": 1175,
@@ -3020,7 +3004,7 @@
         "type": "unsafe-function",
         "z": "ed3a5601fc579e40",
         "name": "PrepareOutput",
-        "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Create an Observation Event Object ------------------------------------\nvar observation = {};\nobservation.id = uuid;\nobservation.source = msg.source;\nobservation.direction = \"Output\";\nvar observableReference = \"\";\n\nvar observedKeys = msg.payload.observed.keys;\nfor (var key in observedKeys) {\n    if (parseInt(key) < 2) {\n        observableReference = observableReference + observedKeys[key].value + \"/\";\n    } else if (parseInt(key) >= 2 && parseInt(key) < (observedKeys.length - 1)) {\n        observableReference = observableReference + observedKeys[key].value + \";\";\n    } else {\n        observableReference = observableReference + observedKeys[key].value;\n    }\n}\n\nobservation.observableReference = observableReference;\nobservation.source = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\n\nif (context.flow.get(\"timestamp\")) {\n    observation.timestamp = context.flow.get(\"timestamp\");\n} else {\n    observation.timestamp = new Date().getTime();\n}\nobservation.payload = \"Data Flow removed\";\n//observation.href = msg.href;\n// END Create an Observation Object --------------------------------\n//outputMsgs.push(observation);\n\n//msg.payload = outputMsgs;\n//msg.payload = JSON.stringify(observation);\n//msg.test = JSON.parse(msg.payload);\ncontext.flow.set(\"ObsObj\", \"\");\nmsg.payload = observation;\nreturn msg;\n\n\n",
+        "func": "var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Create an Observation Event Object ------------------------------------\nvar observation = {};\nobservation.id = uuid;\nobservation.source = msg.source;\nobservation.direction = \"Output\";\nvar observableReference = \"\";\n\nvar observedKeys = msg.payload.observed.keys;\nfor (var key in observedKeys) {\n    if (parseInt(key) < 2) {\n        observableReference = observableReference + observedKeys[key].value + \"/\";\n    } else if (parseInt(key) >= 2 && parseInt(key) < (observedKeys.length - 1)) {\n        observableReference = observableReference + observedKeys[key].value + \".\";\n    } else {\n        observableReference = observableReference + observedKeys[key].value;\n    }\n}\n\nobservation.observableReference = observableReference;\nobservation.source = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\n\nif (context.flow.get(\"timestamp\")) {\n    observation.timestamp = context.flow.get(\"timestamp\");\n} else {\n    observation.timestamp = new Date().getTime();\n}\nobservation.payload = \"Data Flow removed\";\n//observation.href = msg.href;\n// END Create an Observation Object --------------------------------\n//outputMsgs.push(observation);\n\n//msg.payload = outputMsgs;\n//msg.payload = JSON.stringify(observation);\n//msg.test = JSON.parse(msg.payload);\ncontext.flow.set(\"ObsObj\", \"\");\nmsg.payload = observation;\nreturn msg;\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "x": 1175,
@@ -3159,7 +3143,7 @@
         "type": "unsafe-function",
         "z": "ed3a5601fc579e40",
         "name": "PrepareOutput",
-        "func": "var observableReference = \"\";\n\nvar observedKeys = msg.payload.observed.keys;\nfor (var key in observedKeys) {\n    if (parseInt(key) < 2) {\n        observableReference = observableReference + observedKeys[key].value + \"/\";\n    } else if (parseInt(key) >= 2 && parseInt(key) < (observedKeys.length - 1)) {\n        observableReference = observableReference + observedKeys[key].value + \";\";\n    } else {\n        observableReference = observableReference + observedKeys[key].value;\n    }\n}\nmsg.link = observableReference;\nreturn msg;\n\n\n",
+        "func": "var observableReference = \"\";\n\nvar observedKeys = msg.payload.observed.keys;\nfor (var key in observedKeys) {\n    if (parseInt(key) < 2) {\n        observableReference = observableReference + observedKeys[key].value + \"/\";\n    } else if (parseInt(key) >= 2 && parseInt(key) < (observedKeys.length - 1)) {\n        observableReference = observableReference + observedKeys[key].value + \".\";\n    } else {\n        observableReference = observableReference + observedKeys[key].value;\n    }\n}\nmsg.link = observableReference;\nreturn msg;\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "x": 505,
