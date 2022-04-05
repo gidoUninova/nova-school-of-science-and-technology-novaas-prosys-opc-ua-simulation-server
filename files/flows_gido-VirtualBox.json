@@ -1465,7 +1465,8 @@
         "order": 1,
         "disp": true,
         "width": "3",
-        "collapse": true
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "8fc17f5a.38023",
@@ -1475,7 +1476,7 @@
         "order": 2,
         "disp": true,
         "width": "15",
-        "collapse": true,
+        "collapse": false,
         "className": ""
     },
     {
@@ -1495,7 +1496,7 @@
         "order": 3,
         "disp": true,
         "width": "20",
-        "collapse": true,
+        "collapse": false,
         "className": ""
     },
     {
@@ -2094,26 +2095,8 @@
         "order": 4,
         "disp": true,
         "width": "5",
-        "collapse": true,
+        "collapse": false,
         "className": ""
-    },
-    {
-        "id": "3d2c88cc.07fe3",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "28ba0356.ef188c",
-        "order": 2,
-        "width": "3",
-        "height": "29"
-    },
-    {
-        "id": "d485ef76.7ab83",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "f9f1bdc8.0e017",
-        "order": 2,
-        "width": "5",
-        "height": "28"
     },
     {
         "id": "bbfbe12.a34272",
@@ -18308,7 +18291,7 @@
                 "83bab555a8e3c1b8"
             ],
             [
-                "6f5aea3db052c301"
+                "ba9ac0eba0db5cd1"
             ]
         ]
     },
@@ -18370,7 +18353,7 @@
                 "7971eddcab8b45ef"
             ],
             [
-                "dfc211cf22d8ee56"
+                "5828ec6efa282206"
             ]
         ]
     },
@@ -18398,7 +18381,7 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1910,
+        "x": 1990,
         "y": 980,
         "wires": []
     },
@@ -18445,7 +18428,7 @@
                 "8ebb2c4f0480d50a"
             ],
             [
-                "c8e716e8d965c051"
+                "dd05c97c9d9dd4ac"
             ]
         ]
     },
@@ -18473,7 +18456,7 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1910,
+        "x": 1990,
         "y": 1240,
         "wires": []
     },
@@ -18520,7 +18503,7 @@
                 "4a84d34535d5dd39"
             ],
             [
-                "7ee02346fda34a85"
+                "c153135e1c1db6bc"
             ]
         ]
     },
@@ -18548,7 +18531,7 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1910,
+        "x": 1990,
         "y": 1520,
         "wires": []
     },
@@ -18595,7 +18578,7 @@
                 "660e325e22fb1185"
             ],
             [
-                "5c1a385a90b4d495"
+                "b0c254fb586fd726"
             ]
         ]
     },
@@ -18623,7 +18606,7 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1910,
+        "x": 1990,
         "y": 1780,
         "wires": []
     },
@@ -18670,7 +18653,7 @@
                 "33e5d7326b76fed2"
             ],
             [
-                "7eb19dcafe637aa8"
+                "037aee93a8ce1811"
             ]
         ]
     },
@@ -18698,7 +18681,7 @@
         "aliasMatchAll": false,
         "topicType": "string",
         "link": "d2edf304.fdfa2",
-        "x": 1910,
+        "x": 1990,
         "y": 2080,
         "wires": []
     },
@@ -18983,126 +18966,6 @@
         ]
     },
     {
-        "id": "6f5aea3db052c301",
-        "type": "subflow:fd3d002b9eb19bb9",
-        "z": "078ead1af3884574",
-        "name": "",
-        "env": [
-            {
-                "name": "PathTo",
-                "value": "Counter",
-                "type": "str"
-            }
-        ],
-        "x": 1850,
-        "y": 720,
-        "wires": [
-            [
-                "ba9ac0eba0db5cd1"
-            ]
-        ]
-    },
-    {
-        "id": "dfc211cf22d8ee56",
-        "type": "subflow:fd3d002b9eb19bb9",
-        "z": "078ead1af3884574",
-        "name": "",
-        "env": [
-            {
-                "name": "PathTo",
-                "value": "RandomNumber",
-                "type": "str"
-            }
-        ],
-        "x": 1850,
-        "y": 1040,
-        "wires": [
-            [
-                "5828ec6efa282206"
-            ]
-        ]
-    },
-    {
-        "id": "c8e716e8d965c051",
-        "type": "subflow:fd3d002b9eb19bb9",
-        "z": "078ead1af3884574",
-        "name": "",
-        "env": [
-            {
-                "name": "PathTo",
-                "value": "Sawtooth",
-                "type": "str"
-            }
-        ],
-        "x": 1850,
-        "y": 1300,
-        "wires": [
-            [
-                "dd05c97c9d9dd4ac"
-            ]
-        ]
-    },
-    {
-        "id": "7ee02346fda34a85",
-        "type": "subflow:fd3d002b9eb19bb9",
-        "z": "078ead1af3884574",
-        "name": "",
-        "env": [
-            {
-                "name": "PathTo",
-                "value": "Sinusoid",
-                "type": "str"
-            }
-        ],
-        "x": 1850,
-        "y": 1580,
-        "wires": [
-            [
-                "c153135e1c1db6bc"
-            ]
-        ]
-    },
-    {
-        "id": "5c1a385a90b4d495",
-        "type": "subflow:fd3d002b9eb19bb9",
-        "z": "078ead1af3884574",
-        "name": "",
-        "env": [
-            {
-                "name": "PathTo",
-                "value": "Square",
-                "type": "str"
-            }
-        ],
-        "x": 1850,
-        "y": 1840,
-        "wires": [
-            [
-                "b0c254fb586fd726"
-            ]
-        ]
-    },
-    {
-        "id": "7eb19dcafe637aa8",
-        "type": "subflow:fd3d002b9eb19bb9",
-        "z": "078ead1af3884574",
-        "name": "",
-        "env": [
-            {
-                "name": "PathTo",
-                "value": "Triangle",
-                "type": "str"
-            }
-        ],
-        "x": 1850,
-        "y": 2140,
-        "wires": [
-            [
-                "037aee93a8ce1811"
-            ]
-        ]
-    },
-    {
         "id": "83bab555a8e3c1b8",
         "type": "json",
         "z": "078ead1af3884574",
@@ -19126,7 +18989,7 @@
         "property": "payload.data",
         "action": "",
         "pretty": false,
-        "x": 1770,
+        "x": 1850,
         "y": 980,
         "wires": [
             [
@@ -19142,7 +19005,7 @@
         "property": "payload.data",
         "action": "",
         "pretty": false,
-        "x": 1770,
+        "x": 1850,
         "y": 1240,
         "wires": [
             [
@@ -19158,7 +19021,7 @@
         "property": "payload.data",
         "action": "",
         "pretty": false,
-        "x": 1770,
+        "x": 1850,
         "y": 1520,
         "wires": [
             [
@@ -19174,7 +19037,7 @@
         "property": "payload.data",
         "action": "",
         "pretty": false,
-        "x": 1770,
+        "x": 1850,
         "y": 1780,
         "wires": [
             [
@@ -19190,7 +19053,7 @@
         "property": "payload.data",
         "action": "",
         "pretty": false,
-        "x": 1770,
+        "x": 1850,
         "y": 2080,
         "wires": [
             [
