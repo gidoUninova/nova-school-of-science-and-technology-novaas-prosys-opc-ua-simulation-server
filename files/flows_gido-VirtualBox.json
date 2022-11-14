@@ -74,47 +74,158 @@
         "color": "#DDAA99"
     },
     {
-        "id": "5ed335e57e3a0a3e",
+        "id": "c4ef1733.bc36a8",
         "type": "subflow",
-        "name": "History",
+        "name": "OpenAAS_Manifest_RetrievingSubmodels",
         "info": "",
-        "category": "",
+        "category": "as_subflows",
         "in": [
             {
                 "x": 60,
                 "y": 80,
+                "wires": []
+            }
+        ],
+        "out": [
+            {
+                "x": 1100,
+                "y": 220,
+                "wires": []
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "786aaafb.231574",
+        "type": "subflow",
+        "name": "OpenAAS_Manifest_RetrievingPropertyById",
+        "info": "",
+        "category": "as_subflows",
+        "in": [
+            {
+                "x": 40,
+                "y": 40,
+                "wires": []
+            }
+        ],
+        "out": [
+            {
+                "x": 1180,
+                "y": 200,
+                "wires": []
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "4b6a31ae.51e96",
+        "type": "subflow",
+        "name": "AddFlowFromFile",
+        "info": "",
+        "category": "as_subflows",
+        "in": [
+            {
+                "x": 171.6666259765625,
+                "y": 196.66673278808594,
                 "wires": [
                     {
-                        "id": "407f394e39d1235e"
+                        "id": "71e88904.3ead78"
                     }
                 ]
             }
         ],
         "out": [
             {
-                "x": 340,
-                "y": 80,
+                "x": 1064.9996948242188,
+                "y": 196.66673278808594,
                 "wires": [
                     {
-                        "id": "407f394e39d1235e",
+                        "id": "343c7ae9.c921c6",
                         "port": 0
                     }
                 ]
             }
         ],
-        "env": [
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "5c6f7f1c.e800a",
+        "type": "subflow",
+        "name": "OpenAAS_Manifest_RetrievingHeaders",
+        "info": "",
+        "category": "as_subflows",
+        "in": [
             {
-                "name": "historyArrayName",
-                "type": "str",
-                "value": ""
-            },
-            {
-                "name": "PathTo",
-                "type": "str",
-                "value": ""
+                "x": 220,
+                "y": 80,
+                "wires": []
             }
         ],
-        "meta": {},
+        "out": [
+            {
+                "x": 860,
+                "y": 80,
+                "wires": []
+            }
+        ]
+    },
+    {
+        "id": "d8633d34.059f2",
+        "type": "subflow",
+        "name": "DataFlowsManagement",
+        "info": "",
+        "category": "as_subflows",
+        "in": [
+            {
+                "x": 323.3333740234375,
+                "y": 280,
+                "wires": []
+            }
+        ],
+        "out": [
+            {
+                "x": 1283.333251953125,
+                "y": 279.9999694824219,
+                "wires": []
+            }
+        ]
+    },
+    {
+        "id": "88bdbfa9.b5c8d",
+        "type": "subflow",
+        "name": "DeleteFlowsFromDirectory",
+        "info": "",
+        "category": "as_subflows",
+        "in": [
+            {
+                "x": 222.3333740234375,
+                "y": 375.46429443359375,
+                "wires": [
+                    {
+                        "id": "d5cf465.083bfb8"
+                    },
+                    {
+                        "id": "80d73952.05b468"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1658,
+                "y": 326,
+                "wires": [
+                    {
+                        "id": "69324f69.01e2f",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
         "color": "#DDAA99"
     },
     {
@@ -243,6 +354,78 @@
                 }
             ]
         }
+    },
+    {
+        "id": "5ed335e57e3a0a3e",
+        "type": "subflow",
+        "name": "History",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "407f394e39d1235e"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 340,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "407f394e39d1235e",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "historyArrayName",
+                "type": "str",
+                "value": ""
+            },
+            {
+                "name": "PathTo",
+                "type": "str",
+                "value": ""
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "10392549.d972b3",
+        "type": "group",
+        "z": "c7caf96e.a31f98",
+        "name": "AAS Configuration",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "8af52e00.b2df48",
+            "3a568a54.3c63e6",
+            "b102af28.a0df28",
+            "c0822d7.a2222d",
+            "ed7feffb.fdc4d8",
+            "d7080631.6bd928",
+            "8c3f137a.f60d68",
+            "ece6df22.01841",
+            "fff82399.2f49b",
+            "82289ad6.a600d8",
+            "ad85b295.7069f"
+        ],
+        "x": 76,
+        "y": 225,
+        "w": 1902,
+        "h": 242
     },
     {
         "id": "daa90db5.798ca",
@@ -394,7 +577,9 @@
             "a9c22279a032d681"
         ],
         "x": 194,
-        "y": 4242
+        "y": 4242,
+        "w": 2272,
+        "h": 239
     },
     {
         "id": "d366c10f.cbf158",
@@ -418,7 +603,9 @@
             "555ce72ca0d7dfd4"
         ],
         "x": 194,
-        "y": 3519
+        "y": 3519,
+        "w": 2962,
+        "h": 542
     },
     {
         "id": "9eaca16.128cb6",
@@ -439,9 +626,7 @@
             "726ded99.bd5cac"
         ],
         "x": 94,
-        "y": 2179,
-        "w": 652,
-        "h": 82
+        "y": 2179
     },
     {
         "id": "1d9f40e2.66e59f",
@@ -526,9 +711,7 @@
             "cb32083a9440c96a"
         ],
         "x": 214,
-        "y": 99,
-        "w": 3532,
-        "h": 921
+        "y": 99
     },
     {
         "id": "cffb33fa.8a9ae",
@@ -567,9 +750,7 @@
             "22add3d70156e4b3"
         ],
         "x": 2504,
-        "y": 2679,
-        "w": 1272,
-        "h": 517
+        "y": 2679
     },
     {
         "id": "e8501749a8186080",
@@ -610,31 +791,7 @@
             "e14fe06ae748a0af"
         ],
         "x": 1794,
-        "y": 1279,
-        "w": 1952,
-        "h": 442
-    },
-    {
-        "id": "6aa9beecbf5f8d23",
-        "type": "group",
-        "z": "128ab3134a54f6b4",
-        "name": "Set-up",
-        "style": {
-            "fill": "#e3f3d3",
-            "fill-opacity": "0.4",
-            "label": true
-        },
-        "nodes": [
-            "5c3897124d1d95c0",
-            "41d553602c61b3d5",
-            "4be0576d4487e1ca",
-            "1103084ec6579d65",
-            "1f1477e78999e00b"
-        ],
-        "x": 134,
-        "y": 59,
-        "w": 1312,
-        "h": 182
+        "y": 1279
     },
     {
         "id": "d9efc969.3ac7a8",
@@ -678,33 +835,7 @@
             "315ed0cad6dcaedc"
         ],
         "x": 54,
-        "y": 2999,
-        "w": 1572,
-        "h": 682
-    },
-    {
-        "id": "22cfe8c9db618bda",
-        "type": "group",
-        "z": "128ab3134a54f6b4",
-        "name": "Connecting to the PROSYS OPC UA Simulation Server",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "20b9b85ce32cf43f",
-            "19228a42efe14099",
-            "d8e9c2efa59c4751",
-            "b4f85aa8e05b45cf",
-            "bc9774c3185da37d",
-            "0c6070cb31d40a41",
-            "f0318f3ab0c9dd22",
-            "66974f0c81340ee7",
-            "4ba813afe98b3871"
-        ],
-        "x": 1094,
-        "y": 2259,
-        "w": 1052,
-        "h": 382
+        "y": 2999
     },
     {
         "id": "37a4080e.40ed9",
@@ -752,7 +883,8 @@
             "a4eb92d0.81718",
             "228c3050.5c01b8",
             "4599d634.2aa528",
-            "bb1348ef.5dad58"
+            "bb1348ef.5dad58",
+            "d05b53b9a69cc83a"
         ],
         "x": 101,
         "y": 1176,
@@ -804,6 +936,124 @@
         "y": 1909,
         "w": 1902,
         "h": 552
+    },
+    {
+        "id": "6aa9beecbf5f8d23",
+        "type": "group",
+        "z": "128ab3134a54f6b4",
+        "name": "Set-up",
+        "style": {
+            "fill": "#e3f3d3",
+            "fill-opacity": "0.4",
+            "label": true
+        },
+        "nodes": [
+            "5c3897124d1d95c0",
+            "41d553602c61b3d5",
+            "4be0576d4487e1ca",
+            "1103084ec6579d65",
+            "1f1477e78999e00b"
+        ],
+        "x": 134,
+        "y": 59,
+        "w": 1312,
+        "h": 182
+    },
+    {
+        "id": "22cfe8c9db618bda",
+        "type": "group",
+        "z": "128ab3134a54f6b4",
+        "name": "Connecting to the PROSYS OPC UA Simulation Server",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "20b9b85ce32cf43f",
+            "19228a42efe14099",
+            "d8e9c2efa59c4751",
+            "b4f85aa8e05b45cf",
+            "bc9774c3185da37d",
+            "0c6070cb31d40a41",
+            "f0318f3ab0c9dd22",
+            "66974f0c81340ee7",
+            "4ba813afe98b3871"
+        ],
+        "x": 1094,
+        "y": 2259,
+        "w": 1052,
+        "h": 382
+    },
+    {
+        "id": "bf8d1775bedc9126",
+        "type": "junction",
+        "z": "fd31082e.5487d8",
+        "x": 2180,
+        "y": 1280,
+        "wires": [
+            [
+                "0cf42e9cc5365c9d"
+            ]
+        ]
+    },
+    {
+        "id": "4f66f53de68a468a",
+        "type": "junction",
+        "z": "fd31082e.5487d8",
+        "x": 2200,
+        "y": 1540,
+        "wires": [
+            [
+                "32e4c48636bc81e8"
+            ]
+        ]
+    },
+    {
+        "id": "d2fa44933ad7f7bc",
+        "type": "junction",
+        "z": "fd31082e.5487d8",
+        "x": 2180,
+        "y": 1760,
+        "wires": [
+            [
+                "273b7e8259322a05"
+            ]
+        ]
+    },
+    {
+        "id": "273b7e8259322a05",
+        "type": "junction",
+        "z": "fd31082e.5487d8",
+        "x": 2280,
+        "y": 1800,
+        "wires": [
+            [
+                "ce3d1cd7dad67519"
+            ]
+        ]
+    },
+    {
+        "id": "32e4c48636bc81e8",
+        "type": "junction",
+        "z": "fd31082e.5487d8",
+        "x": 2260,
+        "y": 1580,
+        "wires": [
+            [
+                "e43904b134cd7e13"
+            ]
+        ]
+    },
+    {
+        "id": "0cf42e9cc5365c9d",
+        "type": "junction",
+        "z": "fd31082e.5487d8",
+        "x": 2240,
+        "y": 1340,
+        "wires": [
+            [
+                "a9f85b8570718f9c"
+            ]
+        ]
     },
     {
         "id": "de00f046.a69e6",
@@ -1130,32 +1380,6 @@
         "className": ""
     },
     {
-        "id": "ddccf1e6.d0f5e",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "172.17.0.3",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "compatmode": false,
-        "protocolVersion": 4,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": ""
-    },
-    {
         "id": "a67da331.7afbf8",
         "type": "swagger-doc",
         "summary": "Retrieve the current Manifest document",
@@ -1397,18 +1621,6 @@
         "willPayload": ""
     },
     {
-        "id": "d2edf304.fdfa2",
-        "type": "sub-link-config",
-        "name": "southbound",
-        "clone": false
-    },
-    {
-        "id": "72ae2011.f3d7b",
-        "type": "sub-link-config",
-        "name": "driver",
-        "clone": false
-    },
-    {
         "id": "6a4d510d.5de65",
         "type": "ui_group",
         "name": "ReportDownload",
@@ -1476,26 +1688,73 @@
         "className": ""
     },
     {
-        "id": "6e4dde1c29ea2be5",
-        "type": "Kafka Broker",
+        "id": "9e53ceb7c065e802",
+        "type": "sqlitedb",
+        "db": "/app/.node-red/db/inNOVAASdb.db",
+        "mode": "RW"
+    },
+    {
+        "id": "f1192e81b068366b",
+        "type": "sqlitedb",
+        "db": "/app/.node-red/db/inNOVAASdb.db",
+        "mode": "RW"
+    },
+    {
+        "id": "a4706f79574c7b6e",
+        "type": "sqlitedb",
+        "db": "/app/.node-red/db/inNOVAASdb.db",
+        "mode": "RW"
+    },
+    {
+        "id": "6b5b20832e62c73e",
+        "type": "sqlitedb",
+        "db": "/app/.node-red/db/inNOVAASdb.db",
+        "mode": "RW"
+    },
+    {
+        "id": "9d66e0f86e14f46d",
+        "type": "sqlitedb",
+        "db": "/app/.node-red/db/inNOVAASdb.db",
+        "mode": "RW"
+    },
+    {
+        "id": "02120942a1a3ce78",
+        "type": "mqtt-broker",
         "name": "",
-        "hosts": [
-            {
-                "host": "bd4nrg-htap.vm.fedcloud.eu",
-                "port": 9093
-            }
-        ],
-        "hostsEnvVar": "",
-        "connectTimeout": "10000",
-        "requestTimeout": "30000",
-        "autoConnect": "true",
-        "idleConnection": "5",
-        "reconnectOnIdle": "true",
-        "maxAsyncRequests": "10",
-        "checkInterval": "10",
-        "selfSign": true,
+        "broker": "broker.mqttdashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
         "usetls": false,
-        "useCredentials": false
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d2edf304.fdfa2",
+        "type": "sub-link-config",
+        "name": "southbound",
+        "clone": false
+    },
+    {
+        "id": "72ae2011.f3d7b",
+        "type": "sub-link-config",
+        "name": "driver",
+        "clone": false
     },
     {
         "id": "e6f59bf0e0057665",
@@ -1593,20 +1852,471 @@
         "wires": []
     },
     {
-        "id": "407f394e39d1235e",
-        "type": "function",
-        "z": "5ed335e57e3a0a3e",
-        "name": "History",
-        "func": "var extract = function (point, keyIndex, keysArray) {\n    if (keyIndex < keysArray.length) {\n        let element = keysArray[keyIndex];\n        if (typeof point[element] !== 'object') {\n            let simpleValue = {};\n            simpleValue[element] = point[element];\n            return simpleValue\n        } else {\n            keyIndex = keyIndex + 1;\n            return extract(point[element], keyIndex, keysArray);\n\n        }\n\n    }\n\n}\n\nlet keys = env.get(\"PathTo\");\nlet keysArray = keys.split(\".\");\n\n\n// Get request timestamps\nvar start = msg.payload.start;\nvar end = (msg.payload.end - start)/1000;\n//var end = msg.payload.end;\nvar history = context.flow.get(\"$parent.\" + env.get(\"historyArrayName\"));\nif(end > history.length){\n    start = history.length;\n} else {\n    start = history.length - end;\n}\n\nvar data = [];\nfor (var ts = start; ts < history.length; ts++ )\n{   \n    var element = history[ts];\n\n    data.push( {\n        tstamp: element.tstamp,\n        data: extract(element.data, 0, keysArray)\n    } );\n}\nmsg.payload = data;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 200,
+        "id": "264fc7aa.b065d8",
+        "type": "file in",
+        "z": "c4ef1733.bc36a8",
+        "name": "",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "x": 270,
         "y": 80,
         "wires": [
+            [
+                "852a1c1c.2613f"
+            ]
+        ]
+    },
+    {
+        "id": "852a1c1c.2613f",
+        "type": "json",
+        "z": "c4ef1733.bc36a8",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": true,
+        "x": 510,
+        "y": 80,
+        "wires": [
+            [
+                "15454eba.50d351"
+            ]
+        ]
+    },
+    {
+        "id": "a3f88401.9623b8",
+        "type": "json",
+        "z": "c4ef1733.bc36a8",
+        "name": "",
+        "property": "jsonataResult",
+        "action": "str",
+        "pretty": true,
+        "x": 270,
+        "y": 220,
+        "wires": [
             []
+        ]
+    },
+    {
+        "id": "39839c3f.68ab24",
+        "type": "jsonata",
+        "z": "c4ef1733.bc36a8",
+        "name": "jsonata",
+        "property": "payload",
+        "jsonata": "",
+        "jsonataOpts": "",
+        "x": 1040,
+        "y": 80,
+        "wires": [
+            [
+                "a3f88401.9623b8"
+            ]
+        ]
+    },
+    {
+        "id": "15454eba.50d351",
+        "type": "unsafe-function",
+        "z": "c4ef1733.bc36a8",
+        "name": "JsonataQuery",
+        "func": "msg.jsonata = \"Body.SubModels[\\\"PUBLIC\\\" in PropertyValueStatementContainers.statements.Visibilty]\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 810,
+        "y": 80,
+        "wires": [
+            [
+                "39839c3f.68ab24"
+            ]
+        ]
+    },
+    {
+        "id": "f7527cda.5b012",
+        "type": "file in",
+        "z": "786aaafb.231574",
+        "name": "",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "x": 450,
+        "y": 40,
+        "wires": [
+            [
+                "bea41ae1.2c9688"
+            ]
+        ]
+    },
+    {
+        "id": "bea41ae1.2c9688",
+        "type": "json",
+        "z": "786aaafb.231574",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": true,
+        "x": 650,
+        "y": 40,
+        "wires": [
+            [
+                "9ee0526a.63c73"
+            ]
+        ]
+    },
+    {
+        "id": "9ee0526a.63c73",
+        "type": "unsafe-function",
+        "z": "786aaafb.231574",
+        "name": "JsonataQuery",
+        "func": "msg.jsonata = \"Body.SubModels[(\\\"http://acplt.org/models/PhysicalConnection\\\" in ModelID.IDSpec)].PropertyValueStatementContainers.statements[$substringAfter(\" + \"\\\"\" + msg.req.params.id + \"\\\"\" + \", \\\"models/\\\") in $substringAfter(PropertyID.IDSpec, \\\"http://acplt.org/models/PhysicalConnection/\\\")]\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 900,
+        "y": 40,
+        "wires": [
+            [
+                "38bec566.fe79ba"
+            ]
+        ]
+    },
+    {
+        "id": "38bec566.fe79ba",
+        "type": "jsonata",
+        "z": "786aaafb.231574",
+        "name": "jsonata",
+        "property": "payload",
+        "jsonata": "",
+        "jsonataOpts": "",
+        "x": 1140,
+        "y": 40,
+        "wires": [
+            [
+                "8a8a185a.1f2ec8"
+            ]
+        ]
+    },
+    {
+        "id": "8a8a185a.1f2ec8",
+        "type": "unsafe-function",
+        "z": "786aaafb.231574",
+        "name": "",
+        "func": "msg.payload = msg.jsonataResult;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c19ac6e7.9aeaf8",
+        "type": "file in",
+        "z": "4b6a31ae.51e96",
+        "name": "",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "x": 574.9998168945312,
+        "y": 196.6666717529297,
+        "wires": [
+            [
+                "31aa7cf6.436564"
+            ]
+        ]
+    },
+    {
+        "id": "31aa7cf6.436564",
+        "type": "addflow",
+        "z": "4b6a31ae.51e96",
+        "name": "",
+        "x": 738.3333129882812,
+        "y": 196.6666717529297,
+        "wires": [
+            [
+                "343c7ae9.c921c6"
+            ]
+        ]
+    },
+    {
+        "id": "71e88904.3ead78",
+        "type": "change",
+        "z": "4b6a31ae.51e96",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 374.99993896484375,
+        "y": 196.6666717529297,
+        "wires": [
+            [
+                "c19ac6e7.9aeaf8"
+            ]
+        ]
+    },
+    {
+        "id": "343c7ae9.c921c6",
+        "type": "merge",
+        "z": "4b6a31ae.51e96",
+        "name": "",
+        "timeout": "1",
+        "x": 925,
+        "y": 198,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fb59797d.1ff768",
+        "type": "unsafe-function",
+        "z": "d8633d34.059f2",
+        "name": "AML_Translation",
+        "func": "msg.actionName = msg.payload._Attribs.ID;\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 777.1428833007812,
+        "y": 279.047607421875,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "509b9a91.e6f574",
+        "type": "delflow",
+        "z": "88bdbfa9.b5c8d",
+        "name": "",
+        "enabled": true,
+        "x": 1120,
+        "y": 220,
+        "wires": [
+            [
+                "7c295142.669c6"
+            ]
+        ]
+    },
+    {
+        "id": "d5cf465.083bfb8",
+        "type": "unsafe-function",
+        "z": "88bdbfa9.b5c8d",
+        "name": "ListLoadedDrivers",
+        "func": "var driversIds = context.global.get('Drivers');\nvar outputMsgs = [];\nfor(var element in driversIds){\n    outputMsgs.push({id:driversIds[element]});\n}\nif(outputMsgs.length > 0){\n    return [outputMsgs, null];   \n} else {\n    return [null, msg];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 480.3333740234375,
+        "y": 303.46429443359375,
+        "wires": [
+            [
+                "d4155fc6.2b467"
+            ],
+            [
+                "412627f1.5db028"
+            ]
+        ]
+    },
+    {
+        "id": "d05b5f1b.67e2b",
+        "type": "config",
+        "z": "88bdbfa9.b5c8d",
+        "name": "",
+        "properties": [
+            {
+                "p": "Drivers",
+                "pt": "global",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "active": false,
+        "x": 1710,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "69324f69.01e2f",
+        "type": "wait-paths",
+        "z": "88bdbfa9.b5c8d",
+        "name": "",
+        "paths": "[\"path_2\",\"path_1\"]",
+        "timeout": 15000,
+        "finalTimeout": 60000,
+        "x": 1525,
+        "y": 326,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "412627f1.5db028",
+        "type": "change",
+        "z": "88bdbfa9.b5c8d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "paths[\"path_1\"]",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "pathsCorrelationId",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1256,
+        "y": 318,
+        "wires": [
+            [
+                "69324f69.01e2f"
+            ]
+        ]
+    },
+    {
+        "id": "80d73952.05b468",
+        "type": "change",
+        "z": "88bdbfa9.b5c8d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "paths[\"path_2\"]",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "pathsCorrelationId",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1254,
+        "y": 380,
+        "wires": [
+            [
+                "69324f69.01e2f"
+            ]
+        ]
+    },
+    {
+        "id": "22568f10.a8c3f",
+        "type": "unsafe-function",
+        "z": "88bdbfa9.b5c8d",
+        "name": "checkEverythingDeleted",
+        "func": "var driversIds = context.global.get('Drivers');\nif(driversIds.length == msg.count){\n    return msg;\n}\nelse{\n    return null;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1475.4521484375,
+        "y": 150.4381103515625,
+        "wires": [
+            [
+                "d05b5f1b.67e2b",
+                "412627f1.5db028"
+            ]
+        ]
+    },
+    {
+        "id": "d4155fc6.2b467",
+        "type": "getflows",
+        "z": "88bdbfa9.b5c8d",
+        "name": "",
+        "x": 660,
+        "y": 140,
+        "wires": [
+            [
+                "330fdcf8.4bd194"
+            ]
+        ]
+    },
+    {
+        "id": "330fdcf8.4bd194",
+        "type": "switch",
+        "z": "88bdbfa9.b5c8d",
+        "name": "",
+        "property": "err",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 810,
+        "y": 140,
+        "wires": [
+            [
+                "7c295142.669c6"
+            ],
+            [
+                "91a7026.b9795"
+            ]
+        ]
+    },
+    {
+        "id": "91a7026.b9795",
+        "type": "unsafe-function",
+        "z": "88bdbfa9.b5c8d",
+        "name": "getFlowId",
+        "func": "var outMsg = {};\noutMsg.flowId = msg.payload.id;\nreturn outMsg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 940,
+        "y": 220,
+        "wires": [
+            [
+                "509b9a91.e6f574"
+            ]
+        ]
+    },
+    {
+        "id": "7c295142.669c6",
+        "type": "counter",
+        "z": "88bdbfa9.b5c8d",
+        "name": "",
+        "init": "0",
+        "step": "1",
+        "lower": null,
+        "upper": null,
+        "mode": "increment",
+        "outputs": "1",
+        "x": 1260,
+        "y": 140,
+        "wires": [
+            [
+                "22568f10.a8c3f"
+            ]
         ]
     },
     {
@@ -1848,6 +2558,23 @@
             []
         ],
         "l": false
+    },
+    {
+        "id": "407f394e39d1235e",
+        "type": "function",
+        "z": "5ed335e57e3a0a3e",
+        "name": "History",
+        "func": "var extract = function (point, keyIndex, keysArray) {\n    if (keyIndex < keysArray.length) {\n        let element = keysArray[keyIndex];\n        if (typeof point[element] !== 'object') {\n            let simpleValue = {};\n            simpleValue[element] = point[element];\n            return simpleValue\n        } else {\n            keyIndex = keyIndex + 1;\n            return extract(point[element], keyIndex, keysArray);\n\n        }\n\n    }\n\n}\n\nlet keys = env.get(\"PathTo\");\nlet keysArray = keys.split(\".\");\n\n\n// Get request timestamps\nvar start = msg.payload.start;\nvar end = (msg.payload.end - start)/1000;\n//var end = msg.payload.end;\nvar history = context.flow.get(\"$parent.\" + env.get(\"historyArrayName\"));\nif(end > history.length){\n    start = history.length;\n} else {\n    start = history.length - end;\n}\n\nvar data = [];\nfor (var ts = start; ts < history.length; ts++ )\n{   \n    var element = history[ts];\n\n    data.push( {\n        tstamp: element.tstamp,\n        data: extract(element.data, 0, keysArray)\n    } );\n}\nmsg.payload = data;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 80,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "cac1db39.b04078",
@@ -3339,6 +4066,177 @@
         "wires": []
     },
     {
+        "id": "8af52e00.b2df48",
+        "type": "httpInMultipart",
+        "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
+        "name": "",
+        "url": "/aasServer/conf/addDriver",
+        "method": "post",
+        "fields": "[{\"name\": \"driver\"}]",
+        "swaggerDoc": "",
+        "x": 242,
+        "y": 386,
+        "wires": [
+            [
+                "d7080631.6bd928"
+            ]
+        ]
+    },
+    {
+        "id": "3a568a54.3c63e6",
+        "type": "http in",
+        "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
+        "name": "",
+        "url": "/aasServer/conf/importDriver",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 242,
+        "y": 266,
+        "wires": [
+            [
+                "ed7feffb.fdc4d8"
+            ]
+        ]
+    },
+    {
+        "id": "b102af28.a0df28",
+        "type": "http response",
+        "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 692,
+        "y": 266,
+        "wires": []
+    },
+    {
+        "id": "c0822d7.a2222d",
+        "type": "debug",
+        "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 672,
+        "y": 306,
+        "wires": []
+    },
+    {
+        "id": "ed7feffb.fdc4d8",
+        "type": "template",
+        "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n    <head>\n        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">\n        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>\n        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>\n        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>\n    </head>\n    <div>\n        <form action=\"/aas/conf/addDriver\" method=\"POST\" enctype=\"multipart/form-data\">\n        \t<!-- COMPONENT START -->\n        \t<div class=\"form-group\">\n        \t\t<div class=\"input-group input-file\" name=\"driver\">\n            \t\t<input type=\"text\" class=\"form-control\" placeholder='Choose a file...' />\t\t\t\n                    <span class=\"input-group-btn\">\n                \t\t<button class=\"btn btn-default btn-choose\" type=\"button\">Choose</button>\n            \t\t</span>\n        \n        \n        \t\t</div>\n        \t</div>\n        \t<!-- COMPONENT END -->\n        \t<div class=\"form-group\">\n        \t\t<button type=\"submit\" class=\"btn btn-primary pull-right\">Submit</button>\n        \t\t<button type=\"reset\" class=\"btn btn-danger\">Reset</button>\n        \t</div>\n        </form>\n    </div>\n    <script>\n        function bs_input_file() {\n\t$(\".input-file\").before(\n\t\tfunction() {\n\t\t\tif ( ! $(this).prev().hasClass('input-ghost') ) {\n\t\t\t\tvar element = $(\"<input type='file' class='input-ghost' style='visibility:hidden; height:0'>\");\n\t\t\t\telement.attr(\"name\",$(this).attr(\"name\"));\n\t\t\t\telement.change(function(){\n\t\t\t\t\telement.next(element).find('input').val((element.val()).split('\\\\').pop());\n\t\t\t\t});\n\t\t\t\t$(this).find(\"button.btn-choose\").click(function(){\n\t\t\t\t\telement.click();\n\t\t\t\t});\n\t\t\t\t$(this).find(\"button.btn-reset\").click(function(){\n\t\t\t\t\telement.val(null);\n\t\t\t\t\t$(this).parents(\".input-file\").find('input').val('');\n\t\t\t\t});\n\t\t\t\t$(this).find('input').css(\"cursor\",\"pointer\");\n\t\t\t\t$(this).find('input').mousedown(function() {\n\t\t\t\t\t$(this).parents('.input-file').prev().click();\n\t\t\t\t\treturn false;\n\t\t\t\t});\n\t\t\t\treturn element;\n\t\t\t}\n\t\t}\n\t);\n}\n$(function() {\n\tbs_input_file();\n});\n    </script>\n</html>",
+        "output": "str",
+        "x": 532,
+        "y": 266,
+        "wires": [
+            [
+                "b102af28.a0df28",
+                "c0822d7.a2222d"
+            ]
+        ]
+    },
+    {
+        "id": "d7080631.6bd928",
+        "type": "set-defaults",
+        "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
+        "name": "set-startTime",
+        "rules": [
+            {
+                "p": "startTime",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "chbox_DoOutputToMessage": true,
+        "chbox_SetCurrentToMsg": false,
+        "howSend": {
+            "text": "payload",
+            "type": "msg",
+            "modifiedValue": "payload"
+        },
+        "dropdown_HowManyMessages": "single",
+        "dropdownObjOrVal": "value",
+        "outputs": 1,
+        "x": 532,
+        "y": 386,
+        "wires": [
+            [
+                "8c3f137a.f60d68"
+            ]
+        ]
+    },
+    {
+        "id": "ece6df22.01841",
+        "type": "link out",
+        "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
+        "name": "1_1_Out",
+        "links": [
+            "8ce06b86.c8f5a8"
+        ],
+        "x": 927,
+        "y": 386,
+        "wires": []
+    },
+    {
+        "id": "fff82399.2f49b",
+        "type": "link in",
+        "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
+        "name": "1_1_In",
+        "links": [
+            "26fb4e32.c32dca"
+        ],
+        "x": 1347,
+        "y": 386,
+        "wires": [
+            [
+                "82289ad6.a600d8",
+                "ad85b295.7069f"
+            ]
+        ]
+    },
+    {
+        "id": "82289ad6.a600d8",
+        "type": "http response",
+        "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1902,
+        "y": 386,
+        "wires": []
+    },
+    {
+        "id": "ad85b295.7069f",
+        "type": "subflow:56cb7422.e3d28c",
+        "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
+        "name": "",
+        "env": [],
+        "x": 1882,
+        "y": 426,
+        "wires": [],
+        "icon": "node-red-contrib-viseo-log/log.svg"
+    },
+    {
         "id": "a0cacb3.3af7d38",
         "type": "comment",
         "z": "c7caf96e.a31f98",
@@ -3460,7 +4358,7 @@
         "z": "c7caf96e.a31f98",
         "g": "daa90db5.798ca",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3475,11 +4373,11 @@
         "z": "c7caf96e.a31f98",
         "g": "daa90db5.798ca",
         "name": "",
-        "url": "/aasServer/shells/:id",
+        "url": "/aasServer/shells/:aasid/aas",
         "method": "get",
         "upload": false,
         "swaggerDoc": "6fe2f15a.b44e88",
-        "x": 250,
+        "x": 270,
         "y": 1060,
         "wires": [
             [
@@ -3596,11 +4494,11 @@
         "z": "c7caf96e.a31f98",
         "g": "37a4080e.40ed9",
         "name": "",
-        "url": "/aasServer/shells/:id/aas/submodels",
+        "url": "/aasServer/shells/:aasid/aas/submodels",
         "method": "get",
         "upload": false,
         "swaggerDoc": "b89f33af.44f05",
-        "x": 307,
+        "x": 317,
         "y": 1400,
         "wires": [
             [
@@ -3833,6 +4731,27 @@
         "wires": []
     },
     {
+        "id": "8c3f137a.f60d68",
+        "type": "node-red-contrib-httpauth",
+        "z": "c7caf96e.a31f98",
+        "g": "10392549.d972b3",
+        "name": "handle http Auth",
+        "file": "bebd1a76.551ec8",
+        "cred": "",
+        "authType": "Basic",
+        "realm": "",
+        "username": "",
+        "password": "",
+        "hashed": false,
+        "x": 762,
+        "y": 386,
+        "wires": [
+            [
+                "ece6df22.01841"
+            ]
+        ]
+    },
+    {
         "id": "2dc97f2a.e1d8d8",
         "type": "function",
         "z": "c7caf96e.a31f98",
@@ -3976,12 +4895,13 @@
         "id": "d05b53b9a69cc83a",
         "type": "http in",
         "z": "c7caf96e.a31f98",
+        "g": "37a4080e.40ed9",
         "name": "",
         "url": "/aasServer/shells/:aasid/aas/submodels",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 310,
+        "x": 330,
         "y": 1600,
         "wires": [
             [
@@ -4258,7 +5178,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1890,
-        "y": 1425,
+        "y": 1440,
         "wires": [
             [
                 "1dc6352e.63a42b"
@@ -4320,22 +5240,8 @@
         "tostatus": false,
         "complete": "true",
         "x": 1650,
-        "y": 1540,
-        "wires": []
-    },
-    {
-        "id": "b4b680b.dc7df8",
-        "type": "unsafe-function",
-        "z": "fd31082e.5487d8",
-        "name": "OnlyPublicSubmodels",
-        "func": "var submodels = msg.payload.InternalElement;\nfor(var submodel = 0; submodel < submodels.length; submodel++){\n    var attributes = submodels[submodel].Attribute;\n    for(var attribute in attributes){\n        if(attributes[attribute]._Attribs.Name == \"Visibility\" && attributes[attribute].Value[0].toLowerCase() == \"false\"){\n            //Remove from the list\n            submodels.splice(submodel, 1);\n            submodel--;\n            break;\n        } else if(attributes[attribute]._Attribs.Name == \"Visibility\" && attributes[attribute].Value[0].toLowerCase() == \"true\"){\n            //Check only DataManifests\n            var dsms = submodels[submodel].InternalElement;\n            if(typeof dsms !== \"undefined\"){\n                for(var dsm = 0; dsm < dsms.length; dsm++){\n                    var dsm_attributes = dsms[dsm].Attribute;\n                    for(var dsm_attribute in dsm_attributes){\n                        if(dsm_attributes[dsm_attribute]._Attribs.Name == \"Visibility\" && dsm_attributes[dsm_attribute].Value[0] == \"false\"){\n                            //Remove from the list\n                            dsms.splice(dsm, 1);\n                            dsm--;\n                            break;\n                        }\n                    }\n                }\n            }\n        }\n    }\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1860,
         "y": 1560,
-        "wires": [
-            []
-        ]
+        "wires": []
     },
     {
         "id": "144753fb.39796c",
@@ -4377,8 +5283,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1750,
-        "y": 1720,
+        "x": 1650,
+        "y": 1780,
         "wires": []
     },
     {
@@ -4391,7 +5297,7 @@
             "e2acf77b.dc7f68"
         ],
         "x": 3135,
-        "y": 1760,
+        "y": 1800,
         "wires": []
     },
     {
@@ -4404,7 +5310,7 @@
             "e2af5e8a.78213"
         ],
         "x": 235,
-        "y": 1760,
+        "y": 1800,
         "wires": [
             [
                 "1c4b441450fae9ce"
@@ -4422,7 +5328,7 @@
         "tostatus": false,
         "complete": "true",
         "x": 1630,
-        "y": 1820,
+        "y": 1920,
         "wires": []
     },
     {
@@ -4453,7 +5359,7 @@
         "msgControl": false,
         "outputs": 2,
         "x": 2030,
-        "y": 1880,
+        "y": 1980,
         "wires": [
             [
                 "678e4e74.45bcf"
@@ -4473,7 +5379,7 @@
             "74e66928.59585"
         ],
         "x": 3135,
-        "y": 1860,
+        "y": 1960,
         "wires": []
     },
     {
@@ -4486,7 +5392,7 @@
             "ac692a0253f3bdc4"
         ],
         "x": 235,
-        "y": 1880,
+        "y": 1980,
         "wires": [
             [
                 "02a5ab3d1f7e5b82"
@@ -5068,6 +5974,185 @@
         "wires": []
     },
     {
+        "id": "8ce06b86.c8f5a8",
+        "type": "link in",
+        "z": "fd31082e.5487d8",
+        "name": "1_1_In",
+        "links": [
+            "ece6df22.01841"
+        ],
+        "x": 235,
+        "y": 860,
+        "wires": [
+            [
+                "facb362b.6dd0b"
+            ]
+        ]
+    },
+    {
+        "id": "26fb4e32.c32dca",
+        "type": "link out",
+        "z": "fd31082e.5487d8",
+        "name": "1_1_Out",
+        "links": [
+            "fff82399.2f49b"
+        ],
+        "x": 3135,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "facb362b.6dd0b",
+        "type": "switch",
+        "z": "fd31082e.5487d8",
+        "name": "IF_Manifest_File_Metadata",
+        "property": "req.files.driver",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "null"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 500,
+        "y": 860,
+        "wires": [
+            [
+                "5d60ba62.14ca9c"
+            ],
+            [
+                "278375b4.b88e82"
+            ]
+        ]
+    },
+    {
+        "id": "fc0a9d8e.12c52",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1070,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "5d60ba62.14ca9c",
+        "type": "unsafe-function",
+        "z": "fd31082e.5487d8",
+        "name": "Read File ",
+        "func": "var fs = context.global.get('fs');\nvar content = \"\";\nfs.readFile(msg.req.files.driver[0].path, \"utf8\", function read(err, data) {\n    if (err) {\n        throw err;\n    }\n    content = data;\n\n    // Invoke the next step here however you like\n    //console.log(content);   // Put all of the code here (not the best solution)\n    processFile();          // Or put the next step in a function and invoke it\n});\n\nfunction processFile() {\n    msg.payload = content;\n    node.send(msg);\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 900,
+        "y": 840,
+        "wires": [
+            [
+                "fc0a9d8e.12c52",
+                "26fb4e32.c32dca",
+                "f822f55e.4e556"
+            ]
+        ]
+    },
+    {
+        "id": "ae1b6bc.0e50598",
+        "type": "addflow",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "x": 1640,
+        "y": 820,
+        "wires": [
+            [
+                "c5b5c618.111a08"
+            ]
+        ]
+    },
+    {
+        "id": "ed752512.71a7e",
+        "type": "delflow",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "enabled": true,
+        "x": 1640,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f822f55e.4e556",
+        "type": "json",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1230,
+        "y": 800,
+        "wires": [
+            [
+                "e50371db.c6daf8"
+            ]
+        ]
+    },
+    {
+        "id": "e50371db.c6daf8",
+        "type": "unsafe-function",
+        "z": "fd31082e.5487d8",
+        "name": "Get FlowIds",
+        "func": "var drivers = context.global.get(\"Drivers\");\nfor (var element in drivers){\n    if(msg.payload.id === drivers[element].id || msg.payload.label === drivers[element].label){\n        msg.flowId = drivers[element].id;\n        drivers.splice(1, element);\n        context.global.set(\"Drivers\", drivers);\n        return [msg, msg];\n    }\n}\nreturn [null, msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 1390,
+        "y": 800,
+        "wires": [
+            [
+                "ed752512.71a7e"
+            ],
+            [
+                "ae1b6bc.0e50598"
+            ]
+        ]
+    },
+    {
+        "id": "c5b5c618.111a08",
+        "type": "debug",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1810,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "278375b4.b88e82",
+        "type": "unsafe-function",
+        "z": "fd31082e.5487d8",
+        "name": "Read File Null",
+        "func": "msg.statusCode = 400;\nmsg.payload = \"no attached file\";\nmsg.headers = {};\nmsg.headers['content-type'] = 'text/plain';\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 920,
+        "y": 880,
+        "wires": [
+            [
+                "26fb4e32.c32dca"
+            ]
+        ]
+    },
+    {
         "id": "ce89582d.5a4aa8",
         "type": "inject",
         "z": "fd31082e.5487d8",
@@ -5162,13 +6247,13 @@
         "type": "debug",
         "z": "fd31082e.5487d8",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1670,
-        "y": 1280,
+        "x": 1610,
+        "y": 1300,
         "wires": []
     },
     {
@@ -5209,8 +6294,8 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1730,
-        "y": 1620,
+        "x": 1650,
+        "y": 1700,
         "wires": []
     },
     {
@@ -5222,7 +6307,7 @@
             "727480a5.4236c"
         ],
         "x": 235,
-        "y": 1660,
+        "y": 1720,
         "wires": [
             [
                 "bab93b53cbb3d116"
@@ -5238,7 +6323,7 @@
             "a4eb92d0.81718"
         ],
         "x": 3135,
-        "y": 1660,
+        "y": 1720,
         "wires": []
     },
     {
@@ -5713,7 +6798,7 @@
             "57aec539a62e6dfa"
         ],
         "x": 2320,
-        "y": 1900,
+        "y": 2000,
         "wires": [],
         "l": true
     },
@@ -5852,7 +6937,7 @@
         "y": 1140,
         "wires": [
             [
-                "40e9769.02d7288"
+                "027d051c81f07494"
             ]
         ]
     },
@@ -5869,7 +6954,7 @@
         "y": 1220,
         "wires": [
             [
-                "c309c489.5ba748"
+                "f7372cb457f5e7df"
             ]
         ]
     },
@@ -5887,7 +6972,7 @@
         "wires": [
             [
                 "81714045.0e50c8",
-                "b14ea23f.c308a8"
+                "7540b688d1ccfbd8"
             ]
         ]
     },
@@ -5905,7 +6990,7 @@
         "wires": [
             [
                 "e22aaf22.a1f3e",
-                "7cec632.7e15b9c"
+                "d57f58bc77ffcb8b"
             ]
         ]
     },
@@ -5919,11 +7004,11 @@
         ],
         "timeout": "30",
         "x": 1480,
-        "y": 1660,
+        "y": 1720,
         "wires": [
             [
                 "687c3d5c.dfc7ac",
-                "d8719524.0097b"
+                "1b23f529d28b3c8d"
             ]
         ]
     },
@@ -5937,11 +7022,11 @@
         ],
         "timeout": "30",
         "x": 1470,
-        "y": 1760,
+        "y": 1800,
         "wires": [
             [
                 "33d6ebc0.3cf344",
-                "abd5525b.19111"
+                "de98fa9db5e7edf4"
             ]
         ]
     },
@@ -5975,7 +7060,7 @@
         "finalize": "",
         "libs": [],
         "x": 1000,
-        "y": 1880,
+        "y": 1980,
         "wires": [
             [
                 "77f5c1549ab2c139"
@@ -5995,7 +7080,7 @@
         ],
         "timeout": "30",
         "x": 1460,
-        "y": 1860,
+        "y": 1960,
         "wires": [
             [
                 "1aa365b1.9f918a",
@@ -6534,6 +7619,820 @@
         "wires": []
     },
     {
+        "id": "7540b688d1ccfbd8",
+        "type": "switch",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "property": "req.query.content",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Normal",
+                "vt": "str"
+            },
+            {
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
+            },
+            {
+                "t": "eq",
+                "v": "Trimmed",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Reference",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 5,
+        "x": 1790,
+        "y": 1320,
+        "wires": [
+            [
+                "bf8d1775bedc9126"
+            ],
+            [
+                "bf8d1775bedc9126"
+            ],
+            [
+                "87bce6429de98178"
+            ],
+            [
+                "2d2b37ca7cbfdbc1"
+            ],
+            [
+                "76be2c591d65fa6f"
+            ]
+        ]
+    },
+    {
+        "id": "87bce6429de98178",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "Creating Trimmed Shells",
+        "func": "let shell = msg.payload;\nlet trimmedShell = {};\ntrimmedShell.hasDataSpecification = shell.hasDataSpecification;\ntrimmedShell.derivedFrom = shell.derivedFrom;\ntrimmedShell.conceptDictionaries = shell.conceptDictionaries;\ntrimmedShell.identification = shell.identification;\ntrimmedShell.administration = shell.administration;\ntrimmedShell.idShort = shell.idShort;\ntrimmedShell.modelType = shell.modelType;\n\nmsg.payload = trimmedShell;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2030,
+        "y": 1320,
+        "wires": [
+            [
+                "0cf42e9cc5365c9d"
+            ]
+        ]
+    },
+    {
+        "id": "2d2b37ca7cbfdbc1",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "Creating Reference to Shells",
+        "func": "let shell = msg.payload;\nlet referenceShell = {};\nreferenceShell.idShort = shell.idShort;\n    \nmsg.payload = referenceShell;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2040,
+        "y": 1360,
+        "wires": [
+            [
+                "0cf42e9cc5365c9d"
+            ]
+        ]
+    },
+    {
+        "id": "d57f58bc77ffcb8b",
+        "type": "switch",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "property": "req.query.content",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Normal",
+                "vt": "str"
+            },
+            {
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
+            },
+            {
+                "t": "eq",
+                "v": "Trimmed",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Reference",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Value",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 1790,
+        "y": 1580,
+        "wires": [
+            [
+                "4f66f53de68a468a"
+            ],
+            [
+                "4f66f53de68a468a"
+            ],
+            [
+                "da901f7ac6c9bcfb"
+            ],
+            [
+                "56f89495c40f9077"
+            ],
+            [
+                "764d3739e6d35d5f"
+            ],
+            [
+                "406069fe371c496c"
+            ]
+        ]
+    },
+    {
+        "id": "da901f7ac6c9bcfb",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "Creating Trimmed Submodels",
+        "func": "let submodels = msg.payload;\nlet trimmedSubmodels = [];\nfor(let index = 0; index < submodels.length; index++){\n    let submodel = submodels[index];\n    let trimmedSubmodel = {};\n    trimmedSubmodel.semanticId = submodel.semanticId;\n    trimmedSubmodel.qualifiers = submodel.qualifiers;\n    trimmedSubmodel.hasDataSpecification = submodel.hasDataSpecification;\n    trimmedSubmodel.identification = submodel.identification;\n    trimmedSubmodel.idShort = submodel.idShort;\n    trimmedSubmodel.modelType = submodel.modelType;\n    trimmedSubmodels.push(trimmedSubmodel);\n}\n\nmsg.payload = trimmedSubmodels;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2050,
+        "y": 1580,
+        "wires": [
+            [
+                "32e4c48636bc81e8"
+            ]
+        ]
+    },
+    {
+        "id": "56f89495c40f9077",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "Creating Reference to Submodels",
+        "func": "let submodels = msg.payload;\nlet referenceSubmodels = [];\nfor(let index = 0; index < submodels.length; index++){\n    let submodel = submodels[index];\n    let referenceSubmodel = {};\n    referenceSubmodel.idShort = submodel.idShort;\n    referenceSubmodels.push(referenceSubmodel)\n}\n\nmsg.payload = referenceSubmodels;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2060,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "de98fa9db5e7edf4",
+        "type": "switch",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "property": "req.query.content",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Normal",
+                "vt": "str"
+            },
+            {
+                "t": "istype",
+                "v": "undefined",
+                "vt": "undefined"
+            },
+            {
+                "t": "eq",
+                "v": "Trimmed",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Reference",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Value",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 1790,
+        "y": 1800,
+        "wires": [
+            [
+                "d2fa44933ad7f7bc"
+            ],
+            [
+                "d2fa44933ad7f7bc"
+            ],
+            [
+                "e28fcc33c52a273f"
+            ],
+            [
+                "eaf8e273f0c5a16d"
+            ],
+            [
+                "c1c22f4c94942222"
+            ],
+            [
+                "078534f3f21e5749"
+            ]
+        ]
+    },
+    {
+        "id": "e28fcc33c52a273f",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "Creating Trimmed Submodel",
+        "func": "let submodel = msg.payload;\nlet trimmedSubmodel = {};\n\ntrimmedSubmodel.semanticId = submodel.semanticId;\ntrimmedSubmodel.qualifiers = submodel.qualifiers;\ntrimmedSubmodel.hasDataSpecification = submodel.hasDataSpecification;\ntrimmedSubmodel.identification = submodel.identification;\ntrimmedSubmodel.idShort = submodel.idShort;\ntrimmedSubmodel.modelType = submodel.modelType;\n\nmsg.payload = trimmedSubmodel;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2040,
+        "y": 1800,
+        "wires": [
+            [
+                "273b7e8259322a05"
+            ]
+        ]
+    },
+    {
+        "id": "eaf8e273f0c5a16d",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "Creating Reference to Submodel",
+        "func": "let submodel = msg.payload;\nlet referenceSubmodel = {};\nreferenceSubmodel.idShort = submodel.idShort;\n    \nmsg.payload = referenceSubmodel;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2060,
+        "y": 1840,
+        "wires": [
+            [
+                "273b7e8259322a05"
+            ]
+        ]
+    },
+    {
+        "id": "c1c22f4c94942222",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "Not yet Supported",
+        "func": "msg.payload = \"Not yet Supported\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2090,
+        "y": 1880,
+        "wires": [
+            [
+                "273b7e8259322a05"
+            ]
+        ]
+    },
+    {
+        "id": "76be2c591d65fa6f",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "Bad Request",
+        "func": "msg.statusCode = 400;\nmsg.payload = \"Bad Request\";\nmsg.headers = {};\nmsg.headers['content-type'] = 'text/plain';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2090,
+        "y": 1400,
+        "wires": [
+            [
+                "0cf42e9cc5365c9d"
+            ]
+        ]
+    },
+    {
+        "id": "764d3739e6d35d5f",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "Not yet Supported",
+        "func": "msg.payload = \"Not yet Supported\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2070,
+        "y": 1660,
+        "wires": [
+            [
+                "32e4c48636bc81e8"
+            ]
+        ]
+    },
+    {
+        "id": "078534f3f21e5749",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "Bad Request",
+        "func": "msg.statusCode = 400;\nmsg.payload = \"Bad Request\";\nmsg.headers = {};\nmsg.headers['content-type'] = 'text/plain';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2090,
+        "y": 1920,
+        "wires": [
+            [
+                "273b7e8259322a05"
+            ]
+        ]
+    },
+    {
+        "id": "406069fe371c496c",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "Bad Request",
+        "func": "msg.statusCode = 400;\nmsg.payload = \"Bad Request\";\nmsg.headers = {};\nmsg.headers['content-type'] = 'text/plain';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2090,
+        "y": 1700,
+        "wires": [
+            [
+                "32e4c48636bc81e8"
+            ]
+        ]
+    },
+    {
+        "id": "027d051c81f07494",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 2330,
+        "y": 1140,
+        "wires": [
+            [
+                "40e9769.02d7288"
+            ],
+            [
+                "87cc8612fd2fa954"
+            ]
+        ]
+    },
+    {
+        "id": "87cc8612fd2fa954",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\nlet splittedUrl = msg.req.url.split(\"/\");\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"\";\nlogEvent.observableReference = decodeURIComponent(msg.req.url);\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = \"Requested: \" + splittedUrl[splittedUrl.length - 1];\n\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\"; \nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2600,
+        "y": 1160,
+        "wires": [
+            [
+                "2f60b1f4e43f787e"
+            ]
+        ]
+    },
+    {
+        "id": "2f60b1f4e43f787e",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "9e53ceb7c065e802",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2950,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f7372cb457f5e7df",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 2330,
+        "y": 1220,
+        "wires": [
+            [
+                "c309c489.5ba748"
+            ],
+            [
+                "719ba18e034b2b15"
+            ]
+        ]
+    },
+    {
+        "id": "719ba18e034b2b15",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\nlet splittedUrl = msg.req.url.split(\"/\");\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"\";\nlogEvent.observableReference = decodeURIComponent(msg.req.url);\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = \"Requested: \" + splittedUrl[splittedUrl.length - 1];\n\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\"; \nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2580,
+        "y": 1260,
+        "wires": [
+            [
+                "edecbc60fa8a5d1b"
+            ]
+        ]
+    },
+    {
+        "id": "edecbc60fa8a5d1b",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "50760f2b4eafd99b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2930,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9f85b8570718f9c",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 2350,
+        "y": 1340,
+        "wires": [
+            [
+                "b14ea23f.c308a8"
+            ],
+            [
+                "f7e895b5e00d052c"
+            ]
+        ]
+    },
+    {
+        "id": "f7e895b5e00d052c",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\nlet splittedUrl = msg.req.url.split(\"/\");\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"\";\nlogEvent.observableReference = decodeURIComponent(msg.req.url);\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = \"Requested: \" + decodeURIComponent(splittedUrl[splittedUrl.length - 1]);\n\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\"; \nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2600,
+        "y": 1360,
+        "wires": [
+            [
+                "ffc4e5e8582000c2"
+            ]
+        ]
+    },
+    {
+        "id": "ffc4e5e8582000c2",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "f1192e81b068366b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2950,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e43904b134cd7e13",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 2370,
+        "y": 1580,
+        "wires": [
+            [
+                "7cec632.7e15b9c"
+            ],
+            [
+                "9ebcd6beaf9c5e5a"
+            ]
+        ]
+    },
+    {
+        "id": "9ebcd6beaf9c5e5a",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\nlet splittedUrl = msg.req.url.split(\"/\");\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"\";\nlogEvent.observableReference = decodeURIComponent(msg.req.url);\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = \"Requested: \" + decodeURIComponent(splittedUrl[splittedUrl.length - 1]);\n\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\"; \nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2620,
+        "y": 1620,
+        "wires": [
+            [
+                "998fa797027224c5"
+            ]
+        ]
+    },
+    {
+        "id": "998fa797027224c5",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "a4706f79574c7b6e",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2970,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b23f529d28b3c8d",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 2370,
+        "y": 1720,
+        "wires": [
+            [
+                "d8719524.0097b"
+            ],
+            [
+                "ae1b12ed8743afcb"
+            ]
+        ]
+    },
+    {
+        "id": "ae1b12ed8743afcb",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\nlet splittedUrl = msg.req.url.split(\"/\");\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"\";\nlogEvent.observableReference = decodeURIComponent(msg.req.url);\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = \"Requested: \" + decodeURIComponent(splittedUrl[splittedUrl.length - 1]);\n\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\"; \nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2640,
+        "y": 1760,
+        "wires": [
+            [
+                "73a5f11defe17fa4"
+            ]
+        ]
+    },
+    {
+        "id": "73a5f11defe17fa4",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "6b5b20832e62c73e",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 2990,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce3d1cd7dad67519",
+        "type": "msg-router",
+        "z": "fd31082e.5487d8",
+        "routerType": "broadcast",
+        "topicDependent": false,
+        "counterReset": false,
+        "msgKeyField": "payload",
+        "undefinedHash": false,
+        "outputsInfo": [
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            },
+            {
+                "active": true,
+                "clone": false,
+                "delay": "0",
+                "weight": "0"
+            }
+        ],
+        "name": "",
+        "delaying": "unrelated",
+        "msgControl": false,
+        "outputs": 2,
+        "x": 2390,
+        "y": 1800,
+        "wires": [
+            [
+                "abd5525b.19111"
+            ],
+            [
+                "eb97e9b51c933569"
+            ]
+        ]
+    },
+    {
+        "id": "54a50a843fd134bc",
+        "type": "sqlite",
+        "z": "fd31082e.5487d8",
+        "mydb": "9d66e0f86e14f46d",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 3010,
+        "y": 1860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb97e9b51c933569",
+        "type": "function",
+        "z": "fd31082e.5487d8",
+        "name": "prepare INSERT Statement",
+        "func": "let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    let r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n});\n\n// Process msg payload\nlet splittedUrl = msg.req.url.split(\"/\");\nlet logEvent = {};\nlogEvent.id = uuid;\nlogEvent.source = context.global.get('AASIdentifier');\nlogEvent.direction = \"\";\nlogEvent.observableReference = decodeURIComponent(msg.req.url);\nlogEvent.timestamp = new Date().getTime();\nlogEvent.payload = \"Requested: \" + decodeURIComponent(splittedUrl[splittedUrl.length - 1]);\n\nmsg.topic = \"INSERT INTO aasLogs (aasId, observableRef, timestamp, value) VALUES ($aasId, $observableRef, $timestamp, $value)\"; \nmsg.payload = [logEvent.source, logEvent.observableReference, logEvent.timestamp, logEvent.payload];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2660,
+        "y": 1860,
+        "wires": [
+            [
+                "54a50a843fd134bc"
+            ]
+        ]
+    },
+    {
         "id": "67c6d794.309d08",
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
@@ -6998,7 +8897,7 @@
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
         "name": "Add Submodel",
-        "func": "var submodel = msg.payload;\nvar submodelId = msg.req.param.id;\nvar shellId = msg.req.params.aasid;\nif(msg.jsonataStatus == \"Success\"){\n    \n    /*var keys = msg.jsonataResult;\n    var manifest = context.flow.get(\"manifest\");\n    var submodels = manifest.submodels;\n    for(var index1 in keys){\n        var key = keys[index1];\n        for(var index2 in submodels){\n            var submodel = submodels[index2];\n            if(submodel.identification.id === key.value){\n                if(submodel.idShort === submodelId){\n                    submodels[index2] = submodel;\n                    msg.statusCode = \"200\";\n                    context.flow.set(\"manifest\", manifest);\n                    return msg;\n                }\n            }\n        }\n    }*/\n    msg.statusCode = \"409\";\n    msg.payload = \"Error! submodel already exists!\";\n    return msg;\n} else {\n    msg.statusCode = \"201\";\n    var manifest = context.flow.get(\"manifest\");\n    manifest.submodels.push(msg.payload);\n    var shells = manifest.assetAdministrationShells;\n    for(var element = 0; element < shells.length; element++){\n        if(shells[element].identification.id == shellId){\n            var submodelRef = {};\n            // @ts-ignore\n            var keys = [];\n            var ref = {};\n            ref.type = \"Submodel\";\n            ref.local = true;\n            ref.value = submodel.identification.id;\n            ref.index = 0;\n            ref.idType = submodel.identification.idType;\n            keys.push(ref);\n            submodelRef.keys = keys;\n            shells[element].submodels.push(submodelRef);\n            context.flow.set(\"manifest\", manifest);\n        }\n    }\n}\n\nreturn msg;",
+        "func": "var submodel = msg.payload;\nvar shellId = msg.req.params.aasid;\nif(msg.jsonataStatus == \"Success\"){\n    msg.statusCode = \"409\";\n    msg.payload = \"Error! submodel already exists!\";\n    return msg;\n} else {\n    // Verify IdShort\n    let manifest = context.flow.get(\"manifest\");\n    let submodels = manifest.submodels;\n    for (let index1 = 0; index1 < submodels.length; index1++) {\n        var submodelElement = submodels[index1];\n        if(submodel.idShort == submodelElement.idShort){\n            msg.statusCode = \"409\";\n            msg.payload = \"Error! submodel with idShort: \" + submodel.idShort + \" already exists!\";\n            return msg;\n        }\n    }\n    // Add Submodel after IdShort Verification\n    msg.statusCode = \"201\";\n    //var manifest = context.flow.get(\"manifest\");\n    manifest.submodels.push(msg.payload);\n    var shells = manifest.assetAdministrationShells;\n    for(var element = 0; element < shells.length; element++){\n        if(shells[element].identification.id == shellId){\n            var submodelRef = {};\n            // @ts-ignore\n            var keys = [];\n            var ref = {};\n            ref.type = \"Submodel\";\n            ref.local = true;\n            ref.value = submodel.identification.id;\n            ref.index = 0;\n            ref.idType = submodel.identification.idType;\n            keys.push(ref);\n            submodelRef.keys = keys;\n            shells[element].submodels.push(submodelRef);\n            context.flow.set(\"manifest\", manifest);\n        }\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1160,
@@ -7259,7 +9158,7 @@
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
         "name": "UpdatingSubmodelElement...",
-        "func": "let submodelElement = \"\";\nlet submodelElementId = msg.req.params.id;\nlet submodelId = msg.req.params.submodelId;\nlet persist = \"false\";\nif (msg.req.query.content == \"value\") {\n\n    msg.payload.value = msg.submodelElement[msg.submodelElementId];\n    submodelElement = msg.payload;\n\n} else {\n    submodelElement = msg.submodelElement;\n    persist = \"true\";\n}\n\nlet updateSubmodelElementValues = function (submodelElements, indexIdPath, collectionIds, value) {\n\n    if (indexIdPath < collectionIds.length) {\n\n        let idPath = collectionIds[indexIdPath];\n\n        for (let submodelElement = 0; submodelElement < submodelElements.length; submodelElement++) {\n\n            let submodelElementIdentifier = submodelElements[submodelElement].idShort;\n\n            let modelType = submodelElements[submodelElement].modelType.name;\n\n            if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath < (collectionIds.length - 1)) {\n\n                indexIdPath = indexIdPath + 1;\n\n                return updateSubmodelElementValues(submodelElements[submodelElement].value, indexIdPath, collectionIds, value);\n\n            } else if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath === (collectionIds.length - 1)) {\n\n                //msg.debug3 = \"entrei\";\n\n                let values = JSON.parse(value);\n\n                let keys = Object.keys(values);\n\n\n                for (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n\n                    let selectedValue = 0;\n\n                    selectedValue = values[keys[keyIndex]];\n\n                    submodelElements[submodelElement].value[keyIndex].value = selectedValue;\n\n                }\n\n                return true;\n\n            }\n            else if (submodelElementIdentifier === idPath && modelType === \"Property\") {\n\n                submodelElements[submodelElement].value = value;\n\n                return true;\n\n            }\n\n        }\n\n    } else {\n\n        return false;\n\n    }\n\n}\n\nvar submodelCollectionId = [];\n\nif (msg.jsonataStatus == \"Success\") {\n\n    let submodelRoot = msg.jsonataResult[0];\n\n    let pathToSubmodelElement = submodelElementId;\n\n    let collectionIds = pathToSubmodelElement.split(\".\");\n\n    let value = msg.submodelElement[msg.submodelElementId];\n\n    let submodelRootIdentifier = submodelRoot.identification.id;\n\n    let result = false;\n\n    let manifest = context.flow.get(\"manifest\");\n\n    let manifestSubmodels = manifest.submodels;\n\n    for (let manifestSubmodel = 0; manifestSubmodel < manifestSubmodels.length; manifestSubmodel++) {\n\n        let manifestSubmodelIdentifier = manifestSubmodels[manifestSubmodel].identification.id;\n\n        if (submodelRootIdentifier === manifestSubmodelIdentifier) {\n\n            let manifestSubmodelElements = manifestSubmodels[manifestSubmodel].submodelElements;\n\n            //msg.debug1 = collectionIds;\n\n            //msg.debug2 = manifestSubmodelElements;\n\n            result = updateSubmodelElementValues(manifestSubmodelElements, 0, collectionIds, value);\n\n            //msg.result = result;\n\n            if (result) {\n\n                context.flow.set(\"manifest\", manifest);\n\n                if (persist == \"true\") {\n\n                    return [msg, null];\n\n                } else {\n                    //msg.parsedValue = Object.keys(JSON.parse(value));\n                    //msg.values = JSON.parse(value);\n                    return [null, msg];\n\n                }\n            } else {\n\n                msg.statusCode = \"404\";\n                //msg.payload = \"Submodel with id:\" + submodelIdentifier + \" not found!!!\";\n                return [null, msg];\n\n            }\n\n        }\n\n    }\n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n    return [null, msg];\n}\n\n\n\n",
+        "func": "let submodelElement = \"\";\nlet submodelElementId = msg.req.params.id;\nlet submodelId = msg.req.params.submodelId;\nlet persist = \"false\";\nif (msg.req.query.content == \"Value\") {\n\n    msg.payload.value = msg.submodelElement[msg.submodelElementId];\n    submodelElement = msg.payload;\n\n} else {\n    submodelElement = msg.submodelElement;\n    persist = \"true\";\n}\n\nlet updateSubmodelElementValues = function (submodelElements, indexIdPath, collectionIds, value) {\n\n    if (indexIdPath < collectionIds.length) {\n\n        let idPath = collectionIds[indexIdPath];\n\n        for (let submodelElement = 0; submodelElement < submodelElements.length; submodelElement++) {\n\n            let submodelElementIdentifier = submodelElements[submodelElement].idShort;\n\n            let modelType = submodelElements[submodelElement].modelType.name;\n\n            if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath < (collectionIds.length - 1)) {\n\n                indexIdPath = indexIdPath + 1;\n\n                return updateSubmodelElementValues(submodelElements[submodelElement].value, indexIdPath, collectionIds, value);\n\n            } else if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath === (collectionIds.length - 1)) {\n\n                //msg.debug3 = \"entrei\";\n\n                let values = JSON.parse(value);\n\n                let keys = Object.keys(values);\n\n\n                for (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n\n                    let selectedValue = 0;\n\n                    selectedValue = values[keys[keyIndex]];\n\n                    submodelElements[submodelElement].value[keyIndex].value = selectedValue;\n\n                }\n\n                return true;\n\n            }\n            else if (submodelElementIdentifier === idPath && modelType === \"Property\") {\n\n                submodelElements[submodelElement].value = value;\n\n                return true;\n\n            }\n\n        }\n\n    } else {\n\n        return false;\n\n    }\n\n}\n\nvar submodelCollectionId = [];\n\nif (msg.jsonataStatus == \"Success\") {\n\n    let submodelRoot = msg.jsonataResult[0];\n\n    let pathToSubmodelElement = submodelElementId;\n\n    let collectionIds = pathToSubmodelElement.split(\".\");\n\n    let value = msg.submodelElement[msg.submodelElementId];\n\n    let submodelRootIdentifier = submodelRoot.identification.id;\n\n    let result = false;\n\n    let manifest = context.flow.get(\"manifest\");\n\n    let manifestSubmodels = manifest.submodels;\n\n    for (let manifestSubmodel = 0; manifestSubmodel < manifestSubmodels.length; manifestSubmodel++) {\n\n        let manifestSubmodelIdentifier = manifestSubmodels[manifestSubmodel].identification.id;\n\n        if (submodelRootIdentifier === manifestSubmodelIdentifier) {\n\n            let manifestSubmodelElements = manifestSubmodels[manifestSubmodel].submodelElements;\n\n            //msg.debug1 = collectionIds;\n\n            //msg.debug2 = manifestSubmodelElements;\n\n            result = updateSubmodelElementValues(manifestSubmodelElements, 0, collectionIds, value);\n\n            //msg.result = result;\n\n            if (result) {\n\n                context.flow.set(\"manifest\", manifest);\n\n                if (persist == \"true\") {\n\n                    return [msg, null];\n\n                } else {\n                    //msg.parsedValue = Object.keys(JSON.parse(value));\n                    //msg.values = JSON.parse(value);\n                    return [null, msg];\n\n                }\n            } else {\n\n                msg.statusCode = \"404\";\n                //msg.payload = \"Submodel with id:\" + submodelIdentifier + \" not found!!!\";\n                return [null, msg];\n\n            }\n\n        }\n\n    }\n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n    return [null, msg];\n}\n\n\n\n",
         "outputs": 2,
         "noerr": 0,
         "x": 1810,
@@ -7376,7 +9275,7 @@
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
         "name": "BuildingJsonataQuery...",
-        "func": "var ShellId = msg.req.params.id;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId +\"']\";\nreturn msg;\n",
+        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId +\"']\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "x": 650,
@@ -7408,7 +9307,7 @@
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
         "name": "BuildingJsonataQuery...",
-        "func": "var ShellId = msg.req.params.id;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId +\"'].submodels\";\nreturn msg;\n",
+        "func": "var ShellId = msg.req.params.aasid;\nvar manifest = context.flow.get('manifest');\n\nvar shells = manifest.assetAdministrationShells;\nmsg.shellsJsonStr = JSON.stringify(shells);\nmsg.jsonata = \"$[identification.id='\" + ShellId +\"'].submodels\";\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "x": 720,
@@ -7479,7 +9378,8 @@
         "y": 840,
         "wires": [
             [
-                "da187920.ebbfd8"
+                "da187920.ebbfd8",
+                "faadeccab2b979c5"
             ]
         ]
     },
@@ -8346,6 +10246,37 @@
         "wires": []
     },
     {
+        "id": "faadeccab2b979c5",
+        "type": "debug",
+        "z": "7585249f.880c0c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "af4b6639.02a008",
+        "type": "unsafe-function",
+        "z": "670d9c89.6d0424",
+        "name": "InvokeInternalDriver",
+        "func": "msg.source = context.global.get('AASIdentifier');\nmsg.staticDocs = context.global.get(\"staticDocs\");\nmsg.topic = \"request\";\nvar af = context.global.get(\"actionflows\");\nvar link = msg.req.params.aasid + \"/\" + msg.req.params.submodelId + \"/\" + msg.req.params.id;\nvar action_ = af.invoke(link, msg);\naction_.then(function(msg){\n    node.send(msg);\n});\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1120,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "7d0ec41d.2d0d8c",
         "type": "comment",
         "z": "670d9c89.6d0424",
@@ -8530,7 +10461,7 @@
         "y": 1220,
         "wires": [
             [
-                "db193e6d107d3fb7"
+                "cfda54a5dc2f89f9"
             ]
         ]
     },
@@ -8568,7 +10499,7 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "prepare Observation",
-        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsgs = [];\nfor (var subscription = 0; subscription < subscriptions.length; subscription++) {\n    //var splittedSubscription = subscriptions[subscription].split(\";\");\n    //if (msg.payload.source.includes(splittedSubscription[0]) && msg.payload.source.includes(splittedSubscription[1]) && msg.payload.source.includes(splittedSubscription[2])){\n    if (msg.payload.source.includes(subscription)) {\n        var observation = msg.payload;\n        //observation.source = context.global.get(\"AASIdentifier\");\n        var outMsg = observation;\n        outMsgs.push(outMsg);\n        //msg.topic = splittedSubscription[3];\n    }\n}\n//var observation = msg.payload;\n//observation.source = context.global.get(\"AASIdentifier\");\n//msg.payload = observation;\n//return msg;\nreturn [outMsgs];",
+        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsgs = [];\nfor(var subscription = 0; subscription < subscriptions.length; subscription++){\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if (msg.payload.source.includes(splittedSubscription[0]) && msg.payload.source.includes(splittedSubscription[1]) && msg.payload.source.includes(splittedSubscription[2])){\n        var observation = msg.payload;\n        //observation.source = context.global.get(\"AASIdentifier\");\n        var outMsg = observation;\n        outMsg.topic = splittedSubscription[3];\n        outMsgs.push(outMsg);\n        //msg.topic = splittedSubscription[3];\n    }\n}\n//var observation = msg.payload;\n//observation.source = context.global.get(\"AASIdentifier\");\n//msg.payload = observation;\n//return msg;\nreturn [outMsgs];",
         "outputs": 1,
         "noerr": 0,
         "x": 1360,
@@ -8741,7 +10672,7 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "prepare Observation",
-        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsgs = [];\nfor (var subscription = 0; subscription < subscriptions.length; subscription++) {\n    //var splittedSubscription = subscriptions[subscription].split(\";\");\n    //if (msg.payload.source.includes(splittedSubscription[0]) && msg.payload.source.includes(splittedSubscription[1]) && msg.payload.source.includes(splittedSubscription[2])){\n    if (msg.payload.source.includes(subscription)) {\n        var observation = msg.payload;\n        //observation.source = context.global.get(\"AASIdentifier\");\n        var outMsg = observation;\n        outMsgs.push(outMsg);\n        //msg.topic = splittedSubscription[3];\n    }\n}\n//var observation = msg.payload;\n//observation.source = context.global.get(\"AASIdentifier\");\n//msg.payload = observation;\n//return msg;\nreturn [outMsgs];",
+        "func": "//var observation = JSON.parse(msg.payload);\nvar subscriptions = context.flow.get(\"subscriptions\");\nvar outMsgs = [];\nfor (var subscription = 0; subscription < subscriptions.length; subscription++) {\n    var splittedSubscription = subscriptions[subscription].split(\";\");\n    if (msg.payload.source.includes(splittedSubscription[0]) && msg.payload.source.includes(splittedSubscription[1]) && msg.payload.source.includes(splittedSubscription[2])) {\n        var observation = msg.payload;\n        //observation.source = context.global.get(\"AASIdentifier\");\n        var outMsg = observation;\n        outMsg.topic = splittedSubscription[3];\n        outMsgs.push(outMsg);\n        //msg.topic = splittedSubscription[3];\n    }\n}\n//var observation = msg.payload;\n//observation.source = context.global.get(\"AASIdentifier\");\n//msg.payload = observation;\n//return msg;\nreturn [outMsgs];",
         "outputs": 1,
         "noerr": 0,
         "x": 1360,
@@ -8870,14 +10801,15 @@
         "type": "unsafe-function",
         "z": "670d9c89.6d0424",
         "name": "UpdateSubscriptions",
-        "func": "var subscriptions = context.flow.get(\"subscriptions\");\nvar subscription = msg.payload.source;\nif (msg.topic === \"observe\") {\n    if (subscriptions.includes(subscription)) return null;\n    else {\n        subscriptions.push(subscription);\n        context.flow.set(\"subscriptions\", subscriptions);\n        return msg;\n    }\n} else if (msg.topic === \"unobserve\") {\n    if (subscriptions.length > 0) {\n        for (var index = 0; index < subscriptions.length; index++) {\n            if (subscriptions[index] === subscription) {\n                subscriptions.splice(index, 1);\n                context.flow.set(\"subscriptions\", subscriptions);\n                return msg;\n            }\n        }\n    }\n    return msg;\n\n}\n\n\n",
+        "func": "var subscriptions = context.flow.get(\"subscriptions\");\nvar subscription = msg.payload.observableReference;\nif (msg.topic === \"observe\") {\n    if (subscriptions.includes(subscription)) return null;\n    else {\n        subscriptions.push(subscription);\n        context.flow.set(\"subscriptions\", subscriptions);\n        return msg;\n    }\n} else if (msg.topic === \"unobserve\") {\n    if (subscriptions.length > 0) {\n        for (var index = 0; index < subscriptions.length; index++) {        \n            if (subscriptions[index] === subscription) {\n                subscriptions.splice(index, 1);\n                context.flow.set(\"subscriptions\", subscriptions);\n                return msg;\n            }\n        }\n    }\n\n    return msg;\n}\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "x": 1100,
         "y": 1400,
         "wires": [
             [
-                "c5294566add400ed"
+                "658d3def08041704",
+                "9dd752b037993010"
             ]
         ]
     },
@@ -8893,7 +10825,7 @@
         "y": 1480,
         "wires": [
             [
-                "88278279c949f4c9"
+                "1b9c027a5ec07f6c"
             ]
         ]
     },
@@ -8948,7 +10880,24 @@
         ]
     },
     {
-        "id": "fb9fe59d1eab15f7",
+        "id": "658d3def08041704",
+        "type": "debug",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "d3c6a0cfee3cf934",
         "type": "actionflows_in",
         "z": "670d9c89.6d0424",
         "name": "southbound.resetSubscriptions in",
@@ -8964,17 +10913,17 @@
         ]
     },
     {
-        "id": "88278279c949f4c9",
+        "id": "1b9c027a5ec07f6c",
         "type": "actionflows_out",
         "z": "670d9c89.6d0424",
         "name": "southbound.resetSubscriptions out",
         "links": [],
-        "x": 1800,
+        "x": 1900,
         "y": 1480,
         "wires": []
     },
     {
-        "id": "cf6a5140d89ed519",
+        "id": "4f2167d81c803d3d",
         "type": "actionflows_in",
         "z": "670d9c89.6d0424",
         "name": "southbound.updateSubscriptions in",
@@ -8985,24 +10934,24 @@
         "y": 1400,
         "wires": [
             [
-                "1ee9cdfac8c39c44",
                 "c51eb8701d678fcf",
+                "1ee9cdfac8c39c44",
                 "1ec43281754fe568"
             ]
         ]
     },
     {
-        "id": "c5294566add400ed",
+        "id": "9dd752b037993010",
         "type": "actionflows_out",
         "z": "670d9c89.6d0424",
         "name": "southbound.updateSubscriptions out",
         "links": [],
-        "x": 1810,
+        "x": 1890,
         "y": 1400,
         "wires": []
     },
     {
-        "id": "db193e6d107d3fb7",
+        "id": "cfda54a5dc2f89f9",
         "type": "actionflows",
         "z": "670d9c89.6d0424",
         "info": "Describe your action API here.",
@@ -9016,12 +10965,12 @@
         "scope": "global",
         "perf": false,
         "seq": false,
-        "x": 1150,
+        "x": 1130,
         "y": 1220,
         "wires": [
             [
-                "1cd120a.1a88b5f",
-                "e0c0795b.6a17b8"
+                "e0c0795b.6a17b8",
+                "1cd120a.1a88b5f"
             ]
         ]
     },
@@ -9030,7 +10979,7 @@
         "type": "unsafe-function",
         "z": "3db1c009.99d51",
         "name": "PayloadProcessing",
-        "func": "var msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = \"observation\";\nmsg1.topic = msg.payload.observableReference;\nmsg1.payload = observation;\nreturn msg1;",
+        "func": "var msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = msg.topic;\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    msg1.topic = msg.payload.observableReference;\n    msg1.payload = observation;\n} else {\n    msg1.topic = msg.topic;\n    msg1.payload = observation;\n}\nreturn msg1;",
         "outputs": 1,
         "noerr": 0,
         "x": 790,
@@ -9242,7 +11191,7 @@
         "type": "unsafe-function",
         "z": "3db1c009.99d51",
         "name": "PayloadProcessing",
-        "func": "var msg1 = {};\nlet observation = {};\nobservation.id = \"test\";\nobservation.source = \"myAAS\";\nobservation.direction = \"out\";\nobservation.observableReference = \"msg.observableReference\";\nobservation.timestamp = \"msg.timestamp\";\nobservation.payload = \"msg.payload\";\nobservation.topic = \"msg.topic\";\nreturn msg1;",
+        "func": "var msg1 = {};\nlet observation = {};\nobservation.id = \"test\";\nobservation.source = \"myAAS\";\nobservation.direction = \"out\";\nobservation.observableReference = \"msg.observableReference\";\nobservation.timestamp = \"msg.timestamp\";\nobservation.payload = \"msg.payload\";\nobservation.topic = \"msg.topic\";\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    msg1.topic = msg.payload.observableReference;\n    msg1.payload = observation;\n} else {\n    msg1.topic = msg.topic;\n    msg1.payload = observation;\n}\nreturn msg1;",
         "outputs": 1,
         "noerr": 0,
         "x": 770,
@@ -9258,7 +11207,7 @@
         "type": "unsafe-function",
         "z": "3db1c009.99d51",
         "name": "PayloadProcessing",
-        "func": "var msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = \"observation\";\n//msg1.topic = msg.payload.observableReference;\nmsg1.payload = observation;\nreturn msg1;",
+        "func": "var msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = msg.topic;\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    msg1.topic = \"\";\n    msg1.payload = JSON.stringify(observation);\n} else {\n    msg1.topic = \"\";\n    msg1.payload = JSON.stringify(observation);\n}\nreturn msg1;",
         "outputs": 1,
         "noerr": 0,
         "x": 630,
@@ -9658,11 +11607,11 @@
         "type": "Kafka Consumer",
         "z": "3db1c009.99d51",
         "name": "",
-        "broker": "6ff683fad530755b",
+        "broker": "",
         "regex": false,
         "topics": [
             {
-                "topic": "bd4nrg.LSP09.datastreamer",
+                "topic": "",
                 "offset": 0,
                 "partition": 0
             }
@@ -9692,7 +11641,7 @@
         "z": "3db1c009.99d51",
         "name": "",
         "broker": "",
-        "topic": "bd4nrg.LSP09.datastreamer",
+        "topic": "",
         "topicSlash2dot": false,
         "requireAcks": 1,
         "ackTimeoutMs": 100,
@@ -9711,8 +11660,8 @@
         "type": "Kafka Producer",
         "z": "3db1c009.99d51",
         "name": "",
-        "broker": "6ff683fad530755b",
-        "topic": "bd4nrg.LSP09.datastreamer",
+        "broker": "",
+        "topic": "",
         "topicSlash2dot": false,
         "requireAcks": 1,
         "ackTimeoutMs": 100,
@@ -9747,8 +11696,8 @@
         "topic": "encrypt_cmd",
         "payload": "on",
         "payloadType": "str",
-        "x": 620,
-        "y": 1780,
+        "x": 600,
+        "y": 1720,
         "wires": [
             [
                 "a89170b27e831c5c"
@@ -9776,8 +11725,8 @@
         "topic": "encrypt_cmd",
         "payload": "off",
         "payloadType": "str",
-        "x": 630,
-        "y": 1820,
+        "x": 610,
+        "y": 1760,
         "wires": [
             [
                 "a89170b27e831c5c"
@@ -9795,8 +11744,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 1800,
+        "x": 940,
+        "y": 1740,
         "wires": [
             [
                 "8db2cd280f2c6c33"
@@ -9816,8 +11765,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1250,
-        "y": 1800,
+        "x": 1230,
+        "y": 1740,
         "wires": []
     },
     {
