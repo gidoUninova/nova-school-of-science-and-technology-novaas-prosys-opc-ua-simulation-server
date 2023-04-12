@@ -57,6 +57,14 @@
         "info": ""
     },
     {
+        "id": "1543d308b342690a",
+        "type": "tab",
+        "label": "FlexDash empty flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "56cb7422.e3d28c",
         "type": "subflow",
         "name": "APILogger",
@@ -423,7 +431,9 @@
             "ad85b295.7069f"
         ],
         "x": 76,
-        "y": 225
+        "y": 225,
+        "w": 1902,
+        "h": 242
     },
     {
         "id": "daa90db5.798ca",
@@ -474,7 +484,9 @@
             "437c7c89.d0b51c"
         ],
         "x": 75,
-        "y": 599
+        "y": 599,
+        "w": 1977,
+        "h": 1888
     },
     {
         "id": "66d3f26a.c296b4",
@@ -497,7 +509,9 @@
             "d42664b2.514808"
         ],
         "x": 74,
-        "y": 2499
+        "y": 2499,
+        "w": 1951,
+        "h": 282
     },
     {
         "id": "fd25b313.221798",
@@ -520,7 +534,9 @@
             "2dc97f2a.e1d8d8"
         ],
         "x": 74,
-        "y": 2799
+        "y": 2799,
+        "w": 1912,
+        "h": 202
     },
     {
         "id": "16640da3.5a20ca",
@@ -541,7 +557,9 @@
             "43be3c31.fa03f4"
         ],
         "x": 74,
-        "y": 3019
+        "y": 3019,
+        "w": 1932,
+        "h": 182
     },
     {
         "id": "4b4e4270.d440bc",
@@ -567,9 +585,7 @@
             "a9c22279a032d681"
         ],
         "x": 214,
-        "y": 3819,
-        "w": 2272,
-        "h": 239
+        "y": 3819
     },
     {
         "id": "d366c10f.cbf158",
@@ -593,9 +609,7 @@
             "555ce72ca0d7dfd4"
         ],
         "x": 214,
-        "y": 3096,
-        "w": 2962,
-        "h": 542
+        "y": 3096
     },
     {
         "id": "9eaca16.128cb6",
@@ -838,6 +852,53 @@
         "h": 682
     },
     {
+        "id": "96315c43b31f65cf",
+        "type": "group",
+        "z": "0f7b0349d3beda52",
+        "name": "Set-up",
+        "style": {
+            "fill": "#e3f3d3",
+            "fill-opacity": "0.4",
+            "label": true
+        },
+        "nodes": [
+            "fc47632397101388",
+            "a237e88477c641c7",
+            "418a8fee993d943b",
+            "b182ca465598b238",
+            "d57f305ac53e4d3f",
+            "f8b354e5d9771dda"
+        ],
+        "x": 134,
+        "y": 59,
+        "w": 1322,
+        "h": 182
+    },
+    {
+        "id": "613b3238c3da875c",
+        "type": "group",
+        "z": "0f7b0349d3beda52",
+        "name": "Connecting to the PROSYS OPC UA Simulation Server",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0219f19f63f4f26f",
+            "c5d7a12e40e47c82",
+            "e5fe72a24bd5ae50",
+            "8ef5f8cc321269ee",
+            "df6163485b0944cc",
+            "a6e34c38b88bf493",
+            "5edb132f331ef30c",
+            "48f320da208f2f2e",
+            "a0e19bb3f6b13c57"
+        ],
+        "x": 1094,
+        "y": 2259,
+        "w": 1052,
+        "h": 382
+    },
+    {
         "id": "37a4080e.40ed9",
         "type": "group",
         "z": "c7caf96e.a31f98",
@@ -887,7 +948,9 @@
             "d05b53b9a69cc83a"
         ],
         "x": 101,
-        "y": 1176
+        "y": 1176,
+        "w": 1925,
+        "h": 708
     },
     {
         "id": "c358a7e7.e264e",
@@ -931,54 +994,9 @@
             "1dad423e9ce11cac"
         ],
         "x": 111,
-        "y": 1909
-    },
-    {
-        "id": "96315c43b31f65cf",
-        "type": "group",
-        "z": "0f7b0349d3beda52",
-        "name": "Set-up",
-        "style": {
-            "fill": "#e3f3d3",
-            "fill-opacity": "0.4",
-            "label": true
-        },
-        "nodes": [
-            "fc47632397101388",
-            "a237e88477c641c7",
-            "418a8fee993d943b",
-            "b182ca465598b238",
-            "d57f305ac53e4d3f",
-            "f8b354e5d9771dda"
-        ],
-        "x": 134,
-        "y": 59,
-        "w": 1322,
-        "h": 182
-    },
-    {
-        "id": "613b3238c3da875c",
-        "type": "group",
-        "z": "0f7b0349d3beda52",
-        "name": "Connecting to the PROSYS OPC UA Simulation Server",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "0219f19f63f4f26f",
-            "c5d7a12e40e47c82",
-            "e5fe72a24bd5ae50",
-            "8ef5f8cc321269ee",
-            "df6163485b0944cc",
-            "a6e34c38b88bf493",
-            "5edb132f331ef30c",
-            "48f320da208f2f2e",
-            "a0e19bb3f6b13c57"
-        ],
-        "x": 1094,
-        "y": 2259,
-        "w": 1052,
-        "h": 382
+        "y": 1909,
+        "w": 1902,
+        "h": 552
     },
     {
         "id": "bf8d1775bedc9126",
@@ -1762,6 +1780,29 @@
         "secpol": "None",
         "secmode": "None",
         "login": false
+    },
+    {
+        "id": "69c2e3f5798c3475",
+        "type": "flexdash container",
+        "name": "Demo grid",
+        "title": "",
+        "kind": "StdGrid",
+        "fd_children": ",97e34cb72c2f36bd",
+        "tab": "fef6c0f6d48841d6",
+        "min_cols": "1",
+        "max_cols": "6",
+        "parent": "",
+        "solid": false,
+        "cols": "1",
+        "rows": "1"
+    },
+    {
+        "id": "fef6c0f6d48841d6",
+        "type": "flexdash tab",
+        "name": "Demo",
+        "icon": "mdi-view-dashboard",
+        "fd_children": ",69c2e3f5798c3475",
+        "fd": "e8f5aea52ab49500"
     },
     {
         "id": "d56e5f93.f422c",
@@ -10581,7 +10622,7 @@
         "type": "unsafe-function",
         "z": "7585249f.880c0c",
         "name": "UpdatingSubmodelElement...",
-        "func": "let submodelElement = \"\";\nlet submodelElementId = msg.req.params.id;\nlet submodelId = msg.req.params.submodelId;\nlet persist = \"false\";\nif (msg.req.query.content == \"value\") {\n\n    msg.payload.value = msg.submodelElement[msg.submodelElementId];\n    submodelElement = msg.payload;\n\n} else {\n    submodelElement = msg.submodelElement;\n    persist = \"true\";\n}\n\n\nlet updateSubmodelElementValues = function (submodelElements, indexIdPath, collectionIds, value) {\n\n    if (indexIdPath < collectionIds.length) {\n\n        let idPath = collectionIds[indexIdPath];\n\n        for (let submodelElement = 0; submodelElement < submodelElements.length; submodelElement++) {\n\n            let submodelElementIdentifier = submodelElements[submodelElement].idShort;\n\n            let modelType = submodelElements[submodelElement].modelType.name;\n\n            if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath < (collectionIds.length - 1)) {\n\n                indexIdPath = indexIdPath + 1;\n\n                return updateSubmodelElementValues(submodelElements[submodelElement].value, indexIdPath, collectionIds, value);\n\n            } else if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath === (collectionIds.length - 1)) {\n\n                let values = JSON.parse(value);\n\n                let keys = Object.keys(values);\n\n                for (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n\n                    let selectedValue = 0;\n\n                    selectedValue = values[keys[keyIndex]];\n                    //msg.debug15 = selectedValue;\n\n                    //msg.debug15 = selectedValue;\n                    if (typeof selectedValue != 'object') {\n                        for (let valuesIndex = 0; valuesIndex < submodelElements[submodelElement].value.length; valuesIndex++) {\n                            if (submodelElements[submodelElement].value[valuesIndex].idShort == keys[keyIndex]) {\n                                submodelElements[submodelElement].value[valuesIndex].value = selectedValue;\n                                break;\n\n                            }\n                        }\n                    }\n\n\n                }\n\n                return true;\n\n            }\n            else if (submodelElementIdentifier === idPath && modelType === \"Property\") {\n                //msg.debug11 = \"Entrei \" + submodelElements[submodelElement].idShort + \" and \" + idPath + \" \" + value;\n                submodelElements[submodelElement].value = value;\n\n                return true;\n\n            }\n\n        }\n\n    } else {\n\n        return false;\n\n    }\n\n}\n\nvar submodelCollectionId = [];\n\nlet manifest = context.flow.get(\"manifest\");\nif (msg.jsonataStatus == \"Success\") {\n\n    let submodelRoot = msg.jsonataResult[0];\n\n    let pathsToSubmodelElements = msg.pathsToUpdate;\n\n    let submodelRootIdentifier = submodelRoot.identification.id;\n\n    let manifestSubmodels = manifest.submodels;\n\n    let manifestSubmodelElements = {};\n\n    let stratingJsonDecomposition = msg.submodelElementId.split(\".\");\n\n    for (let manifestSubmodel = 0; manifestSubmodel < manifestSubmodels.length; manifestSubmodel++) {\n\n        let manifestSubmodelIdentifier = manifestSubmodels[manifestSubmodel].identification.id;\n\n        if (submodelRootIdentifier === manifestSubmodelIdentifier) {\n\n            manifestSubmodelElements = manifestSubmodels[manifestSubmodel].submodelElements;\n\n        }\n\n    }\n\n    for (let pathIndex = 0; pathIndex < pathsToSubmodelElements.length; pathIndex++) {\n\n        let collectionIds = pathsToSubmodelElements[pathIndex].split(\".\");\n        msg.collectionIds = collectionIds;\n        let value = msg.submodelElement[msg.submodelElementId];\n        msg.getValue1 = value;\n        let jsonObjectValue = {};\n\n        let processedValue = {};\n\n        if (collectionIds.length > 1) {\n            jsonObjectValue = JSON.parse(value);\n            let decomposeJsonObj = jsonObjectValue;\n            for (let index = stratingJsonDecomposition.length; index < collectionIds.length; index++) {\n                decomposeJsonObj = decomposeJsonObj[collectionIds[index]];\n            }\n            processedValue = JSON.stringify(decomposeJsonObj)\n\n        } else {\n            if(typeof value == \"object\"){\n                jsonObjectValue = JSON.parse(value);\n            } else {\n                processedValue = value;\n            }\n\n        }\n        msg.getValue2 = processedValue;\n        updateSubmodelElementValues(manifestSubmodelElements, 0, collectionIds, processedValue);\n\n    }\n    context.flow.set(\"manifest\", manifest);\n\n    if (persist == \"true\") {\n\n        return [msg, null];\n\n    } else {\n\n        return [null, msg];\n    }\n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n    return [null, msg];\n}",
+        "func": "let submodelElement = \"\";\nlet submodelElementId = msg.req.params.id;\nlet submodelId = msg.req.params.submodelId;\nlet persist = \"false\";\nif (msg.req.query.content == \"value\") {\n\n    msg.payload.value = msg.submodelElement[msg.submodelElementId];\n    submodelElement = msg.payload;\n\n} else {\n    submodelElement = msg.submodelElement;\n    persist = \"true\";\n}\n\n\nlet updateSubmodelElementValues = function (submodelElements, indexIdPath, collectionIds, value) {\n\n    if (indexIdPath < collectionIds.length) {\n\n        let idPath = collectionIds[indexIdPath];\n\n        for (let submodelElement = 0; submodelElement < submodelElements.length; submodelElement++) {\n\n            let submodelElementIdentifier = submodelElements[submodelElement].idShort;\n\n            let modelType = submodelElements[submodelElement].modelType.name;\n\n            if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath < (collectionIds.length - 1)) {\n\n                indexIdPath = indexIdPath + 1;\n\n                return updateSubmodelElementValues(submodelElements[submodelElement].value, indexIdPath, collectionIds, value);\n\n            } else if (submodelElementIdentifier === idPath && modelType === \"SubmodelElementCollection\" && indexIdPath === (collectionIds.length - 1)) {\n\n                let values = JSON.parse(value);\n\n                let keys = Object.keys(values);\n\n                for (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n\n                    let selectedValue = 0;\n\n                    selectedValue = values[keys[keyIndex]];\n                    //msg.debug15 = selectedValue;\n                    if (typeof selectedValue != 'object') {\n                        for (let valuesIndex = 0; valuesIndex < submodelElements[submodelElement].value.length; valuesIndex++) {\n                            if (submodelElements[submodelElement].value[valuesIndex].idShort == keys[keyIndex]) {\n                                submodelElements[submodelElement].value[valuesIndex].value = selectedValue;\n                                break;\n                            }\n                        }\n                    }\n\n\n                }\n\n                return true;\n\n            }\n            else if (submodelElementIdentifier === idPath && modelType === \"Property\") {\n                //msg.debug11 = \"Entrei \" + submodelElements[submodelElement].idShort + \" and \" + idPath + \" \" + value;\n\n                submodelElements[submodelElement].value = value;\n                return true;\n\n            }\n\n        }\n\n    } else {\n\n        return false;\n\n    }\n\n}\n\nvar submodelCollectionId = [];\n\nlet manifest = context.flow.get(\"manifest\");\nif (msg.jsonataStatus == \"Success\") {\n\n    let submodelRoot = msg.jsonataResult[0];\n\n    let pathsToSubmodelElements = msg.pathsToUpdate;\n\n    let submodelRootIdentifier = submodelRoot.identification.id;\n\n    let manifestSubmodels = manifest.submodels;\n\n    let manifestSubmodelElements = {};\n\n    let stratingJsonDecomposition = msg.submodelElementId.split(\".\");\n\n    for (let manifestSubmodel = 0; manifestSubmodel < manifestSubmodels.length; manifestSubmodel++) {\n\n        let manifestSubmodelIdentifier = manifestSubmodels[manifestSubmodel].identification.id;\n\n        if (submodelRootIdentifier === manifestSubmodelIdentifier) {\n\n            manifestSubmodelElements = manifestSubmodels[manifestSubmodel].submodelElements;\n\n        }\n\n    }\n\n    for (let pathIndex = 0; pathIndex < pathsToSubmodelElements.length; pathIndex++) {\n\n        let collectionIds = pathsToSubmodelElements[pathIndex].split(\".\");\n        msg.collectionIds = collectionIds;\n        let value = msg.submodelElement[msg.submodelElementId];\n        //msg.getValue1 = value;\n        let jsonObjectValue = {};\n\n        let processedValue = {};\n\n        if (collectionIds.length > 1) {\n            jsonObjectValue = JSON.parse(value);\n            let decomposeJsonObj = jsonObjectValue;\n            for (let index = stratingJsonDecomposition.length; index < collectionIds.length; index++) {\n                decomposeJsonObj = decomposeJsonObj[collectionIds[index]];\n            }\n            if (typeof decomposeJsonObj === \"string\") {\n                processedValue = JSON.stringify(decomposeJsonObj.replace(/^\"|\"$/g, ''));\n            } else {\n                processedValue = decomposeJsonObj;\n            }\n\n            //msg.stringified = decomposeJsonObj;\n\n        } else {\n            if (typeof value == \"object\") {\n                jsonObjectValue = JSON.parse(value);\n            } else {\n                processedValue = value;\n            }\n\n        }\n        ///msg.getValue2 = processedValue;\n        //msg.getValue3 = value;\n        updateSubmodelElementValues(manifestSubmodelElements, 0, collectionIds, processedValue);\n\n    }\n    context.flow.set(\"manifest\", manifest);\n\n    if (persist == \"true\") {\n\n        return [msg, null];\n\n    } else {\n\n        return [null, msg];\n    }\n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n    return [null, msg];\n}",
         "outputs": 2,
         "noerr": 0,
         "x": 2090,
@@ -13700,7 +13741,7 @@
         "z": "2164c119.f88826",
         "g": "9eaca16.128cb6",
         "name": "",
-        "func": "if(msg.host === \"\"){\n    msg.url = \"http://localhost:\" + msg.portfw + \"/dash\";\n} else {\n    msg.url = \"http://\" + msg.host + \":\" + msg.portfw + \"/dash\";\n}\nreturn msg;",
+        "func": "if(msg.host === \"\"){\n    msg.url = \"http://localhost:\" + msg.portfw + \"/flexdash\";\n} else {\n    msg.url = \"http://\" + msg.host + \":\" + msg.portfw + \"/flexdash\";\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 400,
@@ -15827,23 +15868,6 @@
         "wires": []
     },
     {
-        "id": "fb4599ce54161f9b",
-        "type": "iot-datasource",
-        "z": "0f7b0349d3beda52",
-        "name": "counter",
-        "tstampField": "",
-        "dataField": "",
-        "disableDiscover": false,
-        "x": 1100,
-        "y": 640,
-        "wires": [
-            [
-                "8563fae91e7321da",
-                "b8fdcbb598ef0ee6"
-            ]
-        ]
-    },
-    {
         "id": "44f7e81ecb472556",
         "type": "msg-router",
         "z": "0f7b0349d3beda52",
@@ -15887,67 +15911,7 @@
                 "673a0a6ed07f2fec"
             ],
             [
-                "fb4599ce54161f9b"
-            ]
-        ]
-    },
-    {
-        "id": "8563fae91e7321da",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1370,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "444c44422ce941f5",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1370,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "b8fdcbb598ef0ee6",
-        "type": "subflow:5ed335e57e3a0a3e",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "env": [
-            {
-                "name": "historyArrayName",
-                "value": "Counter_hist",
-                "type": "str"
-            },
-            {
-                "name": "PathTo",
-                "value": "Counter",
-                "type": "str"
-            }
-        ],
-        "x": 1100,
-        "y": 680,
-        "wires": [
-            [
-                "fb4599ce54161f9b",
-                "444c44422ce941f5"
+                "95f3474f2f46c76d"
             ]
         ]
     },
@@ -15967,23 +15931,6 @@
         "x": 2110,
         "y": 400,
         "wires": []
-    },
-    {
-        "id": "41bf9010829c6ea1",
-        "type": "iot-datasource",
-        "z": "0f7b0349d3beda52",
-        "name": "randomNumber",
-        "tstampField": "",
-        "dataField": "",
-        "disableDiscover": false,
-        "x": 2680,
-        "y": 640,
-        "wires": [
-            [
-                "95ee4323c7b0c00e",
-                "8cd517fd0fb90623"
-            ]
-        ]
     },
     {
         "id": "80f8b62e08625d75",
@@ -16028,67 +15975,7 @@
                 "5cc1e7458e1825f5"
             ],
             [
-                "41bf9010829c6ea1"
-            ]
-        ]
-    },
-    {
-        "id": "95ee4323c7b0c00e",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2930,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "afc99ce53a5148f3",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2930,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "8cd517fd0fb90623",
-        "type": "subflow:5ed335e57e3a0a3e",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "env": [
-            {
-                "name": "historyArrayName",
-                "value": "RandomNumber_hist",
-                "type": "str"
-            },
-            {
-                "name": "PathTo",
-                "value": "RandomNumber",
-                "type": "str"
-            }
-        ],
-        "x": 2660,
-        "y": 680,
-        "wires": [
-            [
-                "41bf9010829c6ea1",
-                "afc99ce53a5148f3"
+                "0c8edd157cc0b175"
             ]
         ]
     },
@@ -16125,23 +16012,6 @@
         "x": 550,
         "y": 740,
         "wires": []
-    },
-    {
-        "id": "fc4c9f8c995f8e21",
-        "type": "iot-datasource",
-        "z": "0f7b0349d3beda52",
-        "name": "sawtooth",
-        "tstampField": "",
-        "dataField": "",
-        "disableDiscover": false,
-        "x": 1100,
-        "y": 980,
-        "wires": [
-            [
-                "6380e3c45b1a91d5",
-                "e7d8e1723747d186"
-            ]
-        ]
     },
     {
         "id": "cb3851270544c3f2",
@@ -16187,67 +16057,7 @@
                 "4d5edf02adda2e0c"
             ],
             [
-                "fc4c9f8c995f8e21"
-            ]
-        ]
-    },
-    {
-        "id": "6380e3c45b1a91d5",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1370,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "dc050fabb52b057b",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1370,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "e7d8e1723747d186",
-        "type": "subflow:5ed335e57e3a0a3e",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "env": [
-            {
-                "name": "historyArrayName",
-                "value": "Sawtooth_hist",
-                "type": "str"
-            },
-            {
-                "name": "PathTo",
-                "value": "Sawtooth",
-                "type": "str"
-            }
-        ],
-        "x": 1100,
-        "y": 1020,
-        "wires": [
-            [
-                "fc4c9f8c995f8e21",
-                "dc050fabb52b057b"
+                "781fb987c5860044"
             ]
         ]
     },
@@ -16284,23 +16094,6 @@
         "x": 550,
         "y": 1100,
         "wires": []
-    },
-    {
-        "id": "baa755debfa9d61a",
-        "type": "iot-datasource",
-        "z": "0f7b0349d3beda52",
-        "name": "square",
-        "tstampField": "",
-        "dataField": "",
-        "disableDiscover": false,
-        "x": 1110,
-        "y": 1340,
-        "wires": [
-            [
-                "275774968ce3b2d1",
-                "ab851456647d8f4c"
-            ]
-        ]
     },
     {
         "id": "bc8c722ad7ce951b",
@@ -16346,68 +16139,7 @@
                 "7f3f228e0389a9d9"
             ],
             [
-                "baa755debfa9d61a",
-                "01cf10819cfc7c64"
-            ]
-        ]
-    },
-    {
-        "id": "275774968ce3b2d1",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1390,
-        "y": 1340,
-        "wires": []
-    },
-    {
-        "id": "f4162c7fd177c36d",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1390,
-        "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "ab851456647d8f4c",
-        "type": "subflow:5ed335e57e3a0a3e",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "env": [
-            {
-                "name": "historyArrayName",
-                "value": "Square_hist",
-                "type": "str"
-            },
-            {
-                "name": "PathTo",
-                "value": "Square",
-                "type": "str"
-            }
-        ],
-        "x": 1120,
-        "y": 1380,
-        "wires": [
-            [
-                "baa755debfa9d61a",
-                "f4162c7fd177c36d"
+                "bc680e85de09ed58"
             ]
         ]
     },
@@ -16426,23 +16158,6 @@
         "statusType": "auto",
         "x": 990,
         "y": 1240,
-        "wires": []
-    },
-    {
-        "id": "01cf10819cfc7c64",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 970,
-        "y": 1400,
         "wires": []
     },
     {
@@ -17193,23 +16908,6 @@
         "wires": []
     },
     {
-        "id": "5b5dcdf99f2a6158",
-        "type": "iot-datasource",
-        "z": "0f7b0349d3beda52",
-        "name": "sinusoid",
-        "tstampField": "",
-        "dataField": "",
-        "disableDiscover": false,
-        "x": 2660,
-        "y": 980,
-        "wires": [
-            [
-                "5ce1f464c9c98bb1",
-                "9a6e06843a91bbbf"
-            ]
-        ]
-    },
-    {
         "id": "294c4a8837f0d6e9",
         "type": "msg-router",
         "z": "0f7b0349d3beda52",
@@ -17253,67 +16951,7 @@
                 "03be9fde3e17d8c1"
             ],
             [
-                "5b5dcdf99f2a6158"
-            ]
-        ]
-    },
-    {
-        "id": "5ce1f464c9c98bb1",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2930,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "4005f5d3b9d74bd8",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2930,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "9a6e06843a91bbbf",
-        "type": "subflow:5ed335e57e3a0a3e",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "env": [
-            {
-                "name": "historyArrayName",
-                "value": "Sinusoid_hist",
-                "type": "str"
-            },
-            {
-                "name": "PathTo",
-                "value": "Sinusoid",
-                "type": "str"
-            }
-        ],
-        "x": 2660,
-        "y": 1020,
-        "wires": [
-            [
-                "5b5dcdf99f2a6158",
-                "4005f5d3b9d74bd8"
+                "b150d107d0201a05"
             ]
         ]
     },
@@ -17513,23 +17151,6 @@
         "wires": []
     },
     {
-        "id": "a1132b1a522acfdb",
-        "type": "iot-datasource",
-        "z": "0f7b0349d3beda52",
-        "name": "triangle",
-        "tstampField": "",
-        "dataField": "",
-        "disableDiscover": false,
-        "x": 2640,
-        "y": 1340,
-        "wires": [
-            [
-                "5e0bf5aea6e0cc17",
-                "2533738d24f8026d"
-            ]
-        ]
-    },
-    {
         "id": "8dfa538c6a0a0642",
         "type": "msg-router",
         "z": "0f7b0349d3beda52",
@@ -17573,67 +17194,7 @@
                 "d13a14ce54f55a15"
             ],
             [
-                "a1132b1a522acfdb"
-            ]
-        ]
-    },
-    {
-        "id": "5e0bf5aea6e0cc17",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2910,
-        "y": 1340,
-        "wires": []
-    },
-    {
-        "id": "3214ed5825fe6c49",
-        "type": "debug",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2910,
-        "y": 1380,
-        "wires": []
-    },
-    {
-        "id": "2533738d24f8026d",
-        "type": "subflow:5ed335e57e3a0a3e",
-        "z": "0f7b0349d3beda52",
-        "name": "",
-        "env": [
-            {
-                "name": "historyArrayName",
-                "value": "Triangle_hist",
-                "type": "str"
-            },
-            {
-                "name": "PathTo",
-                "value": "Triangle",
-                "type": "str"
-            }
-        ],
-        "x": 2640,
-        "y": 1380,
-        "wires": [
-            [
-                "a1132b1a522acfdb",
-                "3214ed5825fe6c49"
+                "6a0aaa5a475bfc80"
             ]
         ]
     },
@@ -19089,6 +18650,203 @@
         "links": [],
         "x": 2305,
         "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "95f3474f2f46c76d",
+        "type": "link call",
+        "z": "0f7b0349d3beda52",
+        "name": "",
+        "links": [
+            "8cb87649afd62fd8"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 800,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "781fb987c5860044",
+        "type": "link call",
+        "z": "0f7b0349d3beda52",
+        "name": "",
+        "links": [
+            "8cb87649afd62fd8"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 800,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc680e85de09ed58",
+        "type": "link call",
+        "z": "0f7b0349d3beda52",
+        "name": "",
+        "links": [
+            "8cb87649afd62fd8"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 820,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a0aaa5a475bfc80",
+        "type": "link call",
+        "z": "0f7b0349d3beda52",
+        "name": "",
+        "links": [
+            "8cb87649afd62fd8"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 2320,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b150d107d0201a05",
+        "type": "link call",
+        "z": "0f7b0349d3beda52",
+        "name": "",
+        "links": [
+            "8cb87649afd62fd8"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 2320,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0c8edd157cc0b175",
+        "type": "link call",
+        "z": "0f7b0349d3beda52",
+        "name": "",
+        "links": [
+            "8cb87649afd62fd8"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 2320,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97e34cb72c2f36bd",
+        "type": "fd-date-time",
+        "z": "1543d308b342690a",
+        "fd_container": "69c2e3f5798c3475",
+        "fd_cols": "2",
+        "fd_rows": 1,
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "Flow started at",
+        "value": "",
+        "color": "",
+        "start_mode": 0,
+        "zoom": 100,
+        "low_threshold": "",
+        "low_color": "blue",
+        "high_threshold": "",
+        "high_color": "pink",
+        "chip": "false",
+        "units": [
+            "now",
+            "sec",
+            "min",
+            "hr",
+            "days",
+            "weeks",
+            "months"
+        ],
+        "x": 420,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2aac71d34da0af1c",
+        "type": "inject",
+        "z": "1543d308b342690a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "97e34cb72c2f36bd"
+            ]
+        ]
+    },
+    {
+        "id": "8cb87649afd62fd8",
+        "type": "link in",
+        "z": "1543d308b342690a",
+        "name": "flexdash",
+        "links": [],
+        "x": 75,
+        "y": 360,
+        "wires": [
+            [
+                "7897e5f9d24d31a3",
+                "535fefea3045516a"
+            ]
+        ]
+    },
+    {
+        "id": "7897e5f9d24d31a3",
+        "type": "link out",
+        "z": "1543d308b342690a",
+        "name": "link out 1",
+        "mode": "return",
+        "links": [],
+        "x": 445,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "535fefea3045516a",
+        "type": "debug",
+        "z": "1543d308b342690a",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 180,
+        "y": 340,
         "wires": []
     }
 ]
