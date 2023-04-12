@@ -59,7 +59,7 @@
     {
         "id": "1543d308b342690a",
         "type": "tab",
-        "label": "FlexDash empty flow",
+        "label": "FlexDash dashboard flow",
         "disabled": false,
         "info": "",
         "env": []
@@ -1782,27 +1782,115 @@
         "login": false
     },
     {
-        "id": "69c2e3f5798c3475",
+        "id": "e749fa22b4bde05b",
         "type": "flexdash container",
-        "name": "Demo grid",
+        "name": "Square",
         "title": "",
         "kind": "StdGrid",
-        "fd_children": ",97e34cb72c2f36bd",
-        "tab": "fef6c0f6d48841d6",
+        "fd_children": ",9d2b8d17dfb69b75",
+        "tab": "d8c11a5f45ac4a82",
         "min_cols": "1",
-        "max_cols": "6",
+        "max_cols": "20",
         "parent": "",
         "solid": false,
         "cols": "1",
         "rows": "1"
     },
     {
-        "id": "fef6c0f6d48841d6",
+        "id": "83a089d5771c39db",
+        "type": "flexdash container",
+        "name": "Sinusoid",
+        "kind": "StdGrid",
+        "fd_children": ",eaafc84f0d3881bb",
+        "tab": "d8c11a5f45ac4a82",
+        "min_cols": 1,
+        "max_cols": 20,
+        "unicast": "ignore",
+        "parent": "",
+        "solid": false,
+        "cols": 1,
+        "rows": 1
+    },
+    {
+        "id": "d8c11a5f45ac4a82",
         "type": "flexdash tab",
-        "name": "Demo",
-        "icon": "mdi-view-dashboard",
-        "fd_children": ",69c2e3f5798c3475",
-        "fd": "e8f5aea52ab49500"
+        "name": "Graphs",
+        "icon": "mdi-current-ac",
+        "title": "",
+        "fd_children": ",e749fa22b4bde05b,83a089d5771c39db,5bf726131c2079d0,6e78dfc66b08198f,62bcf6967e43a1bf,863c6461b0bdccfa",
+        "fd": "c5094ac3d91b7775"
+    },
+    {
+        "id": "5bf726131c2079d0",
+        "type": "flexdash container",
+        "name": "Sawtooth",
+        "kind": "StdGrid",
+        "fd_children": ",bd94dd062ef8eb51",
+        "tab": "d8c11a5f45ac4a82",
+        "min_cols": 1,
+        "max_cols": 20,
+        "unicast": "ignore",
+        "parent": "",
+        "solid": false,
+        "cols": 1,
+        "rows": 1
+    },
+    {
+        "id": "6e78dfc66b08198f",
+        "type": "flexdash container",
+        "name": "RandomNumber",
+        "kind": "StdGrid",
+        "fd_children": ",b6ccb08d9d99ae75",
+        "tab": "d8c11a5f45ac4a82",
+        "min_cols": 1,
+        "max_cols": 20,
+        "unicast": "ignore",
+        "parent": "",
+        "solid": false,
+        "cols": 1,
+        "rows": 1
+    },
+    {
+        "id": "62bcf6967e43a1bf",
+        "type": "flexdash container",
+        "name": "Counter",
+        "kind": "StdGrid",
+        "fd_children": ",5ad31821cf3f3b46",
+        "tab": "d8c11a5f45ac4a82",
+        "min_cols": 1,
+        "max_cols": 20,
+        "unicast": "ignore",
+        "parent": "",
+        "solid": false,
+        "cols": 1,
+        "rows": 1
+    },
+    {
+        "id": "863c6461b0bdccfa",
+        "type": "flexdash container",
+        "name": "Triangle",
+        "kind": "StdGrid",
+        "fd_children": ",2513b904a16dc9d0",
+        "tab": "d8c11a5f45ac4a82",
+        "min_cols": 1,
+        "max_cols": 20,
+        "unicast": "ignore",
+        "parent": "",
+        "solid": false,
+        "cols": 1,
+        "rows": 1
+    },
+    {
+        "id": "c5094ac3d91b7775",
+        "type": "flexdash dashboard",
+        "port": 80,
+        "ioOpts": "{}",
+        "path": "/flexdash",
+        "redServer": true,
+        "saveConfig": true,
+        "allOrigins": false,
+        "name": "FlexDash",
+        "fd_children": ",d8c11a5f45ac4a82"
     },
     {
         "id": "d56e5f93.f422c",
@@ -9777,7 +9865,7 @@
         "type": "debug",
         "z": "7585249f.880c0c",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -16275,7 +16363,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "5",
+        "repeat": "1",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -17448,7 +17536,7 @@
         "type": "function",
         "z": "0f7b0349d3beda52",
         "name": "",
-        "func": "if(msg.payload.includes(\"succeeded\")){\n    context.flow.set(\"status\", true);\n    return msg;\n}\nelse {\n    context.flow.set(\"status\", false);\n    return msg;\n}",
+        "func": "if(msg.payload.includes(\"succeeded\")){\n    context.flow.set(\"connected\", true);\n    return msg;\n}\nelse {\n    context.flow.set(\"connected\", false);\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -17503,7 +17591,7 @@
         "type": "function",
         "z": "0f7b0349d3beda52",
         "name": "",
-        "func": "if(msg.topic.includes(\"1001\")){\n    context.flow.set(\"Counter\", msg.payload);\n} else if(msg.topic.includes(\"1002\")){\n     context.flow.set(\"RandomNumber\", msg.payload);\n} else if(msg.topic.includes(\"1003\")){\n    context.flow.set(\"Sawtooth\", msg.payload);\n} else if(msg.topic.includes(\"1004\")){\n    context.flow.set(\"Sinusoid\", msg.payload);\n} else if(msg.topic.includes(\"1005\")){\n    context.flow.set(\"Square\", msg.payload);\n}else if(msg.topic.includes(\"1006\")){\n    context.flow.set(\"Triangle\", msg.payload);\n}\nvar date = new Date(msg.sourceTimestamp);\ncontext.flow.set(\"timestamp\", date.getTime());\nreturn msg;",
+        "func": "if(msg.topic.includes(\"1001\")){\n    context.flow.set(\"Counter\", msg.payload);\n} else if(msg.topic.includes(\"1002\")){\n     context.flow.set(\"RandomNumber\", msg.payload);\n} else if(msg.topic.includes(\"1003\")){\n    context.flow.set(\"Sawtooth\", msg.payload);\n} else if(msg.topic.includes(\"1004\")){\n    context.flow.set(\"Sinusoid\", msg.payload);\n} else if(msg.topic.includes(\"1005\")){\n    context.flow.set(\"Square\", msg.payload);\n}else if(msg.topic.includes(\"1006\")){\n    context.flow.set(\"Triangle\", msg.payload);\n}\nvar date = new Date();\ncontext.flow.set(\"timestamp\", date.getTime());\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is started.\ncontext.flow.set(\"Counter\", 0.0);\ncontext.flow.set(\"RandomNumber\", 0.0);\ncontext.flow.set(\"Sawtooth\", 0.0);\ncontext.flow.set(\"Sinusoid\", 0.0);\ncontext.flow.set(\"Square\", 0.0);\ncontext.flow.set(\"Triangle\", 0.0);",
@@ -17533,13 +17621,13 @@
         "localkeyfile": "",
         "securitymode": "None",
         "securitypolicy": "None",
-        "folderName4PKI": "",
         "name": "",
         "x": 2040,
         "y": 2300,
         "wires": [
             [
-                "4ad2b1c38bc91ec8"
+                "4ad2b1c38bc91ec8",
+                "96f4267e8e774efd"
             ]
         ]
     },
@@ -18749,62 +18837,21 @@
         ]
     },
     {
-        "id": "97e34cb72c2f36bd",
-        "type": "fd-date-time",
-        "z": "1543d308b342690a",
-        "fd_container": "69c2e3f5798c3475",
-        "fd_cols": "2",
-        "fd_rows": 1,
-        "fd_array": false,
-        "fd_array_max": 10,
+        "id": "96f4267e8e774efd",
+        "type": "debug",
+        "z": "0f7b0349d3beda52",
         "name": "",
-        "title": "Flow started at",
-        "value": "",
-        "color": "",
-        "start_mode": 0,
-        "zoom": 100,
-        "low_threshold": "",
-        "low_color": "blue",
-        "high_threshold": "",
-        "high_color": "pink",
-        "chip": "false",
-        "units": [
-            "now",
-            "sec",
-            "min",
-            "hr",
-            "days",
-            "weeks",
-            "months"
-        ],
-        "x": 420,
-        "y": 120,
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2250,
+        "y": 2260,
         "wires": []
-    },
-    {
-        "id": "2aac71d34da0af1c",
-        "type": "inject",
-        "z": "1543d308b342690a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 120,
-        "wires": [
-            [
-                "97e34cb72c2f36bd"
-            ]
-        ]
     },
     {
         "id": "8cb87649afd62fd8",
@@ -18817,7 +18864,8 @@
         "wires": [
             [
                 "7897e5f9d24d31a3",
-                "535fefea3045516a"
+                "535fefea3045516a",
+                "329804a11a2599a6"
             ]
         ]
     },
@@ -18847,6 +18895,622 @@
         "statusType": "auto",
         "x": 180,
         "y": 340,
+        "wires": []
+    },
+    {
+        "id": "329804a11a2599a6",
+        "type": "switch",
+        "z": "1543d308b342690a",
+        "name": "",
+        "property": "payload.link",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "Square",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Sinusoid",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Sawtooth",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "RandomNumber",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Counter",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Triangle",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 210,
+        "y": 500,
+        "wires": [
+            [
+                "5202b42747071e9d"
+            ],
+            [
+                "ba94be1eb63b9e33"
+            ],
+            [
+                "c1aeefb62a0b2e58"
+            ],
+            [
+                "83b19d2551f1371c"
+            ],
+            [
+                "b5124d8d4bf99836"
+            ],
+            [
+                "81a1998d89c090fd"
+            ]
+        ]
+    },
+    {
+        "id": "5202b42747071e9d",
+        "type": "function",
+        "z": "1543d308b342690a",
+        "name": "processing Payload",
+        "func": "let outMsg = {};\noutMsg.payload = [];\n\noutMsg.payload[0] = msg.payload.tstamp;\noutMsg.payload[1] = msg.payload.data;\n\nreturn outMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "1e353c2d37d2910c",
+                "ec84e191d4bf86cf"
+            ]
+        ]
+    },
+    {
+        "id": "1e353c2d37d2910c",
+        "type": "change",
+        "z": "1543d308b342690a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "{\"series\":[{},{\"label\":\"square\",\"stroke\":\"purple\",\"width\":1,\"dash\":[10,5],\"value\":\"v.toFixed(1)\",\"scale\":\"\"}],\"bands\":[{\"series\":[2,1],\"fill\":\"rgba(255,0,0,0.1)\"}],\"axes\":[{},{\"scale\":\"\",\"values\":\"vv.map(v=>v&&(v.toFixed(1)))\",\"grid\":{\"show\":true}}],\"ticks\":{\"show\":true,\"stroke\":\"#eee\",\"width\":2,\"dash\":[],\"size\":10}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "title",
+                "pt": "msg",
+                "to": "Time Plot Raw",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 460,
+        "wires": [
+            [
+                "9d2b8d17dfb69b75",
+                "38d1e33b05671fb3"
+            ]
+        ]
+    },
+    {
+        "id": "38d1e33b05671fb3",
+        "type": "debug",
+        "z": "1543d308b342690a",
+        "name": "debug 23",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 925,
+        "y": 495,
+        "wires": []
+    },
+    {
+        "id": "9d2b8d17dfb69b75",
+        "type": "fd-time-plot-raw",
+        "z": "1543d308b342690a",
+        "fd_container": "e749fa22b4bde05b",
+        "fd_cols": "6",
+        "fd_rows": "4",
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "",
+        "popup_info": "",
+        "options": "",
+        "data": null,
+        "x": 935,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "38f9c3f6b5a69479",
+        "type": "change",
+        "z": "1543d308b342690a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "{\"series\":[{},{\"label\":\"Sinusoid\",\"stroke\":\"purple\",\"width\":1,\"dash\":[10,5],\"value\":\"v.toFixed(1)\",\"scale\":\"\"}],\"bands\":[{\"series\":[2,1],\"fill\":\"rgba(255,0,0,0.1)\"}],\"axes\":[{},{\"scale\":\"\",\"values\":\"vv.map(v=>v&&(v.toFixed(1)))\",\"grid\":{\"show\":true}}],\"ticks\":{\"show\":true,\"stroke\":\"#eee\",\"width\":2,\"dash\":[],\"size\":10}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "title",
+                "pt": "msg",
+                "to": "Time Plot Raw",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 540,
+        "wires": [
+            [
+                "eaafc84f0d3881bb",
+                "1331b9ee1f6e8a8f"
+            ]
+        ]
+    },
+    {
+        "id": "1331b9ee1f6e8a8f",
+        "type": "debug",
+        "z": "1543d308b342690a",
+        "name": "debug 30",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 925,
+        "y": 575,
+        "wires": []
+    },
+    {
+        "id": "eaafc84f0d3881bb",
+        "type": "fd-time-plot-raw",
+        "z": "1543d308b342690a",
+        "fd_container": "83a089d5771c39db",
+        "fd_cols": "6",
+        "fd_rows": "4",
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "",
+        "popup_info": "",
+        "options": "",
+        "data": null,
+        "x": 935,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "1d69162a9e48b317",
+        "type": "change",
+        "z": "1543d308b342690a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "{\"series\":[{},{\"label\":\"sawtooth\",\"stroke\":\"purple\",\"width\":1,\"dash\":[10,5],\"value\":\"v.toFixed(1)\",\"scale\":\"\"}],\"bands\":[{\"series\":[2,1],\"fill\":\"rgba(255,0,0,0.1)\"}],\"axes\":[{},{\"scale\":\"\",\"values\":\"vv.map(v=>v&&(v.toFixed(1)))\",\"grid\":{\"show\":true}}],\"ticks\":{\"show\":true,\"stroke\":\"#eee\",\"width\":2,\"dash\":[],\"size\":10}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "title",
+                "pt": "msg",
+                "to": "Time Plot Raw",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 620,
+        "wires": [
+            [
+                "bd94dd062ef8eb51",
+                "c181f99883cbe958"
+            ]
+        ]
+    },
+    {
+        "id": "c181f99883cbe958",
+        "type": "debug",
+        "z": "1543d308b342690a",
+        "name": "debug 31",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 925,
+        "y": 655,
+        "wires": []
+    },
+    {
+        "id": "bd94dd062ef8eb51",
+        "type": "fd-time-plot-raw",
+        "z": "1543d308b342690a",
+        "fd_container": "5bf726131c2079d0",
+        "fd_cols": "6",
+        "fd_rows": "4",
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "",
+        "popup_info": "",
+        "options": "",
+        "data": null,
+        "x": 935,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "8656f96e77f77197",
+        "type": "change",
+        "z": "1543d308b342690a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "{\"series\":[{},{\"label\":\"randomNumber\",\"stroke\":\"purple\",\"width\":1,\"dash\":[10,5],\"value\":\"v.toFixed(1)\",\"scale\":\"\"}],\"bands\":[{\"series\":[2,1],\"fill\":\"rgba(255,0,0,0.1)\"}],\"axes\":[{},{\"scale\":\"\",\"values\":\"vv.map(v=>v&&(v.toFixed(1)))\",\"grid\":{\"show\":true}}],\"ticks\":{\"show\":true,\"stroke\":\"#eee\",\"width\":2,\"dash\":[],\"size\":10}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "title",
+                "pt": "msg",
+                "to": "Time Plot Raw",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 700,
+        "wires": [
+            [
+                "b6ccb08d9d99ae75",
+                "d5d6d1377a4e5949"
+            ]
+        ]
+    },
+    {
+        "id": "d5d6d1377a4e5949",
+        "type": "debug",
+        "z": "1543d308b342690a",
+        "name": "debug 33",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 925,
+        "y": 735,
+        "wires": []
+    },
+    {
+        "id": "b6ccb08d9d99ae75",
+        "type": "fd-time-plot-raw",
+        "z": "1543d308b342690a",
+        "fd_container": "6e78dfc66b08198f",
+        "fd_cols": "6",
+        "fd_rows": "4",
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "",
+        "popup_info": "",
+        "options": "",
+        "data": null,
+        "x": 935,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "e66bd17453e5ea66",
+        "type": "change",
+        "z": "1543d308b342690a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "{\"series\":[{},{\"label\":\"Counter\",\"stroke\":\"purple\",\"width\":1,\"dash\":[10,5],\"value\":\"v.toFixed(1)\",\"scale\":\"\"}],\"bands\":[{\"series\":[2,1],\"fill\":\"rgba(255,0,0,0.1)\"}],\"axes\":[{},{\"scale\":\"\",\"values\":\"vv.map(v=>v&&(v.toFixed(1)))\",\"grid\":{\"show\":true}}],\"ticks\":{\"show\":true,\"stroke\":\"#eee\",\"width\":2,\"dash\":[],\"size\":10}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "title",
+                "pt": "msg",
+                "to": "Time Plot Raw",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 780,
+        "wires": [
+            [
+                "5ad31821cf3f3b46",
+                "272ff5706981d2ee"
+            ]
+        ]
+    },
+    {
+        "id": "272ff5706981d2ee",
+        "type": "debug",
+        "z": "1543d308b342690a",
+        "name": "debug 34",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 925,
+        "y": 815,
+        "wires": []
+    },
+    {
+        "id": "5ad31821cf3f3b46",
+        "type": "fd-time-plot-raw",
+        "z": "1543d308b342690a",
+        "fd_container": "62bcf6967e43a1bf",
+        "fd_cols": "6",
+        "fd_rows": "4",
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "",
+        "popup_info": "",
+        "options": "",
+        "data": null,
+        "x": 935,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "b985d60d931052b8",
+        "type": "change",
+        "z": "1543d308b342690a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "{\"series\":[{},{\"label\":\"Triangle\",\"stroke\":\"purple\",\"width\":1,\"dash\":[10,5],\"value\":\"v.toFixed(1)\",\"scale\":\"\"}],\"bands\":[{\"series\":[2,1],\"fill\":\"rgba(255,0,0,0.1)\"}],\"axes\":[{},{\"scale\":\"\",\"values\":\"vv.map(v=>v&&(v.toFixed(1)))\",\"grid\":{\"show\":true}}],\"ticks\":{\"show\":true,\"stroke\":\"#eee\",\"width\":2,\"dash\":[],\"size\":10}}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "title",
+                "pt": "msg",
+                "to": "Time Plot Raw",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 860,
+        "wires": [
+            [
+                "2513b904a16dc9d0",
+                "bbc361c80b37c0d2"
+            ]
+        ]
+    },
+    {
+        "id": "bbc361c80b37c0d2",
+        "type": "debug",
+        "z": "1543d308b342690a",
+        "name": "debug 35",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 925,
+        "y": 895,
+        "wires": []
+    },
+    {
+        "id": "2513b904a16dc9d0",
+        "type": "fd-time-plot-raw",
+        "z": "1543d308b342690a",
+        "fd_container": "863c6461b0bdccfa",
+        "fd_cols": "6",
+        "fd_rows": "4",
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "",
+        "popup_info": "",
+        "options": "",
+        "data": null,
+        "x": 935,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "ba94be1eb63b9e33",
+        "type": "function",
+        "z": "1543d308b342690a",
+        "name": "processing Payload",
+        "func": "let outMsg = {};\noutMsg.payload = [];\n\noutMsg.payload[0] = msg.payload.tstamp;\noutMsg.payload[1] = msg.payload.data;\n\nreturn outMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 540,
+        "wires": [
+            [
+                "38f9c3f6b5a69479"
+            ]
+        ]
+    },
+    {
+        "id": "c1aeefb62a0b2e58",
+        "type": "function",
+        "z": "1543d308b342690a",
+        "name": "processing Payload",
+        "func": "let outMsg = {};\noutMsg.payload = [];\n\noutMsg.payload[0] = msg.payload.tstamp;\noutMsg.payload[1] = msg.payload.data;\n\nreturn outMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 620,
+        "wires": [
+            [
+                "1d69162a9e48b317"
+            ]
+        ]
+    },
+    {
+        "id": "83b19d2551f1371c",
+        "type": "function",
+        "z": "1543d308b342690a",
+        "name": "processing Payload",
+        "func": "let outMsg = {};\noutMsg.payload = [];\n\noutMsg.payload[0] = msg.payload.tstamp;\noutMsg.payload[1] = msg.payload.data;\n\nreturn outMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 700,
+        "wires": [
+            [
+                "8656f96e77f77197"
+            ]
+        ]
+    },
+    {
+        "id": "b5124d8d4bf99836",
+        "type": "function",
+        "z": "1543d308b342690a",
+        "name": "processing Payload",
+        "func": "let outMsg = {};\noutMsg.payload = [];\n\noutMsg.payload[0] = msg.payload.tstamp;\noutMsg.payload[1] = msg.payload.data;\n\nreturn outMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 780,
+        "wires": [
+            [
+                "e66bd17453e5ea66"
+            ]
+        ]
+    },
+    {
+        "id": "81a1998d89c090fd",
+        "type": "function",
+        "z": "1543d308b342690a",
+        "name": "processing Payload",
+        "func": "let outMsg = {};\noutMsg.payload = [];\n\noutMsg.payload[0] = msg.payload.tstamp;\noutMsg.payload[1] = msg.payload.data;\n\nreturn outMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 860,
+        "wires": [
+            [
+                "b985d60d931052b8"
+            ]
+        ]
+    },
+    {
+        "id": "ec84e191d4bf86cf",
+        "type": "debug",
+        "z": "1543d308b342690a",
+        "name": "debug 36",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 380,
         "wires": []
     }
 ]
