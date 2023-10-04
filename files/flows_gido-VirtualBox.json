@@ -585,7 +585,9 @@
             "a9c22279a032d681"
         ],
         "x": 214,
-        "y": 3819
+        "y": 3819,
+        "w": 2272,
+        "h": 239
     },
     {
         "id": "d366c10f.cbf158",
@@ -609,7 +611,9 @@
             "555ce72ca0d7dfd4"
         ],
         "x": 214,
-        "y": 3096
+        "y": 3096,
+        "w": 2962,
+        "h": 542
     },
     {
         "id": "9eaca16.128cb6",
@@ -11763,7 +11767,7 @@
         "type": "unsafe-function",
         "z": "3db1c009.99d51",
         "name": "PayloadProcessing",
-        "func": "var msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = msg.topic;\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    msg1.topic = msg.payload.observableReference;\n    msg1.payload = observation;\n} else {\n    msg1.topic = msg.topic;\n    msg1.payload = observation;\n}\nreturn msg1;",
+        "func": "var msg1 = {};\nlet observation = {};\nobservation.id = msg.id;\nobservation.source = msg.source;\nobservation.direction = msg.direction;\nobservation.observableReference = msg.observableReference;\nobservation.timestamp = msg.timestamp;\nobservation.payload = msg.payload;\nobservation.topic = msg.topic;\n//msg1.topic = context.global.get('AASIdentifier');\nif (msg.topic == \"\" || typeof msg.topic == \"undefined\") {\n    let topic_processing = msg.observableReference.replace(\"https://\", \"\");\n    topic_processing = topic_processing.replace(\"http://\", \"\");\n    const regex = /\\./g;\n    let topic = topic_processing.replace(regex, \"/\");\n    msg1.topic = topic;\n    msg1.payload = observation;\n} else {\n    msg1.topic = msg.topic;\n    msg1.payload = observation;\n}\nreturn msg1;",
         "outputs": 1,
         "noerr": 0,
         "x": 790,
@@ -12257,6 +12261,7 @@
         "links": [
             "24179aae9a10d5f7"
         ],
+        "linkType": "static",
         "timeout": "30",
         "x": 1280,
         "y": 480,
