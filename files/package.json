@@ -1,5 +1,5 @@
 {
-    "name": "node-red-project",
+  "name": "node-red-project",
   "description": "A Node-RED Project",
   "version": "0.0.1",
   "private": true,
@@ -15,7 +15,7 @@
     "node-red-contrib-merge": "~0.1.1",
     "node-red-contrib-msg-router": "0.0.7",
     "node-red-contrib-msg-speed": "2.1.0",
-    "node-red-contrib-msg-size": "1.1.0",  
+    "node-red-contrib-msg-size": "1.1.0",
     "node-red-contrib-os": "~0.2.0",
     "node-red-contrib-prib-functions": "~0.14.1",
     "node-red-contrib-set-defaults": "~0.9.1",
@@ -36,14 +36,15 @@
     "node-red-contrib-loadbalance": "0.5.0a",
     "node-red-contrib-opcua": "0.2.223",
     "node-red-contrib-qrcode-generator": "0.4.0",
-    "node-red-node-sqlite":"1.0.3",
-    "node-red-contrib-crypto-js-dynamic":"0.1.22",
-    "node-red-contrib-kafka-manager":"0.5.1"
+    "node-red-node-sqlite": "1.0.3",
+    "node-red-contrib-crypto-js-dynamic": "0.1.22",
+    "node-red-contrib-kafka-manager": "0.5.1",
+    "@flowfuse/node-red-dashboard": "1.11.1"
   },
-    "node-red": {
-        "settings": {
-            "flowFile": "flows_gido-VirtualBox.json",
-            "credentialsFile": "flows_gido-VirtualBox_cred.json"
-        }
+  "node-red": {
+    "settings": {
+      "flowFile": "flows_gido-VirtualBox.json",
+      "credentialsFile": "flows_gido-VirtualBox_cred.json"
     }
+  }
 }
