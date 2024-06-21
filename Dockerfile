@@ -1,13 +1,10 @@
-FROM nikolaik/python-nodejs:python3.9-nodejs14-slim
+FROM nikolaik/python-nodejs:python3.11-nodejs18
 LABEL org.opencontainers.image.authors="gido@uninova.pt"
-RUN apt-get update && apt install unzip && apt-get install -y git && apt install -y sqlite3 && apt-get install -y netcat \
+RUN apt-get update && apt install unzip && apt-get install -y git && apt install -y sqlite3 && apt-get install -y netcat-traditional \
 && npm install -g --unsafe-perm node-red
 WORKDIR /app
 RUN mkdir -p .node-red
 ADD files .node-red/
-# Adding Flexdash dependecies and core widgets ************************
-RUN npm i @flexdash/node-red-fd-corewidgets --prefix /app/.node-red
-# *********************************************************************
 RUN npm install --prefix /app/.node-red
 ADD dist .node-red/node_modules/node-red-dashboard/dist/
 RUN unzip /app/.node-red/model.aasx -d /app/.node-red/
