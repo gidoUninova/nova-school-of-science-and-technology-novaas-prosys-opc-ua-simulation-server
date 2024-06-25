@@ -17,13 +17,13 @@ The docker command to create the NOVAAS image is the following:
 
 Once the image has been created the followig docker command can be used to start a new container that runs the NOVAAS image:
 
-`docker run --env PORT_FORWARDING=1870 --env HOST=localhost --env BROKER_SERVICE_HOST=localhost --env BROKER_SERVICE_PORT=1883 --env PROSYS_OPCUA_SERVICE=opc.tcp://server_name:53530/OPCUA/SimulationServer -p 1870:1880 name_of_the_image:ver -d`
+`docker run --env PORT_FORWARDING=1860 --env HOST=localhost --env BROKER_SERVICE_HOST=localhost --env BROKER_SERVICE_PORT=1883 --env PROSYS_OPCUA_SERVICE=opc.tcp://server_name:53530/OPCUA/SimulationServer -p 1860:1880 name_of_the_image:ver -d`
 
 After executing the above commands, the NOVAAS will be accessible at the following link:
 
 http://localhost:1860/ui 
 
-![Semantic description of image](/source/images/mainScreen.png)"NOVAAS Main Screen"
+![Semantic description of image](/source/images/novaas-prosys-opc-ua-simulation-server.png)"NOVAAS Main Screen"
 
 ### Notes
 The two environmental variables are needed to properly configure the internal iFrame node that is used to expose in the ui the dashboards for each one of the internal data sources. Specifically, the $HOST environmental variable should be the ip address of the host machine where NOVAAS is deployed. Setting this variable to localhost will only expose the dash tab within the ui in the host.
