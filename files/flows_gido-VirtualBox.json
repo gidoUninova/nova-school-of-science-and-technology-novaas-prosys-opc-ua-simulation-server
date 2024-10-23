@@ -10797,7 +10797,7 @@
         "type": "function",
         "z": "76d11e83ac083a40",
         "name": "preprocessing and flattening JSON",
-        "func": "function isJSONString(str) {\n    try {\n        JSON.parse(str);\n        return true;\n    } catch (error) {\n        return false;\n    }\n}\n\nfunction getFlatObject(object) {\n    function iter(o, p) {\n        if (o && typeof o === 'object') {\n            Object.keys(o).forEach(function (k) {\n                iter(o[k], p.concat(k));\n            });\n            return;\n        }\n        path[p.join('.')] = o;\n    }\n\n    var path = {};\n    iter(object, []);\n    return path;\n}\n\nlet flattenObject;\nlet keys = [];\nlet object = JSON.parse(msg.value);\n\nif (object.hasOwnProperty(\"blob\")) {\n    let data = object.blob;\n    flattenObject = getFlatObject(data);\n    keys = Object.keys(flattenObject);\n    //msg.object = data;\n} else {\n    if(msg.payload.modelType == \"Property\"){\n        if(isJSONString(msg.value)){\n            flattenObject = msg.value;\n            keys.push(\"\");\n        }\n    } else if (msg.payload.modelType == \"SubmodelElementCollection\"){\n        flattenObject = getFlatObject(JSON.parse(msg.value));\n        keys = Object.keys(flattenObject);\n    }\n    \n}\n\n//let flattenObject = getFlatObject(JSON.parse(msg.value));\n\nmsg.flattenObject = flattenObject;\nmsg.keys = keys;\nfor (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n    let substringsArray = keys[keyIndex].split(\".\");\n    keys[keyIndex] = keys[keyIndex].replace(\".\" + substringsArray[substringsArray.length - 1], \"\");\n}\nlet uniqueKeys = Array.from(new Set(keys));\n\nlet pathsToUpdate = [];\nif (uniqueKeys.length > 1) {\n    for (let uniqueKeyIndex = 0; uniqueKeyIndex < uniqueKeys.length; uniqueKeyIndex++) {\n        uniqueKeys[uniqueKeyIndex] = msg.submodelElementId + \".\" + uniqueKeys[uniqueKeyIndex];\n        pathsToUpdate.push(uniqueKeys[uniqueKeyIndex]);\n    }\n} else {\n    uniqueKeys[0] = msg.submodelElementId;\n    pathsToUpdate.push(uniqueKeys[0]);\n}\nmsg.pathsToUpdate = pathsToUpdate;\n\nreturn msg;",
+        "func": "function isJSONString(str) {\n    try {\n        JSON.parse(str);\n        return true;\n    } catch (error) {\n        return false;\n    }\n}\n\nfunction getFlatObject(object) {\n    function iter(o, p) {\n        if (o && typeof o === 'object') {\n            Object.keys(o).forEach(function (k) {\n                iter(o[k], p.concat(k));\n            });\n            return;\n        }\n        path[p.join('.')] = o;\n    }\n\n    var path = {};\n    iter(object, []);\n    return path;\n}\n\nlet flattenObject;\nlet keys = [];\nlet object = JSON.parse(msg.value);\n\nif (object.hasOwnProperty(\"blob\")) {\n    let data = object.blob;\n    flattenObject = getFlatObject(data);\n    keys = Object.keys(flattenObject);\n    //msg.object = data;\n} else {\n    if (msg.payload.modelType == \"Property\") {\n        if (isJSONString(msg.value)) {\n            flattenObject = msg.value;\n            keys.push(\"\");\n        }\n    } else if (msg.payload.modelType == \"SubmodelElementCollection\") {\n        flattenObject = getFlatObject(JSON.parse(msg.value));\n        keys = Object.keys(flattenObject);\n    }\n\n}\n\n//let flattenObject = getFlatObject(JSON.parse(msg.value));\n\nmsg.flattenObject = flattenObject;\nmsg.keys = keys;\nfor (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {\n    let substringsArray = keys[keyIndex].split(\".\");\n    keys[keyIndex] = keys[keyIndex].replace(\".\" + substringsArray[substringsArray.length - 1], \"\");\n}\nlet uniqueKeys = Array.from(new Set(keys));\n\nlet pathsToUpdate = [];\nif (uniqueKeys.length > 1) {\n    for (let uniqueKeyIndex = 0; uniqueKeyIndex < uniqueKeys.length; uniqueKeyIndex++) {\n        uniqueKeys[uniqueKeyIndex] = msg.submodelElementId + \".\" + uniqueKeys[uniqueKeyIndex];\n        pathsToUpdate.push(uniqueKeys[uniqueKeyIndex]);\n    }\n} else {\n    uniqueKeys[0] = msg.submodelElementId;\n    pathsToUpdate.push(uniqueKeys[0]);\n}\nmsg.pathsToUpdate = pathsToUpdate;\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -11215,8 +11215,9 @@
         "type": "function",
         "z": "76d11e83ac083a40",
         "name": "Update SubmodelElement",
-        "func": "var verifySubmodelBelongsToAasId = function (aasId, shells, submodel) {\n    for (var index = 0; index < shells.length; index++) {\n        if (shells[index].identification.id === aasId) {\n            var submodelRefs = shells[index].submodels;\n            for (var index2 = 0; index2 < submodelRefs.length; index2++) {\n                var ref = submodelRefs[index2];\n                if (ref.keys[0].value === submodel.identification.id) {\n                    return true;\n                }\n            }\n        }\n    }\n    return false;\n}\n\nvar iterate = function (submodelToUpdate, collectionIds, submodelElements) {\n    for (var index = 0; index < submodelElements.length; index++) {\n        if (submodelElements[index].modelType.name !== \"SubmodelElementCollection\" || (submodelElements[index].modelType.name === \"SubmodelElementCollection\" && collectionIds.length < 1)) {\n            if (submodelElements[index].idShort === submodelToUpdate.idShort) {\n                submodelElements[index] = submodelToUpdate;\n                return submodelToUpdate;\n\n            }\n\n        } else {\n            for (var collIndex = 0; collIndex < collectionIds.length; collIndex++) {\n                var collectionId = collectionIds[collIndex];\n                if (submodelElements[index].idShort === collectionId) {\n                    collectionIds.splice(collIndex, 1);\n                    var result = iterate(submodelToUpdate, collectionIds, submodelElements[index].value);\n                    return result;\n                }\n            }\n\n        }\n    }\n    return \"\";\n}\n\nlet manifest = context.flow.get(\"manifest\");\nlet aasid = msg.req.params.aasid;\nvar submodelElementId = msg.req.params.id;\nvar submodelId = msg.req.params.submodelId;\n\nvar submodelCollectionId = [];\nvar submodelToUpdate = msg.submodelElement;\n\nif (msg.jsonataStatus == \"Success\") {\n\n\n    for (var index1 = 0; index1 < manifest.submodels.length; index1++) {\n\n        let verified = verifySubmodelBelongsToAasId(aasid, manifest.assetAdministrationShells, manifest.submodels[index1]);\n\n        if (verified) {\n            var result = iterate(submodelToUpdate, submodelCollectionId, manifest.submodels[index1].submodelElements);\n            if (result != \"\") {\n                context.flow.set(\"manifest\", manifest);\n                msg.payload = result;\n                msg.statusCode = \"200\";\n                return [msg, null];\n            }\n        }\n    }\n\n    msg.statusCode = \"404\";\n    msg.payload = \"SubmodelElement with id:\" + submodelElementId + \" not found\";\n\n\n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n}\n\nreturn [null, msg];",
+        "func": "var verifySubmodelBelongsToAasId = function (aasId, shells, submodel) {\n    for (var index = 0; index < shells.length; index++) {\n        if (shells[index].id === aasId) {\n            var submodelRefs = shells[index].submodels;\n            for (var index2 = 0; index2 < submodelRefs.length; index2++) {\n                var ref = submodelRefs[index2];\n                if (ref.keys[0].value === submodel.id) {\n                    return true;\n                }\n            }\n        }\n    }\n    return false;\n}\n\nvar iterate = function (submodelToUpdate, collectionIds, submodelElements) {\n    for (var index = 0; index < submodelElements.length; index++) {\n        if (submodelElements[index].modelType !== \"SubmodelElementCollection\" || (submodelElements[index].modelType === \"SubmodelElementCollection\" && collectionIds.length < 1)) {\n            if (submodelElements[index].idShort === submodelToUpdate.idShort) {\n                submodelElements[index] = submodelToUpdate;\n                return submodelToUpdate;\n\n            }\n\n        } else {\n            for (var collIndex = 0; collIndex < collectionIds.length; collIndex++) {\n                var collectionId = collectionIds[collIndex];\n                if (submodelElements[index].idShort === collectionId) {\n                    collectionIds.splice(collIndex, 1);\n                    var result = iterate(submodelToUpdate, collectionIds, submodelElements[index].value);\n                    return result;\n                }\n            }\n\n        }\n    }\n    return \"\";\n}\n\nlet manifest = context.flow.get(\"manifest\");\nlet aasid = msg.req.params.aasid;\nvar submodelElementId = msg.req.params.id;\nvar submodelId = msg.req.params.submodelId;\n\nvar submodelCollectionId = [];\nvar submodelToUpdate = msg.submodelElement;\n\nif (msg.jsonataStatus == \"Success\") {\n\n\n    for (var index1 = 0; index1 < manifest.submodels.length; index1++) {\n\n        let verified = verifySubmodelBelongsToAasId(aasid, manifest.assetAdministrationShells, manifest.submodels[index1]);\n\n        if (verified) {\n            var result = iterate(submodelToUpdate, submodelCollectionId, manifest.submodels[index1].submodelElements);\n            if (result != \"\") {\n                context.flow.set(\"manifest\", manifest);\n                msg.payload = result;\n                msg.statusCode = \"200\";\n                return [msg, null];\n            }\n        }\n    }\n\n    msg.statusCode = \"404\";\n    msg.payload = \"SubmodelElement with id:\" + submodelElementId + \" not found\";\n\n\n\n} else {\n    msg.statusCode = \"404\";\n    msg.payload = \"Submodel with id:\" + submodelId + \" not found\";\n}\n\nreturn [null, msg];",
         "outputs": 2,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -22011,7 +22012,7 @@
             },
             {
                 "name": "HistoryLength",
-                "value": "14400",
+                "value": "0",
                 "type": "num"
             },
             {
@@ -22053,7 +22054,7 @@
             },
             {
                 "name": "HistoryLength",
-                "value": "14400",
+                "value": "0",
                 "type": "num"
             },
             {
@@ -22095,7 +22096,7 @@
             },
             {
                 "name": "HistoryLength",
-                "value": "14400",
+                "value": "0",
                 "type": "num"
             },
             {
@@ -22137,7 +22138,7 @@
             },
             {
                 "name": "HistoryLength",
-                "value": "14400",
+                "value": "0",
                 "type": "num"
             },
             {
@@ -22380,7 +22381,7 @@
             },
             {
                 "name": "HistoryLength",
-                "value": "14400",
+                "value": "0",
                 "type": "num"
             },
             {
@@ -22623,7 +22624,7 @@
             },
             {
                 "name": "HistoryLength",
-                "value": "14400",
+                "value": "0",
                 "type": "num"
             },
             {
@@ -22676,7 +22677,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 1660,
+        "x": 1670,
         "y": 2220,
         "wires": [
             [],
@@ -22719,8 +22720,9 @@
         "type": "function",
         "z": "0f7b0349d3beda52",
         "name": "",
-        "func": "if(msg.payload.includes(\"succeeded\")){\n    context.flow.set(\"connected\", true);\n    return msg;\n}\nelse {\n    context.flow.set(\"connected\", false);\n    return msg;\n}",
+        "func": "if (msg.payload.includes(\"succeeded\") || msg.payload.includes(\"open\")) {\n    context.flow.set(\"connected\", true);\n    return msg;\n}\nelse {\n    context.flow.set(\"connected\", false);\n    return msg;\n}",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -22740,6 +22742,7 @@
         "name": "",
         "func": "let opcuaEndpoint = env.get(\"PROSYS_OPCUA_SERVICE\");\nlet opcuaEndpointManipulation1 = opcuaEndpoint.split(\"/\");\nlet opcuaEndpointManipulation2 = opcuaEndpointManipulation1[2].split(\":\")\nmsg.host = opcuaEndpointManipulation2[0];\nmsg.port = opcuaEndpointManipulation2[1];\n\nmsg.payload = \"-vz \" + msg.host + \" \" + msg.port;\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -22952,8 +22955,9 @@
         "z": "0f7b0349d3beda52",
         "g": "613b3238c3da875c",
         "name": "",
-        "func": "let status = context.flow.get(\"status\");\nif(status){\n    return msg;\n} else {\n    return null;\n}",
+        "func": "let status = context.flow.get(\"connected\");\nif(status){\n    return msg;\n} else {\n    return null;\n}",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -24996,18 +25000,21 @@
         "categoryType": "msg",
         "xAxisLabel": "",
         "xAxisProperty": "",
-        "xAxisPropertyType": "msg",
+        "xAxisPropertyType": "property",
         "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
         "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "",
         "ymax": "",
         "action": "append",
+        "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": 4,
-        "showLegend": true,
-        "removeOlder": 1,
-        "removeOlderUnit": "3600",
+        "showLegend": false,
+        "removeOlder": "2",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#1f77b4",
@@ -25020,6 +25027,14 @@
             "#9467bd",
             "#c5b0d5"
         ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
         "width": "4",
         "height": "4",
         "className": "",
@@ -25042,18 +25057,21 @@
         "categoryType": "msg",
         "xAxisLabel": "",
         "xAxisProperty": "",
-        "xAxisPropertyType": "msg",
+        "xAxisPropertyType": "property",
         "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
         "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "",
         "ymax": "",
         "action": "append",
+        "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": 4,
-        "showLegend": true,
-        "removeOlder": 1,
-        "removeOlderUnit": "3600",
+        "showLegend": false,
+        "removeOlder": "2",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#1f77b4",
@@ -25066,6 +25084,14 @@
             "#9467bd",
             "#c5b0d5"
         ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
         "width": "4",
         "height": "4",
         "className": "",
@@ -25088,18 +25114,21 @@
         "categoryType": "msg",
         "xAxisLabel": "",
         "xAxisProperty": "",
-        "xAxisPropertyType": "msg",
+        "xAxisPropertyType": "property",
         "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
         "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "",
         "ymax": "",
         "action": "append",
+        "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": 4,
-        "showLegend": true,
-        "removeOlder": 1,
-        "removeOlderUnit": "3600",
+        "showLegend": false,
+        "removeOlder": "2",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#1f77b4",
@@ -25112,6 +25141,14 @@
             "#9467bd",
             "#c5b0d5"
         ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
         "width": "4",
         "height": "4",
         "className": "",
@@ -25134,18 +25171,21 @@
         "categoryType": "msg",
         "xAxisLabel": "",
         "xAxisProperty": "",
-        "xAxisPropertyType": "msg",
+        "xAxisPropertyType": "property",
         "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
         "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "",
         "ymax": "",
         "action": "append",
+        "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": 4,
-        "showLegend": true,
-        "removeOlder": 1,
-        "removeOlderUnit": "3600",
+        "showLegend": false,
+        "removeOlder": "2",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#1f77b4",
@@ -25158,6 +25198,14 @@
             "#9467bd",
             "#c5b0d5"
         ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
         "width": "4",
         "height": "4",
         "className": "",
@@ -25180,18 +25228,21 @@
         "categoryType": "msg",
         "xAxisLabel": "",
         "xAxisProperty": "",
-        "xAxisPropertyType": "msg",
+        "xAxisPropertyType": "property",
         "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
         "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "",
         "ymax": "",
         "action": "append",
+        "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": 4,
-        "showLegend": true,
-        "removeOlder": 1,
-        "removeOlderUnit": "3600",
+        "showLegend": false,
+        "removeOlder": "2",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#1f77b4",
@@ -25204,6 +25255,14 @@
             "#9467bd",
             "#c5b0d5"
         ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
         "width": "4",
         "height": "4",
         "className": "",
@@ -25226,18 +25285,21 @@
         "categoryType": "msg",
         "xAxisLabel": "",
         "xAxisProperty": "",
-        "xAxisPropertyType": "msg",
+        "xAxisPropertyType": "property",
         "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
         "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "",
         "ymax": "",
         "action": "append",
+        "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": 4,
-        "showLegend": true,
-        "removeOlder": 1,
-        "removeOlderUnit": "3600",
+        "showLegend": false,
+        "removeOlder": "2",
+        "removeOlderUnit": "60",
         "removeOlderPoints": "",
         "colors": [
             "#1f77b4",
@@ -25250,6 +25312,14 @@
             "#9467bd",
             "#c5b0d5"
         ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
         "width": "4",
         "height": "4",
         "className": "",
