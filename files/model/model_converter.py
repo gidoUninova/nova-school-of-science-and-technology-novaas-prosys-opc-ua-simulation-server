@@ -60,18 +60,10 @@ try:
     xml_files = glob.glob(os.path.join(target_folder, '**', '*.xml'), recursive=True)
         
     if not xml_files:
-        print("No XML file found to replace. Copying the original .aasx file to the parent directory...")
-        try:
-            # Copy the original .aasx file to the parent directory
-            shutil.copy(aasx_file_path, updated_aasx_file_path)
-            print(f"Original .aasx file copied to: {updated_aasx_file_path}")
-        except Exception as e:
-            print(f"An error occurred while copying the .aasx file: {e}")
-        finally:
-            # Clean up the temporary files
-            shutil.rmtree(output_dir)
-            print("Temporary files cleaned up.")
-            exit()
+        print("No XML file found to replace. Cleaning up temporary files...")
+        shutil.rmtree(output_dir)
+        print("Temporary files cleaned up.")
+        exit()
 
     # Assuming only one XML file for replacement
     original_xml_file_path = xml_files[0]  # Take the first XML file found
