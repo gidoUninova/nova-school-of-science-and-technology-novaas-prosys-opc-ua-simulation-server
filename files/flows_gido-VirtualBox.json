@@ -246,7 +246,8 @@
             "e8f3a993c3f7c730",
             "09c675c2a2ee0d9c",
             "e470e541de1883e1",
-            "550bb7dbcd65bfbb"
+            "550bb7dbcd65bfbb",
+            "b73ebb7a5758c311"
         ],
         "x": 2454,
         "y": 3299,
@@ -15547,7 +15548,7 @@
         "y": 3380,
         "wires": [
             [
-                "09c675c2a2ee0d9c"
+                "b73ebb7a5758c311"
             ]
         ]
     },
@@ -16079,12 +16080,10 @@
         "z": "32c5a22a534a4588",
         "g": "102e2f75f3511731",
         "name": "",
-        "links": [
-            "8cb87649afd62fd8"
-        ],
-        "linkType": "static",
+        "links": [],
+        "linkType": "dynamic",
         "timeout": "30",
-        "x": 3480,
+        "x": 3580,
         "y": 3460,
         "wires": [
             []
@@ -17602,6 +17601,34 @@
         "wires": []
     },
     {
+        "id": "b73ebb7a5758c311",
+        "type": "change",
+        "z": "32c5a22a534a4588",
+        "g": "102e2f75f3511731",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "flexdash",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3400,
+        "y": 3460,
+        "wires": [
+            [
+                "09c675c2a2ee0d9c"
+            ]
+        ]
+    },
+    {
         "id": "f08e4446f8c56866",
         "type": "ui_ui_control",
         "z": "18bd4aa6085b5dfb",
@@ -18231,9 +18258,7 @@
         "z": "18bd4aa6085b5dfb",
         "g": "4605d2490d19792b",
         "name": "",
-        "links": [
-            "8cb87649afd62fd8"
-        ],
+        "links": [],
         "linkType": "static",
         "timeout": "30",
         "x": 3480,
@@ -20355,9 +20380,7 @@
         "type": "link call",
         "z": "128ab3134a54f6b4",
         "name": "",
-        "links": [
-            "8cb87649afd62fd8"
-        ],
+        "links": [],
         "linkType": "dynamic",
         "timeout": "30",
         "x": 2460,
@@ -21910,33 +21933,33 @@
                 "vt": "str"
             },
             {
-                "t": "cont",
-                "v": "Square",
+                "t": "eq",
+                "v": "aHR0cHM6Ly9leGFtcGxlLnByb3N5cy5jb20vaWRzL2Fhcy85NTc0XzMxMDNfNzAxMl84NjQ0/aHR0cHM6Ly9leGFtcGxlLnByb3N5cy5jb20vaWRzL3NtLzEwMzVfMzEwM183MDEyXzc1NDI=/Counter",
                 "vt": "str"
             },
             {
-                "t": "cont",
-                "v": "Sinusoid",
+                "t": "eq",
+                "v": "aHR0cHM6Ly9leGFtcGxlLnByb3N5cy5jb20vaWRzL2Fhcy85NTc0XzMxMDNfNzAxMl84NjQ0/aHR0cHM6Ly9leGFtcGxlLnByb3N5cy5jb20vaWRzL3NtLzEwMzVfMzEwM183MDEyXzc1NDI=/RandomNumber",
                 "vt": "str"
             },
             {
-                "t": "cont",
-                "v": "Sawtooth",
+                "t": "eq",
+                "v": "aHR0cHM6Ly9leGFtcGxlLnByb3N5cy5jb20vaWRzL2Fhcy85NTc0XzMxMDNfNzAxMl84NjQ0/aHR0cHM6Ly9leGFtcGxlLnByb3N5cy5jb20vaWRzL3NtLzEwMzVfMzEwM183MDEyXzc1NDI=/Sawtooth",
                 "vt": "str"
             },
             {
-                "t": "cont",
-                "v": "RandomNumber",
+                "t": "eq",
+                "v": "aHR0cHM6Ly9leGFtcGxlLnByb3N5cy5jb20vaWRzL2Fhcy85NTc0XzMxMDNfNzAxMl84NjQ0/aHR0cHM6Ly9leGFtcGxlLnByb3N5cy5jb20vaWRzL3NtLzEwMzVfMzEwM183MDEyXzc1NDI=/https://example.prosys.com/ids/sm/1035_3103_7012_7542.Sinusoid",
                 "vt": "str"
             },
             {
-                "t": "cont",
-                "v": "Counter",
+                "t": "eq",
+                "v": "aHR0cHM6Ly9leGFtcGxlLnByb3N5cy5jb20vaWRzL2Fhcy85NTc0XzMxMDNfNzAxMl84NjQ0/aHR0cHM6Ly9leGFtcGxlLnByb3N5cy5jb20vaWRzL3NtLzEwMzVfMzEwM183MDEyXzc1NDI=/Square",
                 "vt": "str"
             },
             {
-                "t": "cont",
-                "v": "Triangle",
+                "t": "eq",
+                "v": "aHR0cHM6Ly9leGFtcGxlLnByb3N5cy5jb20vaWRzL2Fhcy85NTc0XzMxMDNfNzAxMl84NjQ0/aHR0cHM6Ly9leGFtcGxlLnByb3N5cy5jb20vaWRzL3NtLzEwMzVfMzEwM183MDEyXzc1NDI=/Triangle",
                 "vt": "str"
             }
         ],
