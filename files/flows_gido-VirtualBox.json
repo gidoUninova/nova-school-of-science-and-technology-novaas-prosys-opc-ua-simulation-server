@@ -89,39 +89,6 @@
         "color": "#DDAA99"
     },
     {
-        "id": "4b4e4270.d440bc",
-        "type": "group",
-        "z": "fd31082e.5487d8",
-        "name": "To North",
-        "style": {
-            "fill": "#bfc7d7",
-            "label": true,
-            "color": "#ffffff"
-        },
-        "nodes": [
-            "c7097b80.b03428",
-            "5c80f7ac.2fc2b8",
-            "3e11fc1c.d74334",
-            "1f1ce2c5.9cb5cd",
-            "6c10cd375f817bbf",
-            "7b48ced64946a8d2",
-            "893f967b73205095",
-            "5cea18b9856d1364",
-            "e1994719bd7b4722",
-            "4872c068f48e839b",
-            "a9c22279a032d681",
-            "1f13de33c71277ce",
-            "45cb0777f0f43a5d",
-            "14183942fd4b56cd",
-            "deb1f51509244167",
-            "6d76f752732d606a"
-        ],
-        "x": 194,
-        "y": 4679,
-        "w": 2272,
-        "h": 242
-    },
-    {
         "id": "6aa9beecbf5f8d23",
         "type": "group",
         "z": "128ab3134a54f6b4",
@@ -157,72 +124,6 @@
         "y": 59,
         "w": 1512,
         "h": 542
-    },
-    {
-        "id": "d366c10f.cbf158",
-        "type": "group",
-        "z": "fd31082e.5487d8",
-        "name": "To/From South",
-        "style": {
-            "fill": "#bfdbef",
-            "label": true,
-            "color": "#ffffff"
-        },
-        "nodes": [
-            "5ee56f7a.9622a",
-            "d7f84005.ce11e8",
-            "9f810b8b.7a1b8",
-            "b88a92c6.fb547",
-            "21eb2aa8ef422845",
-            "555ce72ca0d7dfd4",
-            "1de8d122c13a3233",
-            "4ac796c8ddf8155a",
-            "9bf7f8737085ee59",
-            "877ba601c47f4a76",
-            "809d87b71fb0bdfd",
-            "0fd2e5d226b547d5",
-            "9fc975fe338b2abf",
-            "1c271c02ad31924a"
-        ],
-        "x": 224,
-        "y": 3779,
-        "w": 2772,
-        "h": 562
-    },
-    {
-        "id": "ea3b0ae56fd0d23e",
-        "type": "group",
-        "z": "fd31082e.5487d8",
-        "name": "AAS Configuration",
-        "style": {
-            "fill": "#e3f3d3",
-            "label": true,
-            "color": "#777777"
-        },
-        "nodes": [
-            "7399afe28fd2b3e3",
-            "258a1a12d86a4632",
-            "e3c6e6cad62c67a3",
-            "a23e7b2b7d892ce8",
-            "3aa49896be203ca6",
-            "0d8d61717cfd4c03",
-            "b9df8432b067da9e",
-            "bfb79cdf88b1c91b",
-            "c489082841bfdcae",
-            "f822f55e.4e556",
-            "facb362b.6dd0b",
-            "fc0a9d8e.12c52",
-            "6b25201afcb2d8ae",
-            "e19fcb6bfe4abba9",
-            "2c314cfc2cf2d5e4",
-            "cbeff4782cad4fc0",
-            "6b047a758dbcf417",
-            "0adccb6c34ec2802"
-        ],
-        "x": 224,
-        "y": 339,
-        "w": 2802,
-        "h": 262
     },
     {
         "id": "102e2f75f3511731",
@@ -390,16 +291,103 @@
         "h": 382
     },
     {
-        "id": "0cf42e9cc5365c9d",
-        "type": "junction",
+        "id": "4b4e4270.d440bc",
+        "type": "group",
         "z": "fd31082e.5487d8",
-        "x": 2160,
-        "y": 1180,
-        "wires": [
-            [
-                "a9f85b8570718f9c"
-            ]
-        ]
+        "name": "To North",
+        "style": {
+            "fill": "#bfc7d7",
+            "label": true,
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "c7097b80.b03428",
+            "5c80f7ac.2fc2b8",
+            "3e11fc1c.d74334",
+            "1f1ce2c5.9cb5cd",
+            "6c10cd375f817bbf",
+            "7b48ced64946a8d2",
+            "893f967b73205095",
+            "5cea18b9856d1364",
+            "e1994719bd7b4722",
+            "4872c068f48e839b",
+            "a9c22279a032d681",
+            "1f13de33c71277ce",
+            "45cb0777f0f43a5d",
+            "14183942fd4b56cd",
+            "deb1f51509244167",
+            "6d76f752732d606a"
+        ],
+        "x": 194,
+        "y": 4679,
+        "w": 2272,
+        "h": 242
+    },
+    {
+        "id": "d366c10f.cbf158",
+        "type": "group",
+        "z": "fd31082e.5487d8",
+        "name": "To/From South",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "5ee56f7a.9622a",
+            "d7f84005.ce11e8",
+            "9f810b8b.7a1b8",
+            "b88a92c6.fb547",
+            "21eb2aa8ef422845",
+            "555ce72ca0d7dfd4",
+            "1de8d122c13a3233",
+            "4ac796c8ddf8155a",
+            "9bf7f8737085ee59",
+            "877ba601c47f4a76",
+            "809d87b71fb0bdfd",
+            "0fd2e5d226b547d5",
+            "9fc975fe338b2abf",
+            "1c271c02ad31924a"
+        ],
+        "x": 224,
+        "y": 3779,
+        "w": 2772,
+        "h": 562
+    },
+    {
+        "id": "ea3b0ae56fd0d23e",
+        "type": "group",
+        "z": "fd31082e.5487d8",
+        "name": "AAS Configuration",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true,
+            "color": "#777777"
+        },
+        "nodes": [
+            "7399afe28fd2b3e3",
+            "258a1a12d86a4632",
+            "e3c6e6cad62c67a3",
+            "a23e7b2b7d892ce8",
+            "3aa49896be203ca6",
+            "0d8d61717cfd4c03",
+            "b9df8432b067da9e",
+            "bfb79cdf88b1c91b",
+            "c489082841bfdcae",
+            "f822f55e.4e556",
+            "facb362b.6dd0b",
+            "fc0a9d8e.12c52",
+            "6b25201afcb2d8ae",
+            "e19fcb6bfe4abba9",
+            "2c314cfc2cf2d5e4",
+            "cbeff4782cad4fc0",
+            "6b047a758dbcf417",
+            "0adccb6c34ec2802"
+        ],
+        "x": 224,
+        "y": 339,
+        "w": 2802,
+        "h": 262
     },
     {
         "id": "201be4c08d5d19e0",
@@ -411,6 +399,46 @@
             [
                 "eeab441ae2b4c1e1",
                 "05f103af299b62e2"
+            ]
+        ]
+    },
+    {
+        "id": "bb464dc962e986c0",
+        "type": "junction",
+        "z": "670d9c89.6d0424",
+        "x": 400,
+        "y": 620,
+        "wires": [
+            [
+                "66816677.7a4348",
+                "4380234d202dd256",
+                "36f799fe398b26b2"
+            ]
+        ]
+    },
+    {
+        "id": "e35d4cb1f2b5081a",
+        "type": "junction",
+        "z": "670d9c89.6d0424",
+        "x": 400,
+        "y": 860,
+        "wires": [
+            [
+                "8ba74a55.e37468",
+                "fbd472e7.d10f48",
+                "a81af3fe552c97a0"
+            ]
+        ]
+    },
+    {
+        "id": "0cf42e9cc5365c9d",
+        "type": "junction",
+        "z": "fd31082e.5487d8",
+        "x": 2160,
+        "y": 1180,
+        "wires": [
+            [
+                "a9f85b8570718f9c"
             ]
         ]
     },
@@ -451,20 +479,6 @@
         ]
     },
     {
-        "id": "bb464dc962e986c0",
-        "type": "junction",
-        "z": "670d9c89.6d0424",
-        "x": 400,
-        "y": 620,
-        "wires": [
-            [
-                "66816677.7a4348",
-                "4380234d202dd256",
-                "36f799fe398b26b2"
-            ]
-        ]
-    },
-    {
         "id": "bf8d1775bedc9126",
         "type": "junction",
         "z": "fd31082e.5487d8",
@@ -485,20 +499,6 @@
         "wires": [
             [
                 "273b7e8259322a05"
-            ]
-        ]
-    },
-    {
-        "id": "e35d4cb1f2b5081a",
-        "type": "junction",
-        "z": "670d9c89.6d0424",
-        "x": 400,
-        "y": 860,
-        "wires": [
-            [
-                "8ba74a55.e37468",
-                "fbd472e7.d10f48",
-                "a81af3fe552c97a0"
             ]
         ]
     },
@@ -824,152 +824,6 @@
         "width": "34",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "a219352d4ef265ea",
-        "type": "swagger-doc",
-        "summary": "Retrieve the current Manifest document",
-        "description": "",
-        "tags": "",
-        "consumes": "",
-        "produces": "",
-        "parameters": [],
-        "responses": {
-            "200": {
-                "description": "Manifest aml document",
-                "code": "200"
-            }
-        },
-        "deprecated": false
-    },
-    {
-        "id": "f5b23bfc8fda48c4",
-        "type": "swagger-doc",
-        "summary": "Retrieve the current Manifest document",
-        "description": "",
-        "tags": "",
-        "consumes": "",
-        "produces": "",
-        "parameters": [],
-        "responses": {
-            "200": {
-                "description": "Manifest aml document",
-                "code": "200"
-            }
-        },
-        "deprecated": false
-    },
-    {
-        "id": "d001c392a5d760ab",
-        "type": "swagger-doc",
-        "summary": "Retrieve the AAS identificators (header part of the Manifest)",
-        "description": "AAS headers",
-        "tags": "",
-        "consumes": "",
-        "produces": "",
-        "parameters": [],
-        "responses": {
-            "200": {
-                "description": "aml Manifest headers response",
-                "code": "200"
-            }
-        },
-        "deprecated": false
-    },
-    {
-        "id": "d402a031398f76da",
-        "type": "swagger-doc",
-        "summary": "Retrieve the AAS identificators (header part of the Manifest)",
-        "description": "AAS headers",
-        "tags": "",
-        "consumes": "",
-        "produces": "",
-        "parameters": [],
-        "responses": {
-            "200": {
-                "description": "aml Manifest headers response",
-                "code": "200"
-            }
-        },
-        "deprecated": false
-    },
-    {
-        "id": "347a264784675542",
-        "type": "swagger-doc",
-        "summary": "Retrieve the list of the AAS submodels (Body part of the Manifest)",
-        "description": "AAS submodels",
-        "tags": "",
-        "consumes": "",
-        "produces": "",
-        "parameters": [],
-        "responses": {
-            "200": {
-                "description": "List the submodels in the Manifest"
-            }
-        },
-        "deprecated": false
-    },
-    {
-        "id": "1f032284ac2721dc",
-        "type": "swagger-doc",
-        "summary": "Retrieve the list of the AAS submodels (Body part of the Manifest)",
-        "description": "AAS submodels",
-        "tags": "",
-        "consumes": "",
-        "produces": "",
-        "parameters": [],
-        "responses": {
-            "200": {
-                "description": "List the submodels in the Manifest"
-            }
-        },
-        "deprecated": false
-    },
-    {
-        "id": "47af7c7683eb6826",
-        "type": "swagger-doc",
-        "summary": "Retrieve the AAS submodel by Id",
-        "description": "AAS submodel by Id",
-        "tags": "",
-        "consumes": "",
-        "produces": "",
-        "parameters": [
-            {
-                "name": "id",
-                "in": "path",
-                "description": "submodel identificator",
-                "required": true,
-                "type": "string"
-            }
-        ],
-        "responses": {
-            "200": {
-                "description": "xml specific submodel"
-            },
-            "404": {
-                "description": "Submodel with id: {id} not found"
-            }
-        },
-        "deprecated": false
-    },
-    {
-        "id": "ca88e4a4a38f1009",
-        "type": "swagger-doc",
-        "summary": "Test the status of the AAS",
-        "description": "",
-        "tags": "",
-        "consumes": "",
-        "produces": "test/html",
-        "parameters": [],
-        "responses": {
-            "200": {
-                "description": "OK"
-            },
-            "503": {
-                "description": "Asset Administration Shell not configured"
-            }
-        },
-        "deprecated": false
     },
     {
         "id": "6ef5fa494778921a",
@@ -1516,6 +1370,152 @@
         "className": "",
         "visible": "true",
         "disabled": "false"
+    },
+    {
+        "id": "a219352d4ef265ea",
+        "type": "swagger-doc",
+        "summary": "Retrieve the current Manifest document",
+        "description": "",
+        "tags": "",
+        "consumes": "",
+        "produces": "",
+        "parameters": [],
+        "responses": {
+            "200": {
+                "description": "Manifest aml document",
+                "code": "200"
+            }
+        },
+        "deprecated": false
+    },
+    {
+        "id": "f5b23bfc8fda48c4",
+        "type": "swagger-doc",
+        "summary": "Retrieve the current Manifest document",
+        "description": "",
+        "tags": "",
+        "consumes": "",
+        "produces": "",
+        "parameters": [],
+        "responses": {
+            "200": {
+                "description": "Manifest aml document",
+                "code": "200"
+            }
+        },
+        "deprecated": false
+    },
+    {
+        "id": "d001c392a5d760ab",
+        "type": "swagger-doc",
+        "summary": "Retrieve the AAS identificators (header part of the Manifest)",
+        "description": "AAS headers",
+        "tags": "",
+        "consumes": "",
+        "produces": "",
+        "parameters": [],
+        "responses": {
+            "200": {
+                "description": "aml Manifest headers response",
+                "code": "200"
+            }
+        },
+        "deprecated": false
+    },
+    {
+        "id": "d402a031398f76da",
+        "type": "swagger-doc",
+        "summary": "Retrieve the AAS identificators (header part of the Manifest)",
+        "description": "AAS headers",
+        "tags": "",
+        "consumes": "",
+        "produces": "",
+        "parameters": [],
+        "responses": {
+            "200": {
+                "description": "aml Manifest headers response",
+                "code": "200"
+            }
+        },
+        "deprecated": false
+    },
+    {
+        "id": "347a264784675542",
+        "type": "swagger-doc",
+        "summary": "Retrieve the list of the AAS submodels (Body part of the Manifest)",
+        "description": "AAS submodels",
+        "tags": "",
+        "consumes": "",
+        "produces": "",
+        "parameters": [],
+        "responses": {
+            "200": {
+                "description": "List the submodels in the Manifest"
+            }
+        },
+        "deprecated": false
+    },
+    {
+        "id": "1f032284ac2721dc",
+        "type": "swagger-doc",
+        "summary": "Retrieve the list of the AAS submodels (Body part of the Manifest)",
+        "description": "AAS submodels",
+        "tags": "",
+        "consumes": "",
+        "produces": "",
+        "parameters": [],
+        "responses": {
+            "200": {
+                "description": "List the submodels in the Manifest"
+            }
+        },
+        "deprecated": false
+    },
+    {
+        "id": "47af7c7683eb6826",
+        "type": "swagger-doc",
+        "summary": "Retrieve the AAS submodel by Id",
+        "description": "AAS submodel by Id",
+        "tags": "",
+        "consumes": "",
+        "produces": "",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "path",
+                "description": "submodel identificator",
+                "required": true,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "xml specific submodel"
+            },
+            "404": {
+                "description": "Submodel with id: {id} not found"
+            }
+        },
+        "deprecated": false
+    },
+    {
+        "id": "ca88e4a4a38f1009",
+        "type": "swagger-doc",
+        "summary": "Test the status of the AAS",
+        "description": "",
+        "tags": "",
+        "consumes": "",
+        "produces": "test/html",
+        "parameters": [],
+        "responses": {
+            "200": {
+                "description": "OK"
+            },
+            "503": {
+                "description": "Asset Administration Shell not configured"
+            }
+        },
+        "deprecated": false
     },
     {
         "id": "6c23162c.b90798",
@@ -7295,7 +7295,7 @@
         "tostatus": false,
         "complete": "true",
         "x": 1050,
-        "y": 3280,
+        "y": 3320,
         "wires": []
     },
     {
@@ -7305,8 +7305,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 2930,
-        "y": 3320,
+        "x": 3070,
+        "y": 3360,
         "wires": []
     },
     {
@@ -7314,8 +7314,8 @@
         "type": "subflow:56cb7422.e3d28c",
         "z": "fd31082e.5487d8",
         "name": "",
-        "x": 2910,
-        "y": 3360,
+        "x": 3050,
+        "y": 3400,
         "wires": [],
         "icon": "node-red-contrib-viseo-log/log.svg"
     },
@@ -7329,7 +7329,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 610,
-        "y": 3320,
+        "y": 3360,
         "wires": [
             [
                 "d7eaed1d3689a90b",
@@ -7361,7 +7361,7 @@
         "dropdownObjOrVal": "value",
         "outputs": 1,
         "x": 1050,
-        "y": 3320,
+        "y": 3360,
         "wires": [
             [
                 "6d92d6029bc49ce2"
@@ -7758,7 +7758,7 @@
         "action": "b64",
         "property": "req.params.aasid",
         "x": 1200,
-        "y": 3320,
+        "y": 3360,
         "wires": [
             [
                 "1382247df77d6f76"
@@ -7985,7 +7985,7 @@
         "action": "b64",
         "property": "req.params.submodelId",
         "x": 1360,
-        "y": 3320,
+        "y": 3360,
         "wires": [
             [
                 "ac39b69bd18aa87e"
@@ -8162,7 +8162,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1680,
-        "y": 3240,
+        "y": 3280,
         "wires": []
     },
     {
@@ -8192,8 +8192,8 @@
         "delaying": "unrelated",
         "msgControl": false,
         "outputs": 2,
-        "x": 2730,
-        "y": 3320,
+        "x": 2890,
+        "y": 3380,
         "wires": [
             [
                 "5583c6b91d5daedd"
@@ -8214,10 +8214,10 @@
         "linkType": "dynamic",
         "timeout": "30",
         "x": 2060,
-        "y": 3280,
+        "y": 3320,
         "wires": [
             [
-                "686cce1cad45487e"
+                "f6b5bad240de8108"
             ]
         ]
     },
@@ -8248,7 +8248,7 @@
         "to": "",
         "reg": false,
         "x": 1860,
-        "y": 3420,
+        "y": 3460,
         "wires": [
             [
                 "411a49d448b119d2"
@@ -8276,7 +8276,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1540,
-        "y": 3320,
+        "y": 3360,
         "wires": [
             [
                 "09fe24773ade8e9b",
@@ -8307,7 +8307,7 @@
         "to": "",
         "reg": false,
         "x": 1860,
-        "y": 3280,
+        "y": 3320,
         "wires": [
             [
                 "951842fd783ccd81"
@@ -8333,7 +8333,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1710,
-        "y": 3300,
+        "y": 3340,
         "wires": [
             [
                 "55be63e5ca6c1b30"
@@ -8370,7 +8370,7 @@
         "to": "",
         "reg": false,
         "x": 1860,
-        "y": 3360,
+        "y": 3400,
         "wires": [
             [
                 "411a49d448b119d2"
@@ -8399,14 +8399,13 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 2230,
+        "x": 2370,
         "y": 3280,
         "wires": [
             [
                 "17e8e4783374b268"
             ],
             [
-                "411a49d448b119d2",
                 "874a674b3bb07867"
             ]
         ]
@@ -8419,8 +8418,8 @@
         "links": [],
         "linkType": "dynamic",
         "timeout": "30",
-        "x": 2560,
-        "y": 3220,
+        "x": 2700,
+        "y": 3260,
         "wires": [
             [
                 "411a49d448b119d2"
@@ -8453,8 +8452,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2400,
-        "y": 3220,
+        "x": 2540,
+        "y": 3260,
         "wires": [
             [
                 "cb224e8d1149b335"
@@ -8469,8 +8468,8 @@
         "links": [],
         "linkType": "dynamic",
         "timeout": "30",
-        "x": 2560,
-        "y": 3260,
+        "x": 2700,
+        "y": 3300,
         "wires": [
             []
         ]
@@ -8501,8 +8500,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2400,
-        "y": 3260,
+        "x": 2540,
+        "y": 3300,
         "wires": [
             [
                 "343d95b6718c5604"
@@ -8557,6 +8556,37 @@
         "x": 1010,
         "y": 2900,
         "wires": []
+    },
+    {
+        "id": "f6b5bad240de8108",
+        "type": "switch",
+        "z": "fd31082e.5487d8",
+        "name": "",
+        "property": "statusCode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 2230,
+        "y": 3320,
+        "wires": [
+            [
+                "686cce1cad45487e"
+            ],
+            [
+                "411a49d448b119d2"
+            ]
+        ]
     },
     {
         "id": "04783421e5b9026b",
@@ -10708,29 +10738,6 @@
         ]
     },
     {
-        "id": "2c32db0f315b4bd4",
-        "type": "function",
-        "z": "76d11e83ac083a40",
-        "name": "Process Operation In/out",
-        "func": "let body = msg.req.body;\nlet operation_from_model = msg.payload;\n\n// Verify InputVariable\nif (operation_from_model.inputVariable.length == body.inputArguments.length && operation_from_model.inoutputVariable.length == body.inoutputArguments.length){\n    \n    //Process InputVariable\n    for (let index0 = 0; index0 < operation_from_model.inputVariable.length; index0++){\n        for (let index1 = 0; index1 < body.inputArguments.length; index1++){\n            if (body.inputArguments[index1].value.submodelElement.idShort == operation_from_model.inputVariable[index0].value.submodelElement.idShort){\n                break;\n            }\n            return [null, msg];\n        }\n    }\n\n    //Process InoutputVariable\n    for (let index2 = 0; index2 < operation_from_model.inoutputVariable.length; index2++) {\n        for (let index3 = 0; index3 < body.inoutputArguments.length; index3++) {\n            if (body.inoutputArguments[index3].value.submodelElement.idShort == operation_from_model.inoutputVariable[index2].value.submodelElement.idShort) {\n                break;\n            }\n            return [null, msg];\n        }\n    }\n    return [msg,null];\n\n} else {\n    return [null, msg];\n}",
-        "outputs": 2,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2130,
-        "y": 2060,
-        "wires": [
-            [
-                "96bd8a4c06332a0f"
-            ],
-            [
-                "561e9541c27f78bc"
-            ]
-        ]
-    },
-    {
         "id": "2e941c31bfadc617",
         "type": "wait-paths",
         "z": "76d11e83ac083a40",
@@ -10891,7 +10898,6 @@
         "wires": [
             [
                 "9abb3b8618d9b8f9",
-                "18963fe75ba0e9c8",
                 "2c32db0f315b4bd4"
             ],
             [
@@ -13152,6 +13158,31 @@
         "x": 2330,
         "y": 1400,
         "wires": []
+    },
+    {
+        "id": "2c32db0f315b4bd4",
+        "type": "function",
+        "z": "76d11e83ac083a40",
+        "name": "Process Operation In/out",
+        "func": "let errorMessage = {\n    \"messages\": [{\n        \"Code\": \"BadRequest\",\n        \"CorrelationId\": null,\n        \"MessageType\": \"Error\",\n        \"Text\": `the request parameters of the format of the request body is wrong`,\n        \"Timestamp\": Date.now()\n    }]\n};\n\nlet body = msg.req.body;\nlet operation_from_model = msg.payload;\n\n// Verify InputVariable\nif (operation_from_model.inputVariables.length == body.inputArguments.length && operation_from_model.inoutputVariables.length == body.inoutputArguments.length) {\n\n    //Process InputVariable\n    for (let index0 = 0; index0 < operation_from_model.inputVariables.length; index0++) {\n        for (let index1 = 0; index1 < body.inputArguments.length; index1++) {\n            if (body.inputArguments[index1].value.submodelElement.idShort == operation_from_model.inputVariable[index0].value.submodelElement.idShort) {\n                break;\n            }\n            msg.statusCode = \"400\";\n            msg.payload = errorMessage;\n            return [null, msg];\n\n        }\n    }\n\n    //Process InoutputVariable\n    for (let index2 = 0; index2 < operation_from_model.inoutputVariables.length; index2++) {\n        for (let index3 = 0; index3 < body.inoutputArguments.length; index3++) {\n            if (body.inoutputArguments[index3].value.submodelElement.idShort == operation_from_model.inoutputVariable[index2].value.submodelElement.idShort) {\n                break;\n            }\n            msg.statusCode = \"400\";\n            msg.payload = errorMessage;\n            return [null, msg];\n        }\n    }\n    return [msg, null];\n\n} else {\n    msg.statusCode = \"400\";\n    msg.payload = errorMessage;\n    return [null, msg];\n}",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2030,
+        "y": 2080,
+        "wires": [
+            [
+                "18963fe75ba0e9c8",
+                "96bd8a4c06332a0f"
+            ],
+            [
+                "18963fe75ba0e9c8",
+                "561e9541c27f78bc"
+            ]
+        ]
     },
     {
         "id": "012ebb5641006b90",
@@ -20057,33 +20088,6 @@
         ]
     },
     {
-        "id": "72693a70ea801745",
-        "type": "link in",
-        "z": "128ab3134a54f6b4",
-        "name": "driver.send.commands",
-        "links": [],
-        "x": 880,
-        "y": 2180,
-        "wires": [
-            [
-                "f995bbc47f93d025",
-                "377146044d37209b"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "84b237411eda95b6",
-        "type": "link out",
-        "z": "128ab3134a54f6b4",
-        "name": "driver.send.commands",
-        "mode": "return",
-        "links": [],
-        "x": 2145,
-        "y": 2180,
-        "wires": []
-    },
-    {
         "id": "ab057144cf917fb8",
         "type": "link out",
         "z": "128ab3134a54f6b4",
@@ -20172,74 +20176,6 @@
         "wires": [
             [
                 "d57f305ac53e4d3f"
-            ]
-        ]
-    },
-    {
-        "id": "f995bbc47f93d025",
-        "type": "debug",
-        "z": "128ab3134a54f6b4",
-        "name": "debug 31",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1190,
-        "y": 2160,
-        "wires": []
-    },
-    {
-        "id": "7982f9ad4b18cdb6",
-        "type": "change",
-        "z": "128ab3134a54f6b4",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "target",
-                "pt": "msg",
-                "to": "payload.idShort",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1580,
-        "y": 2180,
-        "wires": [
-            [
-                "84b237411eda95b6"
-            ]
-        ]
-    },
-    {
-        "id": "377146044d37209b",
-        "type": "switch",
-        "z": "128ab3134a54f6b4",
-        "name": "",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "api",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1350,
-        "y": 2180,
-        "wires": [
-            [
-                "7982f9ad4b18cdb6"
             ]
         ]
     },
@@ -21445,6 +21381,329 @@
                 "df6163485b0944cc",
                 "a6e34c38b88bf493",
                 "5edb132f331ef30c"
+            ]
+        ]
+    },
+    {
+        "id": "95e203b588a96b2d",
+        "type": "link in",
+        "z": "128ab3134a54f6b4",
+        "name": "driver.send.commands",
+        "links": [],
+        "x": 880,
+        "y": 2280,
+        "wires": [
+            [
+                "08d80ca6f0fcf082",
+                "77ad103e6bda74bd"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "4aa1de5392152727",
+        "type": "link out",
+        "z": "128ab3134a54f6b4",
+        "name": "driver.send.commands",
+        "mode": "return",
+        "links": [],
+        "x": 2145,
+        "y": 2280,
+        "wires": []
+    },
+    {
+        "id": "08d80ca6f0fcf082",
+        "type": "debug",
+        "z": "128ab3134a54f6b4",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "77ad103e6bda74bd",
+        "type": "switch",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "api",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1350,
+        "y": 2280,
+        "wires": [
+            [
+                "0e4e9d4118e139ea"
+            ]
+        ]
+    },
+    {
+        "id": "0e4e9d4118e139ea",
+        "type": "switch",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "property": "asycn",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1530,
+        "y": 2280,
+        "wires": [
+            [
+                "17a13f1fc2a90431"
+            ],
+            [
+                "ce62fc23e56fae2b"
+            ]
+        ]
+    },
+    {
+        "id": "71c6a45c386d8b60",
+        "type": "link call",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "links": [],
+        "linkType": "dynamic",
+        "timeout": "30",
+        "x": 1900,
+        "y": 2240,
+        "wires": [
+            [
+                "4aa1de5392152727"
+            ]
+        ]
+    },
+    {
+        "id": "17a13f1fc2a90431",
+        "type": "change",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "asyncCall_in",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1720,
+        "y": 2240,
+        "wires": [
+            [
+                "71c6a45c386d8b60"
+            ]
+        ]
+    },
+    {
+        "id": "98b8477c6cc67f2c",
+        "type": "link call",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "links": [],
+        "linkType": "dynamic",
+        "timeout": "30",
+        "x": 1900,
+        "y": 2300,
+        "wires": [
+            [
+                "4aa1de5392152727"
+            ]
+        ]
+    },
+    {
+        "id": "ce62fc23e56fae2b",
+        "type": "change",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "syncCall_in",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1720,
+        "y": 2300,
+        "wires": [
+            [
+                "98b8477c6cc67f2c"
+            ]
+        ]
+    },
+    {
+        "id": "22fa1c99b61a204a",
+        "type": "link in",
+        "z": "128ab3134a54f6b4",
+        "name": "asyncCall_in",
+        "links": [],
+        "x": 1065,
+        "y": 3040,
+        "wires": [
+            [
+                "1a9f4cca0dc6a507"
+            ]
+        ]
+    },
+    {
+        "id": "68ef54be37d237c9",
+        "type": "link in",
+        "z": "128ab3134a54f6b4",
+        "name": "syncCall_in",
+        "links": [],
+        "x": 1065,
+        "y": 3340,
+        "wires": [
+            [
+                "b93ea18432441070"
+            ]
+        ]
+    },
+    {
+        "id": "1a9f4cca0dc6a507",
+        "type": "switch",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "property": "payload.idShort",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1350,
+        "y": 3040,
+        "wires": [
+            [
+                "ebdf3dc323faeefd"
+            ]
+        ]
+    },
+    {
+        "id": "b93ea18432441070",
+        "type": "switch",
+        "z": "128ab3134a54f6b4",
+        "name": "",
+        "property": "payload.idShort",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1350,
+        "y": 3340,
+        "wires": [
+            [
+                "618270890e31dab5"
+            ]
+        ]
+    },
+    {
+        "id": "05c76a2d504bfcb4",
+        "type": "link out",
+        "z": "128ab3134a54f6b4",
+        "name": "synchCall_out",
+        "mode": "return",
+        "links": [],
+        "x": 1945,
+        "y": 3340,
+        "wires": []
+    },
+    {
+        "id": "24b6253840e91f78",
+        "type": "link out",
+        "z": "128ab3134a54f6b4",
+        "name": "asynchCall_out",
+        "mode": "return",
+        "links": [],
+        "x": 1945,
+        "y": 3040,
+        "wires": []
+    },
+    {
+        "id": "ebdf3dc323faeefd",
+        "type": "function",
+        "z": "128ab3134a54f6b4",
+        "name": "return handler",
+        "func": "msg.statusCode = 202;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1640,
+        "y": 3040,
+        "wires": [
+            [
+                "24b6253840e91f78"
+            ]
+        ]
+    },
+    {
+        "id": "618270890e31dab5",
+        "type": "function",
+        "z": "128ab3134a54f6b4",
+        "name": "return Operation result",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 3340,
+        "wires": [
+            [
+                "05c76a2d504bfcb4"
             ]
         ]
     },
