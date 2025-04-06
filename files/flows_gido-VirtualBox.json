@@ -8378,39 +8378,6 @@
         ]
     },
     {
-        "id": "686cce1cad45487e",
-        "type": "switch",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "property": "req.query.async",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "false",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "true",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2370,
-        "y": 3280,
-        "wires": [
-            [
-                "17e8e4783374b268"
-            ],
-            [
-                "874a674b3bb07867"
-            ]
-        ]
-    },
-    {
         "id": "cb224e8d1149b335",
         "type": "link call",
         "z": "fd31082e.5487d8",
@@ -8418,8 +8385,8 @@
         "links": [],
         "linkType": "dynamic",
         "timeout": "30",
-        "x": 2700,
-        "y": 3260,
+        "x": 2600,
+        "y": 3300,
         "wires": [
             [
                 "411a49d448b119d2"
@@ -8452,59 +8419,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2540,
-        "y": 3260,
+        "x": 2440,
+        "y": 3300,
         "wires": [
             [
                 "cb224e8d1149b335"
-            ]
-        ]
-    },
-    {
-        "id": "343d95b6718c5604",
-        "type": "link call",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "links": [],
-        "linkType": "dynamic",
-        "timeout": "30",
-        "x": 2700,
-        "y": 3300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "874a674b3bb07867",
-        "type": "change",
-        "z": "fd31082e.5487d8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "target",
-                "pt": "msg",
-                "to": "southbound.send.commands",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "api",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2540,
-        "y": 3300,
-        "wires": [
-            [
-                "343d95b6718c5604"
             ]
         ]
     },
@@ -8581,7 +8500,7 @@
         "y": 3320,
         "wires": [
             [
-                "686cce1cad45487e"
+                "17e8e4783374b268"
             ],
             [
                 "411a49d448b119d2"
@@ -9998,28 +9917,10 @@
         "y": 1720,
         "wires": [
             [
-                "ab6759f66a906482"
+                "97eb5d291643c514"
             ]
         ],
         "l": true
-    },
-    {
-        "id": "ab6759f66a906482",
-        "type": "link call",
-        "z": "670d9c89.6d0424",
-        "name": "",
-        "links": [
-            "72693a70ea801745"
-        ],
-        "linkType": "static",
-        "timeout": "30",
-        "x": 1130,
-        "y": 1720,
-        "wires": [
-            [
-                "cd6f2a247f2e7f66"
-            ]
-        ]
     },
     {
         "id": "af4b6639.02a008",
@@ -10319,6 +10220,49 @@
         "x": 1855,
         "y": 1840,
         "wires": []
+    },
+    {
+        "id": "ab6759f66a906482",
+        "type": "link call",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "links": [],
+        "linkType": "dynamic",
+        "timeout": "30",
+        "x": 900,
+        "y": 1720,
+        "wires": [
+            [
+                "cd6f2a247f2e7f66"
+            ]
+        ]
+    },
+    {
+        "id": "97eb5d291643c514",
+        "type": "change",
+        "z": "670d9c89.6d0424",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "driver.send.commands",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 1720,
+        "wires": [
+            [
+                "ab6759f66a906482"
+            ]
+        ]
     },
     {
         "id": "03a40b9def235c79",
@@ -21457,7 +21401,7 @@
         "type": "switch",
         "z": "128ab3134a54f6b4",
         "name": "",
-        "property": "asycn",
+        "property": "req.query.async",
         "propertyType": "msg",
         "rules": [
             {
