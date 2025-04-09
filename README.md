@@ -21,7 +21,7 @@ Once the image has been created the followig docker command can be used to start
 
 After executing the above commands, the NOVAAS will be accessible at the following link:
 
-http://localhost:1860/ui 
+http://localhost:1860/dashboard
 
 ![Semantic description of image](/source/images/novaas-prosys-opc-ua-simulation-server.png)"NOVAAS Main Screen"
 
@@ -34,7 +34,7 @@ http://localhost:1860
 
 or by properly configure the following environmental variables: i) $BROKER_SERVICE_HOST that is used to set-up the host where the mqtt broker is running; and ii) $BROKER_SERVICE_PORT that is used to set-up the port used by the mqtt broker. 
 
-![Semantic description of image](/source/images/backend.png)"NOVAAS Backend once user is logged in"
+![Semantic description of image](/source/images/aasAssetConnection.png)"NOVAAS Backend once user is logged in"
 
 To access the backend the user needs to insert username and password. These are the default username and password from the node-red settings file, namely:
 
